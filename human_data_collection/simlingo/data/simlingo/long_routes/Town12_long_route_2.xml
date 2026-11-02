@@ -1,0 +1,40 @@
+<?xml version='1.0' encoding='utf-8'?>
+<routes>
+   <route id="30001" town="Town12">
+      <weathers>
+         <weather route_percentage="0" cloudiness="10" precipitation="0" precipitation_deposits="0" wetness="0" wind_intensity="5" sun_azimuth_angle="190" sun_altitude_angle="72" fog_density="0" fog_distance="90" fog_falloff="0.0" scattering_intensity="1.0" mie_scattering_scale="0.03" />
+         <weather route_percentage="100" cloudiness="15" precipitation="0" precipitation_deposits="0" wetness="0" wind_intensity="5" sun_azimuth_angle="215" sun_altitude_angle="45" fog_density="1" fog_distance="90" fog_falloff="0.0" scattering_intensity="1.0" mie_scattering_scale="0.03" />
+      </weathers>
+      <waypoints>
+         <position x="4018.4" y="4517.8" z="368.7" />
+         <position x="3919.2" y="5125.8" z="367.3" />
+         <position x="3598.2" y="5617.3" z="369.0" />
+         <position x="3321.8" y="5524.6" z="368.5" />
+         <position x="3156.1" y="5101.1" z="367.9" />
+         <position x="2992.0" y="4677.3" z="365.9" />
+         <position x="2626.2" y="4791.3" z="366.2" />
+         <position x="2101.1" y="4874.3" z="364.0" />
+      </waypoints>
+      <scenarios>
+         <scenario name="NonSignalizedJunctionLeftTurnEnterFlow_1" type="NonSignalizedJunctionLeftTurnEnterFlow">
+            <trigger_point x="3985.4" y="4730.2" z="368.8" yaw="98.8" />
+            <flow_speed value="9" />
+            <source_dist_interval from="16" to="30" />
+         </scenario>
+         <scenario name="PedestrianCrossing_2" type="PedestrianCrossing">
+            <trigger_point x="3650.2" y="5556.2" z="368.1" yaw="138.7" />
+         </scenario>
+         <scenario name="ConstructionObstacle_3" type="ConstructionObstacle">
+            <trigger_point x="3361.4" y="5287.8" z="368.2" yaw="279.5" />
+            <distance value="80" />
+            <speed value="40" />
+         </scenario>
+         <scenario name="SignalizedJunctionRightTurn_4" type="SignalizedJunctionRightTurn">
+            <trigger_point x="2983.5" y="4727.6" z="366.4" yaw="279.6" />
+         </scenario>
+         <scenario name="InvadingTurn_5" type="InvadingTurn">
+            <trigger_point x="2444.8" y="4881.1" z="367.2" yaw="188.9" />
+         </scenario>
+      </scenarios>
+   </route>
+</routes>

@@ -1,0 +1,32 @@
+<?xml version="1.0" ?>
+<routes>
+   <route id="0" town="Town12">
+      <weathers>
+         <weather route_percentage="0.0" cloudiness="0.0" precipitation="60.0" precipitation_deposits="0.0" wetness="10.0" wind_intensity="10.0" sun_azimuth_angle="360.0" sun_altitude_angle="0.0" fog_density="10.0"/>
+         <weather route_percentage="100.0" cloudiness="20.0" precipitation="10.0" precipitation_deposits="0.0" wetness="10.0" wind_intensity="30.0" sun_azimuth_angle="315.0" sun_altitude_angle="10.0" fog_density="15.0"/>
+      </weathers>
+      <waypoints>
+         <position x="3260.8" y="4546.0" z="366.3"/>
+         <position x="3319.7" y="4555.6" z="367.0"/>
+         <position x="3498.1" y="4453.2" z="368.0"/>
+         <position x="3498.6" y="4450.1" z="368.0"/>
+      </waypoints>
+      <scenarios>
+         <scenario name="ConstructionObstacleTwoWays_2" type="ConstructionObstacleTwoWays">
+            <trigger_point x="3280.6" y="4549.3" z="366.5" yaw="9.2"/>
+            <distance value="80"/>
+            <frequency from="55" to="115"/>
+         </scenario>
+         <scenario name="SignalizedJunctionLeftTurn_4" type="SignalizedJunctionLeftTurn">
+            <trigger_point x="3383.5" y="4565.9" z="367.6" yaw="9.2"/>
+            <flow_speed value="12"/>
+            <source_dist_interval from="10" to="65"/>
+         </scenario>
+         <scenario name="VehicleOpensDoorTwoWays_1" type="VehicleOpensDoorTwoWays">
+            <trigger_point x="3484.1" y="4549.5" z="367.9" yaw="278.3"/>
+            <distance value="60"/>
+            <frequency from="40" to="95"/>
+         </scenario>
+      </scenarios>
+   </route>
+</routes>

@@ -1,0 +1,32 @@
+<?xml version="1.0" ?>
+<routes>
+   <route id="0" town="Town12">
+      <weathers>
+         <weather route_percentage="0.0" cloudiness="20.0" precipitation="8.0" precipitation_deposits="16.0" wetness="0.0" wind_intensity="100.0" sun_azimuth_angle="225.0" sun_altitude_angle="90.0" fog_density="7.0"/>
+         <weather route_percentage="100.0" cloudiness="0.0" precipitation="50.0" precipitation_deposits="60.0" wetness="2.0" wind_intensity="100.0" sun_azimuth_angle="225.0" sun_altitude_angle="60.0" fog_density="3.0"/>
+      </weathers>
+      <waypoints>
+         <position x="1130.5" y="3729.7" z="367.7"/>
+         <position x="1043.0" y="3715.1" z="369.2"/>
+         <position x="838.3" y="3680.7" z="371.2"/>
+         <position x="755.7" y="3701.3" z="371.6"/>
+         <position x="676.2" y="3728.7" z="371.7"/>
+      </waypoints>
+      <scenarios>
+         <scenario name="ConstructionObstacleTwoWays_1" type="ConstructionObstacleTwoWays">
+            <trigger_point x="1109.9" y="3726.3" z="368.1" yaw="189.4"/>
+            <distance value="80"/>
+            <frequency from="40" to="145"/>
+         </scenario>
+         <scenario name="DynamicObjectCrossing_1" type="DynamicObjectCrossing">
+            <trigger_point x="873.9" y="3686.7" z="371.0" yaw="189.6"/>
+            <distance value="40"/>
+            <blocker_model value="static.prop.foodcart"/>
+            <crossing_angle value="10"/>
+         </scenario>
+         <scenario name="HardBreakRoute_1" type="HardBreakRoute">
+            <trigger_point x="739.6" y="3701.3" z="371.7" yaw="179.9"/>
+         </scenario>
+      </scenarios>
+   </route>
+</routes>

@@ -1,0 +1,29 @@
+<?xml version="1.0" ?>
+<routes>
+   <route id="0" town="Town12">
+      <weathers>
+         <weather route_percentage="0.0" cloudiness="50.0" precipitation="80.0" precipitation_deposits="4.0" wetness="20.0" wind_intensity="50.0" sun_azimuth_angle="270.0" sun_altitude_angle="20.0" fog_density="40.0"/>
+         <weather route_percentage="100.0" cloudiness="5.0" precipitation="10.0" precipitation_deposits="8.0" wetness="6.0" wind_intensity="25.0" sun_azimuth_angle="270.0" sun_altitude_angle="10.0" fog_density="15.0"/>
+      </weathers>
+      <waypoints>
+         <position x="2372.9" y="-200.8" z="334.2"/>
+         <position x="2540.1" y="-92.2" z="331.7"/>
+         <position x="2636.4" y="-91.6" z="330.0"/>
+      </waypoints>
+      <scenarios>
+         <scenario name="SignalizedJunctionLeftTurn_1" type="SignalizedJunctionLeftTurn">
+            <trigger_point x="2373.4" y="-180.9" z="333.4" yaw="90.4"/>
+            <flow_speed value="15"/>
+            <source_dist_interval from="25" to="70"/>
+         </scenario>
+         <scenario name="VehicleTurningRoutePedestrian_2" type="VehicleTurningRoutePedestrian">
+            <trigger_point x="2374.6" y="-125.7" z="335.9" yaw="88.0"/>
+         </scenario>
+         <scenario name="AccidentTwoWays_5" type="AccidentTwoWays">
+            <trigger_point x="2455.8" y="-92.7" z="333.7" yaw="0.4"/>
+            <distance value="95"/>
+            <frequency from="60" to="145"/>
+         </scenario>
+      </scenarios>
+   </route>
+</routes>

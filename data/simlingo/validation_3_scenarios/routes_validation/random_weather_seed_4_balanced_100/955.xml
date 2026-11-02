@@ -1,0 +1,27 @@
+<routes><route id="0" town="Town13">
+      <weathers>
+         <weather route_percentage="0.0" cloudiness="20.0" precipitation="6.0" precipitation_deposits="16.0" wetness="6.0" wind_intensity="80.0" sun_azimuth_angle="45.0" sun_altitude_angle="15.0" fog_density="10.0" />
+         <weather route_percentage="100.0" cloudiness="40.0" precipitation="4.0" precipitation_deposits="100.0" wetness="80.0" wind_intensity="30.0" sun_azimuth_angle="135.0" sun_altitude_angle="5.0" fog_density="4.0" />
+      </weathers>
+      <waypoints>
+         <position x="6775.8" y="4492.8" z="178.0" />
+         <position x="6964.4" y="4557.6" z="181.2" />
+      </waypoints>
+      <scenarios>
+         <scenario name="SignalizedJunctionLeftTurn_1" type="SignalizedJunctionLeftTurn">
+            <trigger_point x="6775.6" y="4513.3" z="178.1" yaw="90.5" />
+            <flow_speed value="9" />
+            <source_dist_interval from="10" to="45" />
+         </scenario>
+         <scenario name="ParkingCrossingPedestrian_2" type="ParkingCrossingPedestrian">
+            <trigger_point x="6825.8" y="4557.5" z="179.2" yaw="0.1" />
+            <distance value="50" />
+            <crossing_angle value="5" />
+         </scenario>
+         <scenario name="ParkingCutIn_2" type="ParkingCutIn">
+            <trigger_point x="6879.2" y="4557.5" z="180.0" yaw="0.1" />
+            <direction value="right" />
+         </scenario>
+      </scenarios>
+   </route>
+</routes>

@@ -1,0 +1,30 @@
+<routes><route id="0" town="Town12">
+      <weathers>
+         <weather route_percentage="0.0" cloudiness="80.0" precipitation="2.0" precipitation_deposits="8.0" wetness="8.0" wind_intensity="30.0" sun_azimuth_angle="225.0" sun_altitude_angle="15.0" fog_density="10.0" />
+         <weather route_percentage="100.0" cloudiness="40.0" precipitation="0.0" precipitation_deposits="20.0" wetness="6.0" wind_intensity="25.0" sun_azimuth_angle="360.0" sun_altitude_angle="-90.0" fog_density="20.0" />
+      </weathers>
+      <waypoints>
+         <position x="3426.1" y="3111.5" z="368.0" />
+         <position x="3990.9" y="3186.0" z="369.9" />
+         <position x="4117.8" y="3505.6" z="370.9" />
+         <position x="4073.7" y="3796.6" z="370.4" />
+      </waypoints>
+      <scenarios>
+         <scenario name="YieldToEmergencyVehicle_1" type="YieldToEmergencyVehicle">
+            <trigger_point x="3446.1" y="3111.4" z="368.2" yaw="-0.3" />
+            <distance value="140" />
+         </scenario>
+         <scenario name="HighwayExit_1" type="HighwayExit">
+            <trigger_point x="3950.3" y="3160.3" z="370.0" yaw="28.9" />
+            <start_actor_flow x="3935.6" y="3156.5" z="370.0" />
+            <end_actor_flow x="4149.9" y="3426.5" z="370.7" />
+            <flow_speed value="12" />
+            <source_dist_interval from="10" to="30" />
+         </scenario>
+         <scenario name="ConstructionObstacle_1" type="ConstructionObstacle">
+            <trigger_point x="4100.4" y="3628.7" z="371.0" yaw="99.0" />
+            <direction value="left" />
+         </scenario>
+      </scenarios>
+   </route>
+</routes>

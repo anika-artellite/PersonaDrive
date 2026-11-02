@@ -1,0 +1,28 @@
+<routes><route id="0" town="Town12">
+      <weathers>
+         <weather route_percentage="0.0" cloudiness="20.0" precipitation="2.0" precipitation_deposits="8.0" wetness="4.0" wind_intensity="5.0" sun_azimuth_angle="225.0" sun_altitude_angle="20.0" fog_density="1.0" />
+         <weather route_percentage="100.0" cloudiness="5.0" precipitation="0.0" precipitation_deposits="12.0" wetness="20.0" wind_intensity="50.0" sun_azimuth_angle="0.0" sun_altitude_angle="-30.0" fog_density="7.0" />
+      </weathers>
+      <waypoints>
+         <position x="2451.9" y="3636.7" z="355.0" />
+         <position x="2446.7" y="3667.4" z="355.0" />
+         <position x="3058.3" y="3803.4" z="360.5" />
+      </waypoints>
+      <scenarios>
+         <scenario name="SignalizedJunctionLeftTurn_1" type="SignalizedJunctionLeftTurn">
+            <trigger_point x="2448.6" y="3656.5" z="355.0" yaw="99.6" />
+            <flow_speed value="14" />
+            <source_dist_interval from="15" to="60" />
+         </scenario>
+         <scenario name="ConstructionObstacleTwoWays_3" type="ConstructionObstacleTwoWays">
+            <trigger_point x="2549.4" y="3720.3" z="355.5" yaw="9.3" />
+            <frequency from="45" to="115" />
+         </scenario>
+         <scenario name="AccidentTwoWays_3" type="AccidentTwoWays">
+            <trigger_point x="2884.6" y="3775.0" z="358.4" yaw="9.3" />
+            <distance value="91.1" />
+            <frequency from="40" to="115" />
+         </scenario>
+      </scenarios>
+   </route>
+</routes>

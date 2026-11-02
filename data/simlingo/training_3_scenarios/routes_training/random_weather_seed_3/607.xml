@@ -1,0 +1,28 @@
+<?xml version="1.0" ?>
+<routes>
+   <route id="0" town="Town12">
+      <weathers>
+         <weather route_percentage="0.0" cloudiness="20.0" precipitation="100.0" precipitation_deposits="100.0" wetness="100.0" wind_intensity="5.0" sun_azimuth_angle="135.0" sun_altitude_angle="70.0" fog_density="40.0"/>
+         <weather route_percentage="100.0" cloudiness="60.0" precipitation="2.0" precipitation_deposits="50.0" wetness="80.0" wind_intensity="80.0" sun_azimuth_angle="315.0" sun_altitude_angle="5.0" fog_density="1.0"/>
+      </weathers>
+      <waypoints>
+         <position x="1461.1" y="2182.0" z="361.9"/>
+         <position x="1696.2" y="2181.1" z="362.8"/>
+         <position x="1728.3" y="2181.2" z="363.3"/>
+      </waypoints>
+      <scenarios>
+         <scenario name="DynamicObjectCrossing_1" type="DynamicObjectCrossing">
+            <trigger_point x="1481.7" y="2181.8" z="361.8" yaw="-0.2"/>
+            <distance value="50"/>
+            <blocker_model value="static.prop.container"/>
+            <crossing_angle value="15"/>
+         </scenario>
+         <scenario name="ControlLoss_1" type="ControlLoss">
+            <trigger_point x="1639.5" y="2181.3" z="362.0" yaw="-0.2"/>
+         </scenario>
+         <scenario name="HardBreakRoute_1" type="HardBreakRoute">
+            <trigger_point x="1662.8" y="2181.2" z="362.3" yaw="-0.2"/>
+         </scenario>
+      </scenarios>
+   </route>
+</routes>

@@ -1,0 +1,29 @@
+<routes><route id="0" town="Town13">
+      <weathers>
+         <weather route_percentage="0.0" cloudiness="10.0" precipitation="2.0" precipitation_deposits="30.0" wetness="4.0" wind_intensity="10.0" sun_azimuth_angle="270.0" sun_altitude_angle="0.0" fog_density="0.0" />
+         <weather route_percentage="100.0" cloudiness="40.0" precipitation="20.0" precipitation_deposits="4.0" wetness="100.0" wind_intensity="10.0" sun_azimuth_angle="360.0" sun_altitude_angle="80.0" fog_density="6.0" />
+      </weathers>
+      <waypoints>
+         <position x="6971.4" y="2628.8" z="167.1" />
+         <position x="6958.8" y="2602.0" z="167.1" />
+         <position x="6819.8" y="2560.7" z="166.1" />
+         <position x="6682.5" y="2560.5" z="164.5" />
+      </waypoints>
+      <scenarios>
+         <scenario name="SignalizedJunctionLeftTurn_2" type="SignalizedJunctionLeftTurn">
+            <trigger_point x="6962.6" y="2609.8" z="167.1" yaw="244.3" />
+            <flow_speed value="12" />
+            <source_dist_interval from="20" to="45" />
+         </scenario>
+         <scenario name="DynamicObjectCrossing_1" type="DynamicObjectCrossing">
+            <trigger_point x="6908.6" y="2560.8" z="166.9" yaw="180.1" />
+            <distance value="70" />
+            <blocker_model value="static.prop.advertisement" />
+            <crossing_angle value="1" />
+         </scenario>
+         <scenario name="PriorityAtJunction_2" type="PriorityAtJunction">
+            <trigger_point x="6814.6" y="2560.7" z="166.0" yaw="180.1" />
+         </scenario>
+      </scenarios>
+   </route>
+</routes>

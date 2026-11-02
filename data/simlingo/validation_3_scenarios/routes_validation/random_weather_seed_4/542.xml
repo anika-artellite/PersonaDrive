@@ -1,0 +1,25 @@
+<?xml version="1.0" ?>
+<routes>
+   <route id="0" town="Town13">
+      <weathers>
+         <weather route_percentage="0.0" cloudiness="40.0" precipitation="0.0" precipitation_deposits="30.0" wetness="20.0" wind_intensity="60.0" sun_azimuth_angle="90.0" sun_altitude_angle="30.0" fog_density="100.0"/>
+         <weather route_percentage="100.0" cloudiness="50.0" precipitation="8.0" precipitation_deposits="20.0" wetness="80.0" wind_intensity="30.0" sun_azimuth_angle="0.0" sun_altitude_angle="5.0" fog_density="40.0"/>
+      </weathers>
+      <waypoints>
+         <position x="-3805.8" y="5477.4" z="167.5"/>
+         <position x="-4073.6" y="5441.9" z="170.0"/>
+      </waypoints>
+      <scenarios>
+         <scenario name="ControlLoss_4" type="ControlLoss">
+            <trigger_point x="-3826.6" y="5444.2" z="167.4" yaw="180.5"/>
+         </scenario>
+         <scenario name="OppositeVehicleTakingPriority_1" type="OppositeVehicleTakingPriority">
+            <trigger_point x="-3851.5" y="5444.0" z="167.7" yaw="180.5"/>
+         </scenario>
+         <scenario name="OppositeVehicleTakingPriority_2" type="OppositeVehicleTakingPriority">
+            <trigger_point x="-3947.6" y="5443.1" z="168.7" yaw="180.5"/>
+            <direction value="left"/>
+         </scenario>
+      </scenarios>
+   </route>
+</routes>

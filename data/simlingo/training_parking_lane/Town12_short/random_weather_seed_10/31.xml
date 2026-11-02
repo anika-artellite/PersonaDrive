@@ -1,0 +1,134 @@
+<?xml version="1.0" ?>
+<routes>
+   <route id="0" town="Town12">
+      <weathers>
+         <weather route_percentage="0.0" cloudiness="60.0" precipitation="20.0" precipitation_deposits="0.0" wetness="80.0" wind_intensity="25.0" sun_azimuth_angle="180.0" sun_altitude_angle="80.0" fog_density="15.0"/>
+         <weather route_percentage="100.0" cloudiness="100.0" precipitation="4.0" precipitation_deposits="40.0" wetness="20.0" wind_intensity="100.0" sun_azimuth_angle="135.0" sun_altitude_angle="90.0" fog_density="20.0"/>
+      </weathers>
+      <waypoints>
+         <position x="-139.4" y="4619.4" z="373.1"/>
+         <position x="-139.0" y="4619.4" z="373.1"/>
+         <position x="-140.0" y="4619.4" z="373.1"/>
+         <position x="-141.0" y="4619.4" z="373.1"/>
+         <position x="-142.0" y="4619.4" z="373.1"/>
+         <position x="-143.0" y="4619.4" z="373.1"/>
+         <position x="-144.0" y="4619.4" z="373.1"/>
+         <position x="-145.0" y="4619.4" z="373.1"/>
+         <position x="-146.0" y="4619.4" z="373.1"/>
+         <position x="-147.0" y="4619.4" z="373.1"/>
+         <position x="-148.0" y="4619.4" z="373.1"/>
+         <position x="-149.0" y="4619.4" z="373.2"/>
+         <position x="-150.0" y="4619.4" z="373.2"/>
+         <position x="-151.0" y="4619.4" z="373.2"/>
+         <position x="-152.0" y="4619.4" z="373.2"/>
+         <position x="-153.0" y="4619.4" z="373.2"/>
+         <position x="-154.0" y="4619.4" z="373.2"/>
+         <position x="-155.0" y="4619.4" z="373.2"/>
+         <position x="-156.0" y="4619.4" z="373.2"/>
+         <position x="-157.0" y="4619.4" z="373.2"/>
+         <position x="-158.0" y="4619.4" z="373.2"/>
+         <position x="-159.0" y="4619.4" z="373.2"/>
+         <position x="-160.0" y="4619.4" z="373.2"/>
+         <position x="-161.0" y="4619.4" z="373.2"/>
+         <position x="-162.0" y="4619.4" z="373.2"/>
+         <position x="-163.0" y="4619.4" z="373.2"/>
+         <position x="-164.0" y="4619.4" z="373.2"/>
+         <position x="-165.4" y="4619.4" z="373.2"/>
+         <position x="-165.4" y="4619.4" z="373.2"/>
+         <position x="-166.3" y="4619.4" z="373.2"/>
+         <position x="-167.2" y="4619.3" z="373.2"/>
+         <position x="-168.1" y="4619.2" z="373.2"/>
+         <position x="-169.0" y="4618.9" z="373.2"/>
+         <position x="-169.8" y="4618.7" z="373.2"/>
+         <position x="-170.7" y="4618.3" z="373.3"/>
+         <position x="-171.5" y="4617.9" z="373.3"/>
+         <position x="-172.2" y="4617.5" z="373.3"/>
+         <position x="-172.8" y="4616.9" z="373.3"/>
+         <position x="-173.3" y="4616.3" z="373.3"/>
+         <position x="-173.7" y="4615.7" z="373.3"/>
+         <position x="-174.0" y="4614.9" z="373.3"/>
+         <position x="-174.2" y="4614.2" z="373.3"/>
+         <position x="-174.3" y="4613.1" z="373.3"/>
+         <position x="-174.3" y="4613.1" z="373.3"/>
+         <position x="-174.3" y="4612.1" z="373.3"/>
+         <position x="-174.3" y="4611.1" z="373.3"/>
+         <position x="-174.3" y="4610.1" z="373.3"/>
+         <position x="-174.3" y="4609.1" z="373.3"/>
+         <position x="-174.3" y="4608.1" z="373.3"/>
+         <position x="-174.3" y="4607.1" z="373.3"/>
+         <position x="-174.3" y="4606.1" z="373.2"/>
+         <position x="-174.3" y="4605.1" z="373.2"/>
+         <position x="-174.3" y="4604.1" z="373.2"/>
+         <position x="-174.3" y="4603.1" z="373.2"/>
+         <position x="-174.3" y="4602.1" z="373.2"/>
+         <position x="-174.3" y="4601.1" z="373.2"/>
+         <position x="-174.3" y="4600.1" z="373.2"/>
+         <position x="-174.3" y="4599.1" z="373.2"/>
+         <position x="-174.3" y="4598.1" z="373.2"/>
+         <position x="-174.3" y="4597.1" z="373.2"/>
+         <position x="-174.3" y="4596.1" z="373.2"/>
+         <position x="-174.3" y="4595.1" z="373.2"/>
+         <position x="-174.3" y="4594.1" z="373.2"/>
+         <position x="-174.3" y="4593.1" z="373.2"/>
+         <position x="-174.3" y="4592.1" z="373.2"/>
+         <position x="-174.3" y="4591.1" z="373.2"/>
+         <position x="-174.3" y="4590.1" z="373.2"/>
+         <position x="-174.4" y="4589.1" z="373.2"/>
+         <position x="-174.4" y="4588.1" z="373.2"/>
+         <position x="-174.4" y="4587.1" z="373.2"/>
+         <position x="-174.4" y="4586.1" z="373.2"/>
+         <position x="-174.4" y="4585.1" z="373.2"/>
+         <position x="-174.4" y="4584.1" z="373.2"/>
+         <position x="-174.4" y="4583.1" z="373.2"/>
+         <position x="-174.4" y="4582.1" z="373.2"/>
+         <position x="-174.4" y="4581.1" z="373.2"/>
+         <position x="-174.4" y="4580.1" z="373.2"/>
+         <position x="-174.4" y="4579.1" z="373.2"/>
+         <position x="-174.4" y="4578.1" z="373.2"/>
+         <position x="-174.4" y="4577.1" z="373.2"/>
+         <position x="-174.4" y="4576.1" z="373.2"/>
+         <position x="-174.4" y="4575.1" z="373.2"/>
+         <position x="-174.4" y="4574.1" z="373.2"/>
+         <position x="-174.4" y="4573.1" z="373.2"/>
+         <position x="-174.4" y="4572.1" z="373.2"/>
+         <position x="-174.4" y="4571.1" z="373.2"/>
+         <position x="-174.4" y="4570.1" z="373.2"/>
+         <position x="-174.4" y="4569.1" z="373.2"/>
+         <position x="-174.4" y="4568.1" z="373.2"/>
+         <position x="-174.4" y="4567.1" z="373.2"/>
+         <position x="-174.4" y="4566.1" z="373.2"/>
+         <position x="-174.4" y="4565.1" z="373.2"/>
+         <position x="-174.4" y="4564.1" z="373.2"/>
+         <position x="-174.4" y="4563.1" z="373.2"/>
+         <position x="-174.4" y="4562.1" z="373.2"/>
+         <position x="-174.4" y="4561.1" z="373.2"/>
+         <position x="-174.4" y="4560.1" z="373.2"/>
+         <position x="-174.4" y="4559.1" z="373.2"/>
+         <position x="-174.4" y="4558.1" z="373.2"/>
+         <position x="-174.4" y="4557.1" z="373.2"/>
+         <position x="-174.4" y="4556.1" z="373.2"/>
+         <position x="-174.4" y="4555.1" z="373.2"/>
+         <position x="-174.4" y="4554.1" z="373.2"/>
+         <position x="-174.4" y="4553.1" z="373.2"/>
+         <position x="-174.4" y="4552.1" z="373.2"/>
+         <position x="-174.4" y="4551.1" z="373.2"/>
+         <position x="-174.4" y="4550.1" z="373.2"/>
+         <position x="-174.4" y="4549.1" z="373.2"/>
+         <position x="-174.4" y="4548.1" z="373.2"/>
+         <position x="-174.4" y="4547.1" z="373.2"/>
+         <position x="-174.4" y="4546.1" z="373.2"/>
+         <position x="-174.4" y="4545.1" z="373.2"/>
+         <position x="-174.4" y="4544.1" z="373.2"/>
+         <position x="-174.4" y="4543.1" z="373.2"/>
+         <position x="-174.4" y="4542.1" z="373.2"/>
+         <position x="-174.4" y="4541.1" z="373.2"/>
+         <position x="-174.4" y="4540.1" z="373.2"/>
+         <position x="-174.4" y="4539.1" z="373.2"/>
+         <position x="-174.4" y="4538.1" z="373.2"/>
+         <position x="-174.4" y="4537.1" z="373.2"/>
+         <position x="-174.4" y="4536.1" z="373.2"/>
+         <position x="-174.4" y="4534.6" z="373.2"/>
+      </waypoints>
+      <scenarios/>
+   </route>
+</routes>

@@ -1,0 +1,30 @@
+<?xml version="1.0" ?>
+<routes>
+   <route id="0" town="Town13">
+      <weathers>
+         <weather route_percentage="0.0" cloudiness="15.0" precipitation="15.0" precipitation_deposits="4.0" wetness="8.0" wind_intensity="100.0" sun_azimuth_angle="180.0" sun_altitude_angle="-45.0" fog_density="10.0"/>
+         <weather route_percentage="100.0" cloudiness="2.0" precipitation="100.0" precipitation_deposits="40.0" wetness="20.0" wind_intensity="100.0" sun_azimuth_angle="315.0" sun_altitude_angle="15.0" fog_density="4.0"/>
+      </weathers>
+      <waypoints>
+         <position x="-4030.0" y="-59.3" z="173.3"/>
+         <position x="-4061.1" y="-220.4" z="171.8"/>
+         <position x="-4132.3" y="-255.1" z="171.2"/>
+      </waypoints>
+      <scenarios>
+         <scenario name="DynamicObjectCrossing_13" type="DynamicObjectCrossing">
+            <trigger_point x="-3996.7" y="-77.5" z="173.2" yaw="271.1"/>
+            <distance value="64"/>
+            <blocker_model value="static.prop.haybalelb"/>
+            <crossing_angle value="-1"/>
+         </scenario>
+         <scenario name="NonSignalizedJunctionLeftTurn_9" type="NonSignalizedJunctionLeftTurn">
+            <trigger_point x="-3995.7" y="-134.7" z="172.7" yaw="271.1"/>
+            <flow_speed value="8"/>
+            <source_dist_interval from="10" to="50"/>
+         </scenario>
+         <scenario name="ControlLoss_20" type="ControlLoss">
+            <trigger_point x="-4016.7" y="-201.4" z="172.0" yaw="189.2"/>
+         </scenario>
+      </scenarios>
+   </route>
+</routes>

@@ -1,0 +1,18 @@
+<?xml version="1.0" ?>
+<routes>
+   <route id="0" town="Town13">
+      <weathers>
+         <weather route_percentage="0.0" cloudiness="20.0" precipitation="8.0" precipitation_deposits="16.0" wetness="80.0" wind_intensity="60.0" sun_azimuth_angle="270.0" sun_altitude_angle="30.0" fog_density="0.0"/>
+         <weather route_percentage="100.0" cloudiness="100.0" precipitation="30.0" precipitation_deposits="4.0" wetness="4.0" wind_intensity="60.0" sun_azimuth_angle="45.0" sun_altitude_angle="10.0" fog_density="6.0"/>
+      </weathers>
+      <waypoints>
+         <position x="6714.4" y="4557.3" z="177.6"/>
+         <position x="6779.0" y="4470.3" z="177.8"/>
+      </waypoints>
+      <scenarios>
+         <scenario name="VehicleTurningRoutePedestrian_6" type="VehicleTurningRoutePedestrian">
+            <trigger_point x="6735.3" y="4557.4" z="177.9" yaw="0.1"/>
+         </scenario>
+      </scenarios>
+   </route>
+</routes>

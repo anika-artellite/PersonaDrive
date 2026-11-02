@@ -1,0 +1,30 @@
+<?xml version="1.0" ?>
+<routes>
+   <route id="0" town="Town13">
+      <weathers>
+         <weather route_percentage="0.0" cloudiness="5.0" precipitation="8.0" precipitation_deposits="60.0" wetness="6.0" wind_intensity="10.0" sun_azimuth_angle="180.0" sun_altitude_angle="-10.0" fog_density="15.0"/>
+         <weather route_percentage="100.0" cloudiness="40.0" precipitation="20.0" precipitation_deposits="20.0" wetness="6.0" wind_intensity="80.0" sun_azimuth_angle="315.0" sun_altitude_angle="-90.0" fog_density="7.0"/>
+      </weathers>
+      <waypoints>
+         <position x="3064.8" y="4013.6" z="183.8"/>
+         <position x="3170.9" y="4067.7" z="184.0"/>
+         <position x="3372.0" y="4069.5" z="179.0"/>
+      </waypoints>
+      <scenarios>
+         <scenario name="NonSignalizedJunctionLeftTurn_4" type="NonSignalizedJunctionLeftTurn">
+            <trigger_point x="3064.4" y="4032.7" z="184.0" yaw="91.2"/>
+            <flow_speed value="6"/>
+            <source_dist_interval from="12" to="50"/>
+         </scenario>
+         <scenario name="ConstructionObstacleTwoWays_3" type="ConstructionObstacleTwoWays">
+            <trigger_point x="3077.7" y="4066.5" z="184.4" yaw="0.8"/>
+            <distance value="70"/>
+            <frequency from="50" to="110"/>
+         </scenario>
+         <scenario name="OppositeVehicleTakingPriority_2" type="OppositeVehicleTakingPriority">
+            <trigger_point x="3270.6" y="4069.1" z="182.2" yaw="0.8"/>
+            <direction value="left"/>
+         </scenario>
+      </scenarios>
+   </route>
+</routes>

@@ -1,0 +1,50 @@
+<?xml version='1.0' encoding='utf-8'?>
+<routes>
+   <route id="30013" town="Town13">
+      <weathers>
+         <weather route_percentage="0" cloudiness="25" precipitation="0" precipitation_deposits="0" wetness="0" wind_intensity="8" sun_azimuth_angle="283" sun_altitude_angle="3" fog_density="5" fog_distance="90" fog_falloff="0.0" scattering_intensity="1.0" mie_scattering_scale="0.03" />
+         <weather route_percentage="100" cloudiness="35" precipitation="0" precipitation_deposits="0" wetness="0" wind_intensity="10" sun_azimuth_angle="80" sun_altitude_angle="50" fog_density="2" fog_distance="90" fog_falloff="0.0" scattering_intensity="1.0" mie_scattering_scale="0.03" />
+      </weathers>
+      <waypoints>
+         <position x="3500.5" y="4988.5" z="179.3" />
+         <position x="4158.5" y="5360.4" z="150.5" />
+         <position x="4202.1" y="6012.7" z="151.6" />
+         <position x="3015.3" y="6045.0" z="157.4" />
+         <position x="1826.3" y="6018.5" z="147.9" />
+         <position x="637.5" y="5999.7" z="165.0" />
+         <position x="-130.3" y="5515.5" z="157.5" />
+         <position x="-994.6" y="4801.6" z="146.4" />
+      </waypoints>
+      <scenarios>
+         <scenario name="CrossingBicycleFlow_1" type="CrossingBicycleFlow">
+            <trigger_point x="3873.9" y="5038.1" z="161.4" yaw="92.9" />
+         </scenario>
+         <scenario name="EnterActorFlowV2_2" type="EnterActorFlowV2">
+            <trigger_point x="4481.7" y="5738.0" z="147.2" yaw="89.1" />
+            <start_actor_flow x="4480.8" y="5688.1" z="147.2" />
+            <end_actor_flow x="4484.8" y="5938.0" z="147.2" />
+            <flow_speed value="18" />
+            <source_dist_interval from="15" to="35" />
+         </scenario>
+         <scenario name="MergerIntoSlowTrafficV2_3" type="MergerIntoSlowTrafficV2">
+            <trigger_point x="3270.2" y="6050.7" z="158.8" yaw="-178.7" />
+         </scenario>
+         <scenario name="HazardAtSideLane_4" type="HazardAtSideLane">
+            <trigger_point x="1822.8" y="6018.4" z="147.8" yaw="-178.7" />
+            <distance value="50" />
+            <bicycle_drive_distance value="80" />
+            <bicycle_speed value="7" />
+         </scenario>
+         <scenario name="HighwayExit_5" type="HighwayExit">
+            <trigger_point x="375.5" y="5984.9" z="165.2" yaw="-176.3" />
+            <start_actor_flow x="425.4" y="5988.1" z="165.2" />
+            <end_actor_flow x="175.7" y="5974.2" z="165.2" />
+            <flow_speed value="18" />
+            <source_dist_interval from="15" to="35" />
+         </scenario>
+         <scenario name="PedestrianCrossing_6" type="PedestrianCrossing">
+            <trigger_point x="-416.4" y="5086.0" z="150.1" yaw="221.0" />
+         </scenario>
+      </scenarios>
+   </route>
+</routes>

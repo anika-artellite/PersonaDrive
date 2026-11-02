@@ -1,0 +1,70 @@
+# This repository holds CODE ONLY - our collection and annotation code, plus the vendored
+# CARLA Leaderboard, scenario_runner and SimLingo trees it runs against. No recorded data
+# belongs in it: recorded paths embed participant names, so a stray `git add` here is a
+# de-anonymization risk. The dataset is distributed separately.
+#
+# NOTE: rules here must not swallow the vendored trees. Blanket extension rules are
+# dangerous for exactly that reason - *.png, *.jpg, *.npy and *.mp4 are NOT ignored,
+# because upstream legitimately ships docs images, speed-limit tables and demo videos.
+# Anything global below was verified absent from every vendored tree.
+
+# Local configuration - real paths for one machine. Start from env.example.sh.
+/env.sh
+
+# --- dataset, label and session roots ----------------------------------------------
+# Anchored with a leading / so they match only at the repo root, never a same-named
+# directory inside the vendored trees.
+/slow/
+/default/
+/fast/
+/normal/
+/scratch/
+/logs/
+/cache/
+/dataset/
+/*_dataset/
+/collective_dataset/
+/labels/
+/screenshots/
+/hpc_tars/
+
+# --- recorded sensor output, matched anywhere ---------------------------------------
+# Directory names the recorder creates. Verified not to collide with any vendored path.
+rgb/
+rgb_augmented/
+lidar/
+boxes/
+measurements/
+bev_semantics/
+bev_semantics_augmented/
+semantics/
+depth/
+vqa/
+# `commentary/` is deliberately NOT listed: SimLingo's commentary generator lives at
+# simlingo/dataset_generation/language_labels/commentary/, and git cannot re-include a
+# path whose parent directory is excluded. Recorded commentary is covered by /labels/.
+
+# Recorded file formats. Zero occurrences in any vendored tree, so a global rule is safe.
+*.laz
+*.json.gz
+*.bin
+*.csv
+
+# Evaluator output, at the repo root only.
+/result.json
+/results.json
+/simulation_results.json
+
+# SimLingo run outputs, should a vendored tree ever be refreshed in place. Note that
+# simlingo/data/ IS tracked: it holds the route XML sets and language-label templates,
+# which are scenario definitions and inputs, not recorded data.
+simlingo/results/
+
+# Smoke-test output from the annotation stage.
+label_gen/smoke_out_com/
+label_gen/smoke_out_vqa/
+label_gen/smoke_root/
+
+# Python bytecode - last, so nothing above can re-include it.
+__pycache__/
+*.py[cod]

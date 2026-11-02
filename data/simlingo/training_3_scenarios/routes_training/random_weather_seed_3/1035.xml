@@ -1,0 +1,34 @@
+<?xml version="1.0" ?>
+<routes>
+   <route id="0" town="Town12">
+      <weathers>
+         <weather route_percentage="0.0" cloudiness="2.0" precipitation="100.0" precipitation_deposits="60.0" wetness="60.0" wind_intensity="100.0" sun_azimuth_angle="270.0" sun_altitude_angle="-10.0" fog_density="100.0"/>
+         <weather route_percentage="100.0" cloudiness="60.0" precipitation="80.0" precipitation_deposits="4.0" wetness="20.0" wind_intensity="100.0" sun_azimuth_angle="270.0" sun_altitude_angle="-30.0" fog_density="8.0"/>
+      </weathers>
+      <waypoints>
+         <position x="-3643.5" y="415.9" z="334.0"/>
+         <position x="-3540.0" y="560.4" z="330.4"/>
+         <position x="-3393.7" y="1449.5" z="348.9"/>
+         <position x="-3343.5" y="1582.6" z="350.3"/>
+      </waypoints>
+      <scenarios>
+         <scenario name="BlockedIntersection_3" type="BlockedIntersection">
+            <trigger_point x="-3623.4" y="411.4" z="333.2" yaw="-12.7"/>
+         </scenario>
+         <scenario name="HazardAtSideLaneTwoWays_7" type="HazardAtSideLaneTwoWays">
+            <trigger_point x="-3592.7" y="436.2" z="332.2" yaw="74.8"/>
+            <distance value="70"/>
+            <frequency value="75"/>
+            <bicycle_drive_distance value="100"/>
+            <bicycle_speed value="11"/>
+         </scenario>
+         <scenario name="HazardAtSideLaneTwoWays_8" type="HazardAtSideLaneTwoWays">
+            <trigger_point x="-3431.8" y="1258.1" z="346.5" yaw="92.8"/>
+            <distance value="90"/>
+            <frequency value="90"/>
+            <bicycle_drive_distance value="100"/>
+            <bicycle_speed value="8"/>
+         </scenario>
+      </scenarios>
+   </route>
+</routes>

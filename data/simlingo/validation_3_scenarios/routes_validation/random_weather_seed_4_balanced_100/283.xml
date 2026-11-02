@@ -1,0 +1,50 @@
+<routes><route id="0" town="Town13">
+      <weathers>
+         <weather route_percentage="0.0" cloudiness="50.0" precipitation="4.0" precipitation_deposits="40.0" wetness="60.0" wind_intensity="10.0" sun_azimuth_angle="360.0" sun_altitude_angle="-90.0" fog_density="70.0" />
+         <weather route_percentage="100.0" cloudiness="40.0" precipitation="6.0" precipitation_deposits="16.0" wetness="4.0" wind_intensity="5.0" sun_azimuth_angle="270.0" sun_altitude_angle="90.0" fog_density="3.0" />
+      </weathers>
+      <waypoints>
+         <position x="2011.2" y="1087.2" z="154.4" />
+         <position x="2010.1" y="1087.2" z="154.4" />
+         <position x="1965.7" y="1091.4" z="153.7" />
+         <position x="1444.0" y="1110.9" z="157.0" />
+         <position x="1371.5" y="1079.2" z="157.0" />
+         <position x="1363.5" y="1062.9" z="157.0" />
+         <position x="1352.3" y="1046.5" z="157.0" />
+         <position x="1339.1" y="1032.9" z="157.0" />
+         <position x="1326.0" y="1023.0" z="157.0" />
+         <position x="1308.7" y="1013.8" z="157.0" />
+         <position x="1279.6" y="1005.7" z="157.0" />
+         <position x="1249.2" y="1005.6" z="157.0" />
+         <position x="1221.6" y="1012.8" z="157.0" />
+         <position x="1203.8" y="1021.8" z="157.0" />
+         <position x="1193.1" y="1029.3" z="157.0" />
+         <position x="1166.3" y="1059.8" z="157.0" />
+         <position x="1150.9" y="1103.6" z="157.0" />
+         <position x="1149.9" y="1119.4" z="157.0" />
+         <position x="1151.2" y="1136.0" z="157.0" />
+         <position x="1162.2" y="1170.4" z="157.0" />
+         <position x="1173.9" y="1189.1" z="157.0" />
+         <position x="1208.5" y="1272.6" z="155.1" />
+      </waypoints>
+      <scenarios>
+         <scenario name="StaticCutIn_1" type="StaticCutIn">
+            <trigger_point x="1991.3" y="1090.8" z="154.1" yaw="178.8" />
+            <distance value="100" />
+            <direction value="right" />
+         </scenario>
+         <scenario name="ConstructionObstacleTwoWays_1" type="ConstructionObstacleTwoWays">
+            <trigger_point x="1723.0" y="1100.1" z="151.9" yaw="177.7" />
+            <distance value="75" />
+            <frequency from="40" to="100" />
+         </scenario>
+         <scenario name="MergerIntoSlowTrafficV2_2" type="MergerIntoSlowTrafficV2">
+            <trigger_point x="1218.7" y="1014.0" z="157.0" yaw="156.6" />
+            <start_actor_flow x="1194.1" y="988.8" z="155.9" />
+            <end_actor_flow x="1208.0" y="1270.9" z="155.2" />
+            <flow_speed value="10" />
+            <source_dist_interval from="17" to="38" />
+         </scenario>
+      </scenarios>
+   </route>
+</routes>

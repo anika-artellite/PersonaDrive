@@ -1,0 +1,31 @@
+<?xml version="1.0" ?>
+<routes>
+   <route id="0" town="Town12">
+      <weathers>
+         <weather route_percentage="0.0" cloudiness="0.0" precipitation="50.0" precipitation_deposits="80.0" wetness="2.0" wind_intensity="5.0" sun_azimuth_angle="135.0" sun_altitude_angle="-90.0" fog_density="40.0"/>
+         <weather route_percentage="100.0" cloudiness="0.0" precipitation="0.0" precipitation_deposits="40.0" wetness="10.0" wind_intensity="30.0" sun_azimuth_angle="180.0" sun_altitude_angle="-15.0" fog_density="15.0"/>
+      </weathers>
+      <waypoints>
+         <position x="-3413.4" y="1399.5" z="348.6"/>
+         <position x="-3393.7" y="1449.5" z="348.9"/>
+         <position x="-3478.2" y="1665.1" z="350.8"/>
+         <position x="-3519.1" y="1669.7" z="349.0"/>
+      </waypoints>
+      <scenarios>
+         <scenario name="ParkedObstacleTwoWays_5" type="ParkedObstacleTwoWays">
+            <trigger_point x="-3406.8" y="1418.6" z="348.7" yaw="69.4"/>
+            <distance value="85"/>
+            <frequency from="35" to="105"/>
+         </scenario>
+         <scenario name="BlockedIntersection_4" type="BlockedIntersection">
+            <trigger_point x="-3342.6" y="1641.5" z="350.3" yaw="95.9"/>
+         </scenario>
+         <scenario name="DynamicObjectCrossing_4" type="DynamicObjectCrossing">
+            <trigger_point x="-3403.6" y="1668.2" z="351.5" yaw="188.0"/>
+            <distance value="45"/>
+            <blocker_model value="vehicle.tesla.model3"/>
+            <crossing_angle value="5"/>
+         </scenario>
+      </scenarios>
+   </route>
+</routes>

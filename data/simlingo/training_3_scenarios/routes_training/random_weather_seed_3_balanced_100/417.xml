@@ -1,0 +1,32 @@
+<routes><route id="0" town="Town12">
+      <weathers>
+         <weather route_percentage="0.0" cloudiness="20.0" precipitation="40.0" precipitation_deposits="60.0" wetness="60.0" wind_intensity="80.0" sun_azimuth_angle="225.0" sun_altitude_angle="80.0" fog_density="70.0" />
+         <weather route_percentage="100.0" cloudiness="80.0" precipitation="15.0" precipitation_deposits="12.0" wetness="100.0" wind_intensity="80.0" sun_azimuth_angle="0.0" sun_altitude_angle="70.0" fog_density="7.0" />
+      </weathers>
+      <waypoints>
+         <position x="2448.8" y="3694.2" z="355.0" />
+         <position x="2470.3" y="3547.2" z="354.9" />
+         <position x="2690.0" y="3158.8" z="365.3" />
+         <position x="3279.2" y="3115.6" z="367.1" />
+         <position x="3284.1" y="3112.1" z="367.1" />
+      </waypoints>
+      <scenarios>
+         <scenario name="StaticCutIn_1" type="StaticCutIn">
+            <trigger_point x="2449.2" y="3672.0" z="355.0" yaw="279.6" />
+            <distance value="100" />
+            <direction value="right" />
+         </scenario>
+         <scenario name="EnterActorFlow_1" type="EnterActorFlow">
+            <trigger_point x="2707.9" y="3155.3" z="364.6" yaw="-10.2" />
+            <start_actor_flow x="2745.2" y="3117.1" z="360.1" />
+            <end_actor_flow x="3054.9" y="3116.6" z="364.6" />
+            <flow_speed value="20" />
+            <source_dist_interval from="15" to="35" />
+         </scenario>
+         <scenario name="ParkedObstacle_1" type="ParkedObstacle">
+            <trigger_point x="3089.8" y="3116.5" z="365.0" yaw="-0.3" />
+            <speed value="60" />
+         </scenario>
+      </scenarios>
+   </route>
+</routes>

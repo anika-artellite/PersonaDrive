@@ -1,0 +1,33 @@
+<?xml version="1.0" ?>
+<routes>
+   <route id="0" town="Town12">
+      <weathers>
+         <weather route_percentage="0.0" cloudiness="100.0" precipitation="60.0" precipitation_deposits="16.0" wetness="8.0" wind_intensity="50.0" sun_azimuth_angle="0.0" sun_altitude_angle="80.0" fog_density="0.0"/>
+         <weather route_percentage="100.0" cloudiness="50.0" precipitation="4.0" precipitation_deposits="50.0" wetness="40.0" wind_intensity="25.0" sun_azimuth_angle="90.0" sun_altitude_angle="5.0" fog_density="10.0"/>
+      </weathers>
+      <waypoints>
+         <position x="2652.7" y="2076.5" z="354.5"/>
+         <position x="2653.0" y="2313.6" z="360.2"/>
+         <position x="2614.3" y="2408.4" z="361.8"/>
+      </waypoints>
+      <scenarios>
+         <scenario name="DynamicObjectCrossing_10" type="DynamicObjectCrossing">
+            <trigger_point x="2652.8" y="2097.4" z="355.2" yaw="89.9"/>
+            <distance value="45"/>
+            <direction value="right"/>
+            <blocker_model value="static.prop.container"/>
+            <crossing_angle value="10"/>
+         </scenario>
+         <scenario name="HazardAtSideLaneTwoWays_3" type="HazardAtSideLaneTwoWays">
+            <trigger_point x="2653.0" y="2219.4" z="359.1" yaw="89.9"/>
+            <distance value="70"/>
+            <frequency value="90"/>
+            <bicycle_drive_distance value="60"/>
+            <bicycle_speed value="10"/>
+         </scenario>
+         <scenario name="BlockedIntersection_3" type="BlockedIntersection">
+            <trigger_point x="2653.2" y="2370.5" z="360.3" yaw="89.9"/>
+         </scenario>
+      </scenarios>
+   </route>
+</routes>

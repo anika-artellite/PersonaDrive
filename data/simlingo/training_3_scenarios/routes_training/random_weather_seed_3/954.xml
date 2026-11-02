@@ -1,0 +1,29 @@
+<?xml version="1.0" ?>
+<routes>
+   <route id="0" town="Town12">
+      <weathers>
+         <weather route_percentage="0.0" cloudiness="5.0" precipitation="60.0" precipitation_deposits="80.0" wetness="60.0" wind_intensity="50.0" sun_azimuth_angle="270.0" sun_altitude_angle="-10.0" fog_density="2.0"/>
+         <weather route_percentage="100.0" cloudiness="2.0" precipitation="30.0" precipitation_deposits="4.0" wetness="20.0" wind_intensity="30.0" sun_azimuth_angle="90.0" sun_altitude_angle="20.0" fog_density="8.0"/>
+      </weathers>
+      <waypoints>
+         <position x="1332.6" y="2295.4" z="364.4"/>
+         <position x="977.8" y="2295.7" z="358.5"/>
+         <position x="922.6" y="2295.8" z="357.2"/>
+      </waypoints>
+      <scenarios>
+         <scenario name="AccidentTwoWays_1" type="AccidentTwoWays">
+            <trigger_point x="1311.8" y="2295.5" z="364.2" yaw="180.0"/>
+            <distance value="90"/>
+            <frequency from="45" to="115"/>
+         </scenario>
+         <scenario name="ConstructionObstacleTwoWays_1" type="ConstructionObstacleTwoWays">
+            <trigger_point x="1138.2" y="2295.6" z="361.4" yaw="180.0"/>
+            <distance value="80"/>
+            <frequency from="40" to="110"/>
+         </scenario>
+         <scenario name="HardBreakRoute_1" type="HardBreakRoute">
+            <trigger_point x="987.7" y="2295.7" z="358.7" yaw="180.0"/>
+         </scenario>
+      </scenarios>
+   </route>
+</routes>

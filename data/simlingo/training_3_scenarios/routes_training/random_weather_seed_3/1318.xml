@@ -1,0 +1,29 @@
+<?xml version="1.0" ?>
+<routes>
+   <route id="0" town="Town12">
+      <weathers>
+         <weather route_percentage="0.0" cloudiness="15.0" precipitation="6.0" precipitation_deposits="4.0" wetness="20.0" wind_intensity="10.0" sun_azimuth_angle="45.0" sun_altitude_angle="-10.0" fog_density="15.0"/>
+         <weather route_percentage="100.0" cloudiness="50.0" precipitation="15.0" precipitation_deposits="50.0" wetness="80.0" wind_intensity="25.0" sun_azimuth_angle="135.0" sun_altitude_angle="-10.0" fog_density="0.0"/>
+      </weathers>
+      <waypoints>
+         <position x="2271.5" y="4347.5" z="359.7"/>
+         <position x="2342.5" y="4278.6" z="359.4"/>
+         <position x="2476.7" y="4244.8" z="359.2"/>
+         <position x="2483.9" y="4198.7" z="359.3"/>
+      </waypoints>
+      <scenarios>
+         <scenario name="DynamicObjectCrossing_2" type="DynamicObjectCrossing">
+            <trigger_point x="2274.8" y="4327.6" z="359.7" yaw="-80.5"/>
+            <distance value="30"/>
+            <blocker_model value="static.prop.advertisement"/>
+            <crossing_angle value="12"/>
+         </scenario>
+         <scenario name="HardBreakRoute_1" type="HardBreakRoute">
+            <trigger_point x="2398.3" y="4288.2" z="359.4" yaw="9.7"/>
+         </scenario>
+         <scenario name="VehicleTurningRoutePedestrian_1" type="VehicleTurningRoutePedestrian">
+            <trigger_point x="2417.4" y="4291.4" z="359.4" yaw="9.7"/>
+         </scenario>
+      </scenarios>
+   </route>
+</routes>

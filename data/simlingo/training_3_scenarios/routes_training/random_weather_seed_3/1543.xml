@@ -1,0 +1,29 @@
+<?xml version="1.0" ?>
+<routes>
+   <route id="0" town="Town12">
+      <weathers>
+         <weather route_percentage="0.0" cloudiness="15.0" precipitation="100.0" precipitation_deposits="30.0" wetness="10.0" wind_intensity="5.0" sun_azimuth_angle="270.0" sun_altitude_angle="15.0" fog_density="70.0"/>
+         <weather route_percentage="100.0" cloudiness="5.0" precipitation="0.0" precipitation_deposits="12.0" wetness="60.0" wind_intensity="80.0" sun_azimuth_angle="360.0" sun_altitude_angle="20.0" fog_density="100.0"/>
+      </weathers>
+      <waypoints>
+         <position x="-2770.1" y="2601.3" z="345.3"/>
+         <position x="-2834.4" y="2962.2" z="351.4"/>
+         <position x="-2888.8" y="3071.5" z="352.0"/>
+      </waypoints>
+      <scenarios>
+         <scenario name="ParkedObstacleTwoWays_6" type="ParkedObstacleTwoWays">
+            <trigger_point x="-2770.5" y="2621.3" z="345.3" yaw="96.5"/>
+            <frequency from="40" to="100"/>
+         </scenario>
+         <scenario name="DynamicObjectCrossing_4" type="DynamicObjectCrossing">
+            <trigger_point x="-2801.1" y="2818.8" z="349.4" yaw="102.5"/>
+            <distance value="50"/>
+            <blocker_model value="vehicle.audi.tt"/>
+            <crossing_angle value="10"/>
+         </scenario>
+         <scenario name="ControlLoss_5" type="ControlLoss">
+            <trigger_point x="-2832.3" y="2955.3" z="351.3" yaw="106.3"/>
+         </scenario>
+      </scenarios>
+   </route>
+</routes>

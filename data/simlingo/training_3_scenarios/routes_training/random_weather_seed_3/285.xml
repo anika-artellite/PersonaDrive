@@ -1,0 +1,28 @@
+<?xml version="1.0" ?>
+<routes>
+   <route id="0" town="Town12">
+      <weathers>
+         <weather route_percentage="0.0" cloudiness="60.0" precipitation="6.0" precipitation_deposits="80.0" wetness="0.0" wind_intensity="50.0" sun_azimuth_angle="135.0" sun_altitude_angle="-45.0" fog_density="15.0"/>
+         <weather route_percentage="100.0" cloudiness="100.0" precipitation="40.0" precipitation_deposits="50.0" wetness="8.0" wind_intensity="25.0" sun_azimuth_angle="270.0" sun_altitude_angle="80.0" fog_density="6.0"/>
+      </weathers>
+      <waypoints>
+         <position x="1222.3" y="3860.1" z="365.3"/>
+         <position x="1028.8" y="3828.7" z="369.1"/>
+         <position x="881.8" y="3869.4" z="370.4"/>
+      </waypoints>
+      <scenarios>
+         <scenario name="PriorityAtJunction_4" type="PriorityAtJunction">
+            <trigger_point x="1202.2" y="3856.8" z="365.8" yaw="189.2"/>
+         </scenario>
+         <scenario name="DynamicObjectCrossing_9" type="DynamicObjectCrossing">
+            <trigger_point x="1081.5" y="3837.2" z="368.2" yaw="189.2"/>
+            <distance value="30"/>
+            <blocker_model value="static.prop.advertisement"/>
+            <crossing_angle value="13"/>
+         </scenario>
+         <scenario name="PedestrianCrossing_3" type="PedestrianCrossing">
+            <trigger_point x="983.3" y="3821.3" z="369.7" yaw="189.2"/>
+         </scenario>
+      </scenarios>
+   </route>
+</routes>

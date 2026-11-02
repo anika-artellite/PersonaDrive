@@ -1,0 +1,9 @@
+*.pyc
+*.json
+*.log
+.project
+.pydevproject
+*.sh
+*.xml
+# PersonaDrive: the route files under data/ are part of the release
+!data/**/*.xml

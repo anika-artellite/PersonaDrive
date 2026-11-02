@@ -1,0 +1,25 @@
+<routes><route id="0" town="Town13">
+      <weathers>
+         <weather route_percentage="0.0" cloudiness="40.0" precipitation="10.0" precipitation_deposits="12.0" wetness="4.0" wind_intensity="5.0" sun_azimuth_angle="225.0" sun_altitude_angle="15.0" fog_density="15.0" />
+         <weather route_percentage="100.0" cloudiness="2.0" precipitation="6.0" precipitation_deposits="60.0" wetness="100.0" wind_intensity="25.0" sun_azimuth_angle="270.0" sun_altitude_angle="5.0" fog_density="70.0" />
+      </weathers>
+      <waypoints>
+         <position x="3148.4" y="493.4" z="171.9" />
+         <position x="2977.1" y="399.5" z="170.1" />
+         <position x="2977.1" y="400.4" z="170.1" />
+      </waypoints>
+      <scenarios>
+         <scenario name="ParkingCutIn_8" type="ParkingCutIn">
+            <trigger_point x="3148.7" y="472.5" z="171.9" yaw="270.9" />
+         </scenario>
+         <scenario name="BlockedIntersection_6" type="BlockedIntersection">
+            <trigger_point x="3149.8" y="402.1" z="172.1" yaw="270.9" />
+         </scenario>
+         <scenario name="NonSignalizedJunctionLeftTurn_5" type="NonSignalizedJunctionLeftTurn">
+            <trigger_point x="3026.0" y="353.9" z="170.8" yaw="180.4" />
+            <flow_speed value="9" />
+            <source_dist_interval from="10" to="50" />
+         </scenario>
+      </scenarios>
+   </route>
+</routes>

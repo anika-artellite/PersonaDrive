@@ -1,0 +1,29 @@
+<routes><route id="0" town="Town12">
+      <weathers>
+         <weather route_percentage="0.0" cloudiness="2.0" precipitation="2.0" precipitation_deposits="40.0" wetness="20.0" wind_intensity="30.0" sun_azimuth_angle="315.0" sun_altitude_angle="70.0" fog_density="8.0" />
+         <weather route_percentage="100.0" cloudiness="100.0" precipitation="60.0" precipitation_deposits="16.0" wetness="10.0" wind_intensity="80.0" sun_azimuth_angle="270.0" sun_altitude_angle="45.0" fog_density="0.0" />
+      </weathers>
+      <waypoints>
+         <position x="2445.0" y="4647.0" z="364.5" />
+         <position x="2295.2" y="4734.2" z="364.9" />
+         <position x="2230.0" y="4595.0" z="362.5" />
+      </waypoints>
+      <scenarios>
+         <scenario name="ParkingCutIn_1" type="ParkingCutIn">
+            <trigger_point x="2407.9" y="4663.8" z="364.6" yaw="98.9" />
+            <direction value="right" />
+         </scenario>
+         <scenario name="HazardAtSideLane_1" type="HazardAtSideLane">
+            <trigger_point x="2360.0" y="4744.7" z="365.4" yaw="189.2" />
+            <distance value="68.3" />
+            <speed value="50" />
+            <bicycle_drive_distance value="70" />
+            <bicycle_speed value="13" />
+         </scenario>
+         <scenario name="VehicleOpensDoorTwoWays_1" type="VehicleOpensDoorTwoWays">
+            <trigger_point x="2213.3" y="4694.2" z="363.5" yaw="279.6" />
+            <distance value="60" />
+         </scenario>
+      </scenarios>
+   </route>
+</routes>

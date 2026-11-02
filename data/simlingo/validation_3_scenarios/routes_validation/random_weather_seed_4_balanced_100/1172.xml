@@ -1,0 +1,29 @@
+<routes><route id="0" town="Town13">
+      <weathers>
+         <weather route_percentage="0.0" cloudiness="100.0" precipitation="50.0" precipitation_deposits="100.0" wetness="40.0" wind_intensity="25.0" sun_azimuth_angle="90.0" sun_altitude_angle="-45.0" fog_density="1.0" />
+         <weather route_percentage="100.0" cloudiness="2.0" precipitation="100.0" precipitation_deposits="12.0" wetness="4.0" wind_intensity="60.0" sun_azimuth_angle="315.0" sun_altitude_angle="45.0" fog_density="4.0" />
+      </weathers>
+      <waypoints>
+         <position x="6618.3" y="4220.7" z="172.8" />
+         <position x="6593.3" y="4249.2" z="172.8" />
+         <position x="6056.1" y="4126.3" z="162.7" />
+      </waypoints>
+      <scenarios>
+         <scenario name="ConstructionObstacle_1" type="ConstructionObstacle">
+            <trigger_point x="6591.4" y="4249.1" z="172.7" yaw="-178.8" />
+            <distance value="70" />
+            <speed value="50" />
+         </scenario>
+         <scenario name="Accident_1" type="Accident">
+            <trigger_point x="6414.6" y="4242.3" z="169.8" yaw="-169.5" />
+            <distance value="103.8" />
+            <speed value="45" />
+         </scenario>
+         <scenario name="Accident_2" type="Accident">
+            <trigger_point x="6246.9" y="4147.5" z="165.9" yaw="-152.9" />
+            <distance value="70" />
+            <speed value="47" />
+         </scenario>
+      </scenarios>
+   </route>
+</routes>

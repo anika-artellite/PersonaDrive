@@ -1,0 +1,30 @@
+<?xml version="1.0" ?>
+<routes>
+   <route id="0" town="Town13">
+      <weathers>
+         <weather route_percentage="0.0" cloudiness="50.0" precipitation="100.0" precipitation_deposits="4.0" wetness="20.0" wind_intensity="100.0" sun_azimuth_angle="270.0" sun_altitude_angle="45.0" fog_density="15.0"/>
+         <weather route_percentage="100.0" cloudiness="10.0" precipitation="50.0" precipitation_deposits="80.0" wetness="80.0" wind_intensity="30.0" sun_azimuth_angle="90.0" sun_altitude_angle="30.0" fog_density="0.0"/>
+      </weathers>
+      <waypoints>
+         <position x="-3618.2" y="3615.1" z="181.2"/>
+         <position x="-3644.0" y="3614.7" z="181.8"/>
+         <position x="-3700.3" y="3510.0" z="181.9"/>
+         <position x="-3724.4" y="3307.6" z="179.9"/>
+      </waypoints>
+      <scenarios>
+         <scenario name="SignalizedJunctionRightTurn_1" type="SignalizedJunctionRightTurn">
+            <trigger_point x="-3639.0" y="3614.8" z="181.7" yaw="180.7"/>
+            <flow_speed value="14"/>
+            <source_dist_interval from="20" to="66"/>
+         </scenario>
+         <scenario name="HardBreakRoute_7" type="HardBreakRoute">
+            <trigger_point x="-3694.8" y="3586.9" z="182.6" yaw="266.6"/>
+         </scenario>
+         <scenario name="ConstructionObstacleTwoWays_2" type="ConstructionObstacleTwoWays">
+            <trigger_point x="-3705.9" y="3451.0" z="181.4" yaw="264.0"/>
+            <distance value="75"/>
+            <frequency from="45" to="110"/>
+         </scenario>
+      </scenarios>
+   </route>
+</routes>

@@ -1,0 +1,8 @@
+{
+  "profile": "slow",
+  "num_frames": 8960,
+  "embedding_dim": 1024,
+  "index_type": "IndexFlatIP",
+  "checkpoint": "checkpoints/best_model.pt",
+  "built_at": "2026-05-05 01:48:35"
+}

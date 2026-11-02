@@ -1,0 +1,36 @@
+<?xml version='1.0' encoding='utf-8'?>
+<routes>
+   <route id="30007" town="Town13">
+      <weathers>
+         <weather route_percentage="0" cloudiness="15" precipitation="0" precipitation_deposits="0" wetness="0" wind_intensity="5" sun_azimuth_angle="215" sun_altitude_angle="45" fog_density="1" fog_distance="90" fog_falloff="0.0" scattering_intensity="1.0" mie_scattering_scale="0.03" />
+         <weather route_percentage="100" cloudiness="75" precipitation="0" precipitation_deposits="0" wetness="0" wind_intensity="15" sun_azimuth_angle="220" sun_altitude_angle="35" fog_density="3" fog_distance="90" fog_falloff="0.0" scattering_intensity="1.0" mie_scattering_scale="0.03" />
+      </weathers>
+      <waypoints>
+         <position x="2799.7" y="5000.5" z="172.7" />
+         <position x="3138.7" y="5152.8" z="177.3" />
+         <position x="3454.5" y="4987.5" z="180.5" />
+         <position x="3463.3" y="4902.5" z="181.1" />
+         <position x="3482.9" y="4592.1" z="180.9" />
+         <position x="3115.7" y="4443.5" z="186.9" />
+         <position x="2638.3" y="4437.3" z="176.5" />
+         <position x="2798.7" y="4275.3" z="181.9" />
+      </waypoints>
+      <scenarios>
+         <scenario name="VehicleTurningRoute_1" type="VehicleTurningRoute">
+            <trigger_point x="2825.5" y="5146.0" z="170.2" yaw="1.2" />
+         </scenario>
+         <scenario name="Accident_2" type="Accident">
+            <trigger_point x="3406.9" y="5000.4" z="181.1" yaw="271.1" />
+         </scenario>
+         <scenario name="ControlLoss_3" type="ControlLoss">
+            <trigger_point x="3455.0" y="4812.7" z="181.9" yaw="0.8" />
+         </scenario>
+         <scenario name="BlockedIntersection_4" type="BlockedIntersection">
+            <trigger_point x="3154.9" y="4444.0" z="187.0" yaw="180.7" />
+         </scenario>
+         <scenario name="DynamicObjectCrossing_5" type="DynamicObjectCrossing">
+            <trigger_point x="2575.1" y="4358.0" z="174.3" yaw="-53.3" />
+         </scenario>
+      </scenarios>
+   </route>
+</routes>

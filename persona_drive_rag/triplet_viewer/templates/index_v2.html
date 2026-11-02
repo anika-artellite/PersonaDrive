@@ -1,0 +1,719 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Triplet Viewer v2 — {{ profile or 'no profile' }}</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+        :root {
+            --bg-page:        #0f1419;
+            --bg-card:        #1a2030;
+            --bg-card-hover:  #1f2637;
+            --bg-input:       #232b3d;
+            --border:         #2d3548;
+            --text-main:      #e6e9ef;
+            --text-dim:       #8a93a8;
+            --accent:         #4f7cff;
+            --accent-hover:   #6b91ff;
+            --action-follow:  #5b8def;
+            --action-left:    #f0a44b;
+            --action-right:   #4bd1c1;
+            --action-straight:#9c7bf0;
+            --action-cl:      #f06b8a;
+            --pos:            #4ade80;
+            --neg:            #f87171;
+            --hard:           #fbbf24;
+        }
+
+        * { box-sizing: border-box; }
+        body {
+            font-family: 'Inter', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: var(--bg-page);
+            color: var(--text-main);
+        }
+
+        /* ── Header bar ────────────────────────────────────────────── */
+        .topbar {
+            background: var(--bg-card);
+            border-bottom: 1px solid var(--border);
+            padding: 16px 32px;
+            position: sticky;
+            top: 0;
+            z-index: 10;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+        }
+        .topbar-row {
+            display: flex;
+            align-items: center;
+            gap: 24px;
+            max-width: 1400px;
+            margin: 0 auto;
+            flex-wrap: wrap;
+        }
+        .brand {
+            font-size: 18px;
+            font-weight: 700;
+            color: var(--accent);
+            letter-spacing: -0.02em;
+        }
+        .brand .v {
+            color: var(--text-dim);
+            font-weight: 400;
+            font-size: 13px;
+            margin-left: 6px;
+        }
+
+        .profile-tabs {
+            display: flex;
+            gap: 4px;
+            background: var(--bg-input);
+            padding: 4px;
+            border-radius: 8px;
+        }
+        .profile-tabs a {
+            padding: 6px 14px;
+            border-radius: 6px;
+            color: var(--text-dim);
+            text-decoration: none;
+            font-size: 13px;
+            font-weight: 500;
+            transition: all 0.15s;
+        }
+        .profile-tabs a:hover { color: var(--text-main); }
+        .profile-tabs a.active {
+            background: var(--accent);
+            color: white;
+        }
+
+        .stats-inline {
+            display: flex;
+            gap: 16px;
+            margin-left: auto;
+            font-size: 13px;
+            color: var(--text-dim);
+        }
+        .stats-inline strong {
+            color: var(--text-main);
+            font-weight: 600;
+        }
+
+        /* ── Filter bar ────────────────────────────────────────────── */
+        .filter-bar {
+            background: var(--bg-card);
+            border-bottom: 1px solid var(--border);
+            padding: 12px 32px;
+        }
+        .filter-row {
+            display: flex;
+            gap: 12px;
+            align-items: center;
+            flex-wrap: wrap;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+        .filter-row form {
+            display: flex;
+            gap: 8px;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        .filter-row label {
+            font-size: 12px;
+            color: var(--text-dim);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            font-weight: 600;
+        }
+        .filter-row input[type="text"],
+        .filter-row select {
+            background: var(--bg-input);
+            border: 1px solid var(--border);
+            color: var(--text-main);
+            padding: 7px 10px;
+            border-radius: 6px;
+            font-size: 13px;
+            font-family: inherit;
+            min-width: 150px;
+        }
+        .filter-row input[type="text"]:focus,
+        .filter-row select:focus {
+            outline: none;
+            border-color: var(--accent);
+        }
+        .filter-row button {
+            background: var(--accent);
+            color: white;
+            border: none;
+            padding: 7px 14px;
+            border-radius: 6px;
+            font-size: 13px;
+            font-weight: 500;
+            cursor: pointer;
+            font-family: inherit;
+        }
+        .filter-row button:hover { background: var(--accent-hover); }
+        .filter-row .clear-link {
+            color: var(--text-dim);
+            text-decoration: none;
+            font-size: 13px;
+            padding: 7px 10px;
+        }
+        .filter-row .clear-link:hover { color: var(--text-main); }
+
+        /* ── Content ───────────────────────────────────────────────── */
+        .content {
+            padding: 24px 32px;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+        .results-summary {
+            color: var(--text-dim);
+            font-size: 13px;
+            margin-bottom: 16px;
+        }
+
+        /* ── Triplet card ──────────────────────────────────────────── */
+        .triplet-container {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 18px;
+            margin-bottom: 18px;
+        }
+        .triplet-header {
+            display: flex;
+            gap: 8px;
+            align-items: center;
+            margin-bottom: 14px;
+            font-size: 12px;
+            flex-wrap: wrap;
+        }
+        .badge {
+            background: var(--bg-input);
+            color: var(--text-main);
+            padding: 4px 10px;
+            border-radius: 12px;
+            font-weight: 500;
+            font-size: 12px;
+            white-space: nowrap;
+        }
+        .badge.profile  { background: #2d3548; color: var(--accent); }
+        .badge.driver   { background: #2d3548; color: #4bd1c1; }
+        .badge.scenario { background: #2d3548; color: #9c7bf0; }
+        .badge.action   { background: #2d3548; }
+        .badge.action.follow   { color: var(--action-follow); }
+        .badge.action.go-left  { color: var(--action-left); }
+        .badge.action.go-right { color: var(--action-right); }
+        .badge.action.go-straight { color: var(--action-straight); }
+        .badge.action.change-lane { color: var(--action-cl); }
+        .badge.frame-id {
+            background: transparent;
+            color: var(--text-dim);
+            font-family: 'SF Mono', Monaco, monospace;
+            padding: 4px 0;
+        }
+
+        .triplet-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 14px;
+        }
+        .item {
+            background: var(--bg-page);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 12px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        .item h3 {
+            margin: 0;
+            font-size: 13px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .item h3 .count {
+            color: var(--text-dim);
+            font-weight: 400;
+            font-size: 11px;
+        }
+        .item.anchor h3      { color: var(--text-main); }
+        .item.positives h3   { color: var(--pos); }
+        .item.negatives h3   { color: var(--neg); }
+        .item.hard-negs h3   { color: var(--hard); }
+
+        .image-container {
+            position: relative;
+            aspect-ratio: 16 / 9;
+            background: var(--bg-input);
+            border-radius: 6px;
+            overflow: hidden;
+        }
+        .image-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            cursor: zoom-in;
+        }
+
+        /* ── Lightbox ──────────────────────────────────────────────── */
+        .lightbox {
+            position: fixed;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.92);
+            display: none;
+            align-items: center;
+            justify-content: center;
+            z-index: 1000;
+            padding: 32px;
+        }
+        .lightbox.open { display: flex; }
+        .lightbox img {
+            max-width: 100%;
+            max-height: calc(100vh - 100px);
+            object-fit: contain;
+            border-radius: 6px;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.6);
+        }
+        .lightbox-toolbar {
+            position: absolute;
+            top: 16px;
+            right: 20px;
+            display: flex;
+            gap: 8px;
+            align-items: center;
+        }
+        .lightbox-toolbar a,
+        .lightbox-toolbar button {
+            background: var(--bg-card);
+            color: var(--text-main);
+            border: 1px solid var(--border);
+            padding: 8px 14px;
+            border-radius: 6px;
+            font-size: 13px;
+            font-family: inherit;
+            font-weight: 500;
+            cursor: pointer;
+            text-decoration: none;
+        }
+        .lightbox-toolbar a:hover,
+        .lightbox-toolbar button:hover { background: var(--bg-card-hover); }
+        .lightbox-caption {
+            position: absolute;
+            bottom: 16px;
+            left: 50%;
+            transform: translateX(-50%);
+            color: var(--text-dim);
+            font-size: 12px;
+            font-family: 'SF Mono', Monaco, monospace;
+            background: rgba(0,0,0,0.6);
+            padding: 6px 12px;
+            border-radius: 4px;
+            max-width: 90vw;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+        .similarity-scores {
+            position: absolute;
+            top: 6px;
+            right: 6px;
+            background: rgba(0, 0, 0, 0.85);
+            color: white;
+            padding: 6px 8px;
+            border-radius: 4px;
+            font-size: 10px;
+            line-height: 1.4;
+            font-family: 'SF Mono', Monaco, monospace;
+        }
+        .similarity-scores p { margin: 0; }
+        .similarity-scores .label { color: #aaa; }
+
+        .item pre {
+            background: var(--bg-input);
+            color: var(--text-dim);
+            padding: 8px;
+            border-radius: 4px;
+            font-size: 11px;
+            font-family: 'SF Mono', Monaco, monospace;
+            margin: 0;
+            max-height: 130px;
+            overflow-y: auto;
+            white-space: pre-wrap;
+            word-break: break-word;
+        }
+
+        .slider-controls {
+            display: flex;
+            justify-content: center;
+            gap: 8px;
+            align-items: center;
+            font-size: 11px;
+        }
+        .slider-controls button {
+            background: var(--bg-input);
+            color: var(--text-main);
+            border: 1px solid var(--border);
+            padding: 3px 9px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 11px;
+        }
+        .slider-controls button:hover { background: var(--bg-card-hover); }
+        .slider-controls .pos-indicator {
+            color: var(--text-dim);
+            min-width: 60px;
+            text-align: center;
+            font-family: 'SF Mono', Monaco, monospace;
+        }
+
+        .slider-item { display: none; }
+        .slider-item.active { display: flex; flex-direction: column; gap: 10px; }
+
+        .empty-list {
+            color: var(--text-dim);
+            text-align: center;
+            font-size: 12px;
+            padding: 20px 0;
+        }
+
+        /* ── Pagination ────────────────────────────────────────────── */
+        .pagination {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 4px;
+            margin-top: 32px;
+            padding-bottom: 32px;
+            flex-wrap: wrap;
+        }
+        .pagination a, .pagination span {
+            padding: 6px 12px;
+            color: var(--text-dim);
+            text-decoration: none;
+            font-size: 13px;
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 6px;
+            transition: all 0.15s;
+        }
+        .pagination a:hover { color: var(--text-main); background: var(--bg-card-hover); }
+        .pagination a.active {
+            background: var(--accent);
+            color: white;
+            border-color: var(--accent);
+        }
+        .pagination span {
+            border: none;
+            background: transparent;
+        }
+
+        /* ── Empty state ───────────────────────────────────────────── */
+        .empty-state {
+            padding: 80px 20px;
+            text-align: center;
+            color: var(--text-dim);
+        }
+        .empty-state h2 {
+            color: var(--text-main);
+            margin: 0 0 8px 0;
+        }
+    </style>
+</head>
+<body>
+
+<div class="topbar">
+    <div class="topbar-row">
+        <div class="brand">Triplet Viewer<span class="v">v2 · triplets_v2/</span></div>
+
+        {% if profiles %}
+        <div class="profile-tabs">
+            {% for p in profiles %}
+            <a href="{{ url_for('index', profile=p) }}"
+               class="{{ 'active' if p == profile else '' }}">{{ p }}</a>
+            {% endfor %}
+        </div>
+        {% endif %}
+
+        {% if profile %}
+        <div class="stats-inline">
+            <span><strong>{{ stats.total }}</strong> triplets</span>
+            <span>·</span>
+            {% for action, count in stats.actions[:4] %}
+            <span><strong>{{ count }}</strong> {{ action }}</span>
+            {% endfor %}
+            {% if stats.drivers|length > 1 %}
+            <span>·</span>
+            <span><strong>{{ stats.drivers|length }}</strong> drivers</span>
+            {% endif %}
+        </div>
+        {% endif %}
+    </div>
+</div>
+
+{% if profile %}
+<div class="filter-bar">
+    <div class="filter-row">
+        <form method="get" action="{{ url_for('index') }}">
+            <input type="hidden" name="profile" value="{{ profile }}">
+
+            <label>Anchor ID</label>
+            <input type="text" name="anchor_id" placeholder="frame_id substring" value="{{ anchor_id or '' }}">
+
+            <label>Action</label>
+            <select name="action">
+                <option value="">All actions</option>
+                {% for action, count in stats.actions %}
+                <option value="{{ action }}" {% if action == action_filter %}selected{% endif %}>
+                    {{ action }} ({{ count }})
+                </option>
+                {% endfor %}
+            </select>
+
+            <label>Driver</label>
+            <select name="driver">
+                <option value="">All drivers</option>
+                {% for drv, count in stats.drivers %}
+                <option value="{{ drv }}" {% if drv == driver_filter %}selected{% endif %}>
+                    {{ drv or '(unknown)' }} ({{ count }})
+                </option>
+                {% endfor %}
+            </select>
+
+            <button type="submit">Apply</button>
+            {% if anchor_id or action_filter or driver_filter %}
+            <a class="clear-link" href="{{ url_for('index', profile=profile) }}">Clear filters</a>
+            {% endif %}
+        </form>
+    </div>
+</div>
+{% endif %}
+
+<div class="content">
+
+{% if not profiles %}
+    <div class="empty-state">
+        <h2>No triplet outputs found</h2>
+        <p>Looked under <code>{{ url_for('static', filename='') }}../triplets_v2/</code> — no <code>&lt;profile&gt;/triplets.jsonl</code> files exist yet.</p>
+        <p>Run <code>embed_mine.py</code> to generate them.</p>
+    </div>
+{% else %}
+
+    <div class="results-summary">
+        Showing {{ triplets|length }} of {{ total }} triplets · page {{ page }} / {{ total_pages }}
+        {% if anchor_id %} · anchor <code>{{ anchor_id }}</code>{% endif %}
+        {% if action_filter %} · action <code>{{ action_filter }}</code>{% endif %}
+        {% if driver_filter %} · driver <code>{{ driver_filter }}</code>{% endif %}
+    </div>
+
+    {% for triplet in triplets %}
+    {% set action_class = (triplet.anchor.action or '') | lower | replace(' ', '-') %}
+    <div class="triplet-container">
+        <div class="triplet-header">
+            <span class="badge profile">{{ triplet.anchor.profile or '-' }}</span>
+            <span class="badge driver">{{ triplet.anchor.driver or '-' }}</span>
+            <span class="badge action {{ action_class }}">{{ triplet.anchor.action or '-' }}</span>
+            <span class="badge frame-id">{{ triplet.anchor.frame_id }}</span>
+        </div>
+
+        <div class="triplet-grid">
+
+            <!-- ANCHOR -->
+            <div class="item anchor">
+                <h3><span>Anchor</span></h3>
+                <div class="image-container">
+                    <img src="{{ url_for('get_image', image_path=triplet.anchor.frame_path.lstrip('/')) }}" alt="Anchor">
+                </div>
+                <pre>{{ triplet.anchor.state | tojson(indent=2) }}</pre>
+            </div>
+
+            <!-- POSITIVES -->
+            <div class="item positives slider" id="pos-slider-{{ loop.index }}">
+                <h3><span>Positives</span><span class="count">×{{ triplet.positives|length }}</span></h3>
+                {% for pos in triplet.positives %}
+                <div class="slider-item {% if loop.first %}active{% endif %}">
+                    <div class="image-container">
+                        <img src="{{ url_for('get_image', image_path=pos.frame_path.lstrip('/')) }}" alt="Positive">
+                        <div class="similarity-scores">
+                            <p><span class="label">txt</span> {{ pos.text_sim }}</p>
+                            <p><span class="label">img</span> {{ pos.image_sim }}</p>
+                            <p><span class="label">cmb</span> {{ pos.combined_sim }}</p>
+                        </div>
+                    </div>
+                    <pre>{{ pos.state | tojson(indent=2) }}</pre>
+                </div>
+                {% else %}
+                <p class="empty-list">No positives</p>
+                {% endfor %}
+                {% if triplet.positives|length > 1 %}
+                <div class="slider-controls">
+                    <button onclick="prevSlide('pos-slider-{{ loop.index }}')">‹</button>
+                    <span class="pos-indicator" id="ind-pos-slider-{{ loop.index }}">1 / {{ triplet.positives|length }}</span>
+                    <button onclick="nextSlide('pos-slider-{{ loop.index }}')">›</button>
+                </div>
+                {% endif %}
+            </div>
+
+            <!-- HARD NEGATIVES -->
+            <div class="item hard-negs slider" id="hard-slider-{{ loop.index }}">
+                <h3><span>Hard Negatives</span><span class="count">×{{ triplet.hard_negatives|length }}</span></h3>
+                {% for hneg in triplet.hard_negatives %}
+                <div class="slider-item {% if loop.first %}active{% endif %}">
+                    <div class="image-container">
+                        <img src="{{ url_for('get_image', image_path=hneg.frame_path.lstrip('/')) }}" alt="Hard Negative">
+                        <div class="similarity-scores">
+                            <p><span class="label">txt</span> {{ hneg.text_sim }}</p>
+                            <p><span class="label">img</span> {{ hneg.image_sim }}</p>
+                            <p><span class="label">cmb</span> {{ hneg.combined_sim }}</p>
+                        </div>
+                    </div>
+                    <pre>{{ hneg.state | tojson(indent=2) }}</pre>
+                </div>
+                {% else %}
+                <p class="empty-list">No hard negatives</p>
+                {% endfor %}
+                {% if triplet.hard_negatives|length > 1 %}
+                <div class="slider-controls">
+                    <button onclick="prevSlide('hard-slider-{{ loop.index }}')">‹</button>
+                    <span class="pos-indicator" id="ind-hard-slider-{{ loop.index }}">1 / {{ triplet.hard_negatives|length }}</span>
+                    <button onclick="nextSlide('hard-slider-{{ loop.index }}')">›</button>
+                </div>
+                {% endif %}
+            </div>
+
+            <!-- EASY NEGATIVES -->
+            <div class="item negatives slider" id="neg-slider-{{ loop.index }}">
+                <h3><span>Easy Negatives</span><span class="count">×{{ triplet.negatives|length }}</span></h3>
+                {% for neg in triplet.negatives %}
+                <div class="slider-item {% if loop.first %}active{% endif %}">
+                    <div class="image-container">
+                        <img src="{{ url_for('get_image', image_path=neg.frame_path.lstrip('/')) }}" alt="Easy Negative">
+                        <div class="similarity-scores">
+                            <p><span class="label">txt</span> {{ neg.text_sim }}</p>
+                            <p><span class="label">img</span> {{ neg.image_sim }}</p>
+                            <p><span class="label">cmb</span> {{ neg.combined_sim }}</p>
+                        </div>
+                    </div>
+                    <pre>{{ neg.state | tojson(indent=2) }}</pre>
+                </div>
+                {% else %}
+                <p class="empty-list">No easy negatives</p>
+                {% endfor %}
+                {% if triplet.negatives|length > 1 %}
+                <div class="slider-controls">
+                    <button onclick="prevSlide('neg-slider-{{ loop.index }}')">‹</button>
+                    <span class="pos-indicator" id="ind-neg-slider-{{ loop.index }}">1 / {{ triplet.negatives|length }}</span>
+                    <button onclick="nextSlide('neg-slider-{{ loop.index }}')">›</button>
+                </div>
+                {% endif %}
+            </div>
+
+        </div>
+    </div>
+    {% endfor %}
+
+    <div class="pagination">
+        {% set qs = {'profile': profile, 'anchor_id': anchor_id, 'action': action_filter, 'driver': driver_filter} %}
+        {% if page > 1 %}
+            <a href="{{ url_for('index', page=page-1, **qs) }}">‹ Prev</a>
+        {% endif %}
+
+        {% if start_page > 1 %}
+            <a href="{{ url_for('index', page=1, **qs) }}" class="{{ 'active' if page == 1 else '' }}">1</a>
+            {% if start_page > 2 %}
+                <span>…</span>
+            {% endif %}
+        {% endif %}
+
+        {% for p in range(start_page, end_page + 1) %}
+            <a href="{{ url_for('index', page=p, **qs) }}" class="{{ 'active' if p == page else '' }}">{{ p }}</a>
+        {% endfor %}
+
+        {% if end_page < total_pages %}
+            {% if end_page < total_pages - 1 %}
+                <span>…</span>
+            {% endif %}
+            <a href="{{ url_for('index', page=total_pages, **qs) }}" class="{{ 'active' if page == total_pages else '' }}">{{ total_pages }}</a>
+        {% endif %}
+
+        {% if page < total_pages %}
+            <a href="{{ url_for('index', page=page+1, **qs) }}">Next ›</a>
+        {% endif %}
+    </div>
+
+{% endif %}
+</div>
+
+<div id="lightbox" class="lightbox" onclick="closeLightbox(event)">
+    <div class="lightbox-toolbar">
+        <a id="lightbox-download" href="#" download>Download</a>
+        <button type="button" onclick="closeLightbox(event, true)">Close ✕</button>
+    </div>
+    <img id="lightbox-img" src="" alt="">
+    <div id="lightbox-caption" class="lightbox-caption"></div>
+</div>
+
+<script>
+    function openLightbox(src, caption) {
+        const lb = document.getElementById('lightbox');
+        document.getElementById('lightbox-img').src = src;
+        const dl = document.getElementById('lightbox-download');
+        dl.href = src;
+        dl.setAttribute('download', caption.split('/').pop() || 'image.jpg');
+        document.getElementById('lightbox-caption').textContent = caption;
+        lb.classList.add('open');
+        document.body.style.overflow = 'hidden';
+    }
+    function closeLightbox(e, force) {
+        if (!force && e && e.target.closest('#lightbox-img, #lightbox-download')) return;
+        document.getElementById('lightbox').classList.remove('open');
+        document.body.style.overflow = '';
+    }
+    document.addEventListener('keydown', e => {
+        if (e.key === 'Escape') closeLightbox(null, true);
+    });
+    document.addEventListener('click', e => {
+        const img = e.target.closest('.image-container img');
+        if (!img) return;
+        e.preventDefault();
+        openLightbox(img.src, img.getAttribute('alt') + ' — ' + img.src);
+    });
+
+    function _items(sliderId) {
+        return document.getElementById(sliderId).getElementsByClassName('slider-item');
+    }
+    function showSlide(sliderId, index) {
+        const items = _items(sliderId);
+        if (!items.length) return;
+        if (index >= items.length) index = 0;
+        if (index < 0) index = items.length - 1;
+        for (const it of items) it.classList.remove('active');
+        items[index].classList.add('active');
+        const ind = document.getElementById('ind-' + sliderId);
+        if (ind) ind.textContent = (index + 1) + ' / ' + items.length;
+        document.getElementById(sliderId).dataset.currentIndex = index;
+    }
+    function nextSlide(id) {
+        const cur = parseInt(document.getElementById(id).dataset.currentIndex || 0);
+        showSlide(id, cur + 1);
+    }
+    function prevSlide(id) {
+        const cur = parseInt(document.getElementById(id).dataset.currentIndex || 0);
+        showSlide(id, cur - 1);
+    }
+    document.addEventListener('DOMContentLoaded', () => {
+        document.querySelectorAll('.slider').forEach(s => showSlide(s.id, 0));
+    });
+</script>
+
+</body>
+</html>

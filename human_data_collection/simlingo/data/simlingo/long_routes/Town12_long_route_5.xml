@@ -1,0 +1,48 @@
+<?xml version='1.0' encoding='utf-8'?>
+<routes>
+   <route id="30004" town="Town12">
+      <weathers>
+         <weather route_percentage="0" cloudiness="50" precipitation="0" precipitation_deposits="60" wetness="50" wind_intensity="10" sun_azimuth_angle="200" sun_altitude_angle="45" fog_density="2" fog_distance="90" fog_falloff="0.0" scattering_intensity="1.0" mie_scattering_scale="0.03" />
+         <weather route_percentage="100" cloudiness="90" precipitation="0" precipitation_deposits="5" wetness="0" wind_intensity="20" sun_azimuth_angle="200" sun_altitude_angle="40" fog_density="5" fog_distance="90" fog_falloff="0.0" scattering_intensity="1.0" mie_scattering_scale="0.03" />
+      </weathers>
+      <waypoints>
+         <position x="2449.3" y="3672.0" z="355.0" />
+         <position x="2545.3" y="2981.2" z="366.0" />
+         <position x="2318.9" y="2409.2" z="367.0" />
+         <position x="2459.9" y="2589.9" z="366.7" />
+         <position x="2558.3" y="3205.4" z="366.0" />
+         <position x="3347.1" y="3115.3" z="367.5" />
+         <position x="4083.4" y="3284.7" z="370.0" />
+         <position x="4045.7" y="4058.2" z="368.7" />
+      </waypoints>
+      <scenarios>
+         <scenario name="VehicleTurningRoute_1" type="VehicleTurningRoute">
+            <trigger_point x="2495.3" y="3399.6" z="357.4" yaw="-80.4" />
+         </scenario>
+         <scenario name="NonSignalizedJunctionRightTurn_2" type="NonSignalizedJunctionRightTurn">
+            <trigger_point x="2541.2" y="2535.1" z="364.8" yaw="269.9" />
+         </scenario>
+         <scenario name="EnterActorFlow_3" type="EnterActorFlow">
+            <trigger_point x="2387.0" y="2486.0" z="367.9" yaw="-291.1" />
+            <start_actor_flow x="2385.9" y="2436.7" z="367.9" />
+            <end_actor_flow x="2460.1" y="2618.9" z="367.9" />
+            <flow_speed value="18" />
+            <source_dist_interval from="15" to="35" />
+         </scenario>
+         <scenario name="YieldToEmergencyVehicle_4" type="YieldToEmergencyVehicle">
+            <trigger_point x="2561.3" y="3204.9" z="366.0" yaw="-370.2" />
+            <distance value="130" />
+         </scenario>
+         <scenario name="HighwayExit_5" type="HighwayExit">
+            <trigger_point x="3524.1" y="3114.5" z="369.0" yaw="-0.3" />
+            <start_actor_flow x="3474.1" y="3114.7" z="369.0" />
+            <end_actor_flow x="3726.1" y="3110.1" z="369.0" />
+            <flow_speed value="18" />
+            <source_dist_interval from="15" to="35" />
+         </scenario>
+         <scenario name="BlockedIntersection_6" type="BlockedIntersection">
+            <trigger_point x="4102.0" y="3618.8" z="371.0" yaw="99.0" />
+         </scenario>
+      </scenarios>
+   </route>
+</routes>

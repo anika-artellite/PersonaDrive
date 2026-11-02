@@ -1,0 +1,54 @@
+# @package _global_
+defaults:
+  - /data_module: carla_bucket_v12_dreamer
+  - /model/vision_model: vlm
+  - /data_module/base_dataset: dataset
+
+model:
+  lr: 3e-5
+  predict_route_as_wps: True
+  speed_wps_mode: 2d
+  language_model:
+    variant: 'OpenGVLab/InternVL2-1B'
+    lora: True
+    lora_alpha: 64
+    lora_r: 32
+    lora_dropout: 0.1
+  vision_model:
+    variant: 'OpenGVLab/InternVL2-1B'
+
+data_module:
+  batch_size: 5 #12
+  num_workers: 8 #worker to load data, 8 is good for 8 gpus, but can be reduced if CPU is bottleneck
+  # dreamer_dataset: null
+  base_dataset:
+    data_path: database/simlingo
+    bucket_path: database/bucketsv2_simlingo
+    pred_len: 11
+    cut_bottom_quarter: True # crop bottom image portion to remove hood / support camera shift
+    use_commentary: True # include commentary samples in training prompts
+    use_qa: True # include VQA samples in training prompts
+    qa_augmentation: True # apply template-based QA text augmentation
+    img_shift_augmentation: True # enable shifted-camera augmentation paths
+    img_shift_augmentation_prob: 0.5 # probability to use shifted images when available
+    hist_len: 1 # number of history frames per sample
+    route_as: target_point_command # route conditioning mode used in prompts
+    use_lmdrive_commands: True # include LMDrive-style command templates
+    use_old_towns: True # include legacy town split routes lb1
+    use_town13: True # include Town13 routes (affects train/val split logic)
+
+    use_safety_flag: True # enable dreamer safety-mode responses for unsafe instructions
+    cache_index_to_disk: False  # set True to persist the route index to disk across runs/GPUs
+
+max_epochs: 15
+val_every_n_epochs: 2
+
+# debug: true
+gpus: 8
+seed: 9876
+name: simlingo_seed_9876
+resume: False
+
+hydra:
+  run:
+    dir: outputs/${wandb_name}_${name}

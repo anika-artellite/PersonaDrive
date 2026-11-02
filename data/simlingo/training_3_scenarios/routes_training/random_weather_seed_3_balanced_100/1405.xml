@@ -1,0 +1,34 @@
+<routes><route id="0" town="Town12">
+      <weathers>
+         <weather route_percentage="0.0" cloudiness="80.0" precipitation="15.0" precipitation_deposits="80.0" wetness="2.0" wind_intensity="60.0" sun_azimuth_angle="315.0" sun_altitude_angle="45.0" fog_density="4.0" />
+         <weather route_percentage="100.0" cloudiness="20.0" precipitation="80.0" precipitation_deposits="0.0" wetness="10.0" wind_intensity="5.0" sun_azimuth_angle="360.0" sun_altitude_angle="-30.0" fog_density="2.0" />
+      </weathers>
+      <waypoints>
+         <position x="1639.5" y="4464.2" z="365.0" />
+         <position x="1661.3" y="4329.5" z="362.9" />
+         <position x="1567.8" y="4266.4" z="363.1" />
+         <position x="1369.5" y="4234.3" z="363.9" />
+         <position x="1334.8" y="4228.7" z="363.9" />
+      </waypoints>
+      <scenarios>
+         <scenario name="ParkingExit_1" type="ParkingExit">
+            <trigger_point x="1639.5" y="4464.2" z="365.0" yaw="279.2" />
+            <direction value="right" />
+            <front_vehicle_distance value="9" />
+            <behind_vehicle_distance value="9" />
+         </scenario>
+         <scenario name="SignalizedJunctionLeftTurn_1" type="SignalizedJunctionLeftTurn">
+            <trigger_point x="1655.2" y="4367.1" z="363.5" yaw="279.3" />
+            <flow_speed value="12" />
+            <source_dist_interval from="20" to="65" />
+         </scenario>
+         <scenario name="HazardAtSideLaneTwoWays_1" type="HazardAtSideLaneTwoWays">
+            <trigger_point x="1640.6" y="4278.2" z="362.5" yaw="189.2" />
+            <distance value="60" />
+            <frequency value="90" />
+            <bicycle_drive_distance value="100" />
+            <bicycle_speed value="10" />
+         </scenario>
+      </scenarios>
+   </route>
+</routes>

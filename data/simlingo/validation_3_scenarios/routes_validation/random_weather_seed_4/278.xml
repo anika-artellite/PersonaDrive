@@ -1,0 +1,31 @@
+<?xml version="1.0" ?>
+<routes>
+   <route id="0" town="Town13">
+      <weathers>
+         <weather route_percentage="0.0" cloudiness="10.0" precipitation="80.0" precipitation_deposits="4.0" wetness="60.0" wind_intensity="25.0" sun_azimuth_angle="45.0" sun_altitude_angle="20.0" fog_density="15.0"/>
+         <weather route_percentage="100.0" cloudiness="40.0" precipitation="10.0" precipitation_deposits="12.0" wetness="100.0" wind_intensity="100.0" sun_azimuth_angle="135.0" sun_altitude_angle="80.0" fog_density="4.0"/>
+      </weathers>
+      <waypoints>
+         <position x="4352.5" y="5073.2" z="147.5"/>
+         <position x="3948.2" y="5479.6" z="156.2"/>
+         <position x="3913.7" y="5488.6" z="157.3"/>
+         <position x="3879.9" y="5468.0" z="158.8"/>
+         <position x="3878.2" y="5458.1" z="158.9"/>
+      </waypoints>
+      <scenarios>
+         <scenario name="StaticCutIn_5" type="StaticCutIn">
+            <trigger_point x="4345.0" y="5092.1" z="147.6" yaw="112.6"/>
+            <distance value="105"/>
+            <direction value="right"/>
+         </scenario>
+         <scenario name="StaticCutIn_6" type="StaticCutIn">
+            <trigger_point x="4220.8" y="5289.9" z="149.2" yaw="131.6"/>
+            <distance value="110"/>
+            <direction value="right"/>
+         </scenario>
+         <scenario name="BlockedIntersection_2" type="BlockedIntersection">
+            <trigger_point x="3937.5" y="5480.2" z="156.5" yaw="159.5"/>
+         </scenario>
+      </scenarios>
+   </route>
+</routes>

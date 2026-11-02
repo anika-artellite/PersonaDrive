@@ -1,0 +1,29 @@
+<?xml version="1.0" ?>
+<routes>
+   <route id="0" town="Town13">
+      <weathers>
+         <weather route_percentage="0.0" cloudiness="20.0" precipitation="4.0" precipitation_deposits="8.0" wetness="20.0" wind_intensity="25.0" sun_azimuth_angle="45.0" sun_altitude_angle="-90.0" fog_density="0.0"/>
+         <weather route_percentage="100.0" cloudiness="60.0" precipitation="8.0" precipitation_deposits="80.0" wetness="2.0" wind_intensity="30.0" sun_azimuth_angle="45.0" sun_altitude_angle="20.0" fog_density="7.0"/>
+      </weathers>
+      <waypoints>
+         <position x="2365.5" y="6205.4" z="165.8"/>
+         <position x="1999.9" y="6451.8" z="153.5"/>
+         <position x="1962.3" y="6455.2" z="152.5"/>
+         <position x="1944.1" y="6458.6" z="152.0"/>
+         <position x="1792.9" y="6458.0" z="148.6"/>
+      </waypoints>
+      <scenarios>
+         <scenario name="ControlLoss_8" type="ControlLoss">
+            <trigger_point x="2363.2" y="6225.5" z="165.7" yaw="99.0"/>
+         </scenario>
+         <scenario name="HardBreakRoute_12" type="HardBreakRoute">
+            <trigger_point x="2302.1" y="6353.0" z="162.5" yaw="132.3"/>
+         </scenario>
+         <scenario name="Accident_3" type="Accident">
+            <trigger_point x="1949.4" y="6458.6" z="152.1" yaw="-179.8"/>
+            <distance value="70"/>
+            <speed value="45"/>
+         </scenario>
+      </scenarios>
+   </route>
+</routes>

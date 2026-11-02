@@ -1,0 +1,31 @@
+<?xml version="1.0" ?>
+<routes>
+   <route id="0" town="Town12">
+      <weathers>
+         <weather route_percentage="0.0" cloudiness="80.0" precipitation="40.0" precipitation_deposits="4.0" wetness="10.0" wind_intensity="30.0" sun_azimuth_angle="270.0" sun_altitude_angle="90.0" fog_density="0.0"/>
+         <weather route_percentage="100.0" cloudiness="5.0" precipitation="30.0" precipitation_deposits="12.0" wetness="6.0" wind_intensity="5.0" sun_azimuth_angle="135.0" sun_altitude_angle="-10.0" fog_density="7.0"/>
+      </weathers>
+      <waypoints>
+         <position x="2053.3" y="3995.1" z="357.8"/>
+         <position x="2009.2" y="4057.2" z="358.6"/>
+         <position x="1939.7" y="4092.1" z="359.1"/>
+      </waypoints>
+      <scenarios>
+         <scenario name="DynamicObjectCrossing_3" type="DynamicObjectCrossing">
+            <trigger_point x="2015.9" y="4016.1" z="358.1" yaw="99.2"/>
+            <distance value="45"/>
+            <direction value="right"/>
+            <blocker_model value="static.prop.foodcart"/>
+            <crossing_angle value="18"/>
+         </scenario>
+         <scenario name="PedestrianCrossing_1" type="PedestrianCrossing">
+            <trigger_point x="2010.8" y="4047.9" z="358.5" yaw="99.2"/>
+         </scenario>
+         <scenario name="SignalizedJunctionRightTurn_1" type="SignalizedJunctionRightTurn">
+            <trigger_point x="2009.7" y="4054.5" z="358.6" yaw="99.2"/>
+            <flow_speed value="12"/>
+            <source_dist_interval from="15" to="50"/>
+         </scenario>
+      </scenarios>
+   </route>
+</routes>

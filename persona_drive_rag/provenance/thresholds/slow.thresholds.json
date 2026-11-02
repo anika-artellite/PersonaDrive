@@ -1,0 +1,32 @@
+{
+  "thresholds": {
+    "POS_TEXT": 0.96630859375,
+    "POS_IMG": 0.890625,
+    "HARD_TEXT": 0.94677734375,
+    "HARD_IMG": 0.81396484375,
+    "NEG_TEXT": 0.94677734375,
+    "NEG_IMG": 0.81396484375
+  },
+  "percentiles": {
+    "POS_PERCENTILE": 60,
+    "HARD_PERCENTILE": 30,
+    "NEG_PERCENTILE": 30
+  },
+  "config": {
+    "TOP_K_POOL": 1000,
+    "BOTTOM_K_POOL": 200,
+    "NUM_POS_PER_ANCHOR": 6,
+    "NUM_NEG_PER_ANCHOR": 6,
+    "NUM_HARD_NEG_PER_ANCHOR": 6,
+    "ALPHA": 0.5,
+    "BETA": 0.5,
+    "SIM_CHUNK": 8000,
+    "MINING_CHUNK": 2000,
+    "SIM_DTYPE": "torch.float16",
+    "SIM_CHUNK_OVERRIDE": null,
+    "MINING_CHUNK_OVERRIDE": null,
+    "USE_VISUAL_HARD_NEGATIVES": false,
+    "EXCLUDE_SAME_ROUTE_POSITIVES": false,
+    "MIN_TEMPORAL_GAP": 0
+  }
+}

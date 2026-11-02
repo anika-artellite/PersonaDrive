@@ -1,0 +1,29 @@
+<routes><route id="0" town="Town13">
+      <weathers>
+         <weather route_percentage="0.0" cloudiness="5.0" precipitation="40.0" precipitation_deposits="80.0" wetness="100.0" wind_intensity="80.0" sun_azimuth_angle="45.0" sun_altitude_angle="0.0" fog_density="15.0" />
+         <weather route_percentage="100.0" cloudiness="60.0" precipitation="6.0" precipitation_deposits="30.0" wetness="2.0" wind_intensity="10.0" sun_azimuth_angle="0.0" sun_altitude_angle="45.0" fog_density="4.0" />
+      </weathers>
+      <waypoints>
+         <position x="6090.4" y="4311.7" z="164.9" />
+         <position x="6092.0" y="4161.8" z="163.5" />
+         <position x="6155.2" y="4132.3" z="164.2" />
+      </waypoints>
+      <scenarios>
+         <scenario name="ParkingExit_1" type="ParkingExit">
+            <trigger_point x="6090.4" y="4311.7" z="164.9" yaw="270.6" />
+            <direction value="right" />
+            <front_vehicle_distance value="9" />
+            <behind_vehicle_distance value="9" />
+         </scenario>
+         <scenario name="ParkingCutIn_1" type="ParkingCutIn">
+            <trigger_point x="6090.7" y="4289.8" z="164.7" yaw="270.6" />
+            <direction value="right" />
+         </scenario>
+         <scenario name="SignalizedJunctionRightTurn_1" type="SignalizedJunctionRightTurn">
+            <trigger_point x="6091.8" y="4183.2" z="163.7" yaw="270.6" />
+            <flow_speed value="10" />
+            <source_dist_interval from="15" to="50" />
+         </scenario>
+      </scenarios>
+   </route>
+</routes>

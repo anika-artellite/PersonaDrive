@@ -1,0 +1,47 @@
+<?xml version='1.0' encoding='utf-8'?>
+<routes>
+   <route id="30003" town="Town12">
+      <weathers>
+         <weather route_percentage="0" cloudiness="10" precipitation="0" precipitation_deposits="0" wetness="0" wind_intensity="5" sun_azimuth_angle="190" sun_altitude_angle="72" fog_density="0" fog_distance="90" fog_falloff="0.0" scattering_intensity="1.0" mie_scattering_scale="0.03" />
+         <weather route_percentage="100" cloudiness="35" precipitation="0" precipitation_deposits="0" wetness="0" wind_intensity="10" sun_azimuth_angle="80" sun_altitude_angle="50" fog_density="2" fog_distance="90" fog_falloff="0.0" scattering_intensity="1.0" mie_scattering_scale="0.03" />
+      </weathers>
+      <waypoints>
+         <position x="-799.5" y="3098.5" z="353.6" />
+         <position x="-54.2" y="3100.6" z="361.6" />
+         <position x="692.3" y="3099.7" z="361.8" />
+         <position x="1438.0" y="3098.9" z="364.4" />
+         <position x="2190.0" y="3110.3" z="356.0" />
+         <position x="2454.2" y="3603.6" z="354.9" />
+         <position x="2476.6" y="4225.9" z="359.2" />
+         <position x="2498.6" y="4003.1" z="358.1" />
+      </waypoints>
+      <scenarios>
+         <scenario name="EnterActorFlow_1" type="EnterActorFlow">
+            <trigger_point x="-539.3" y="3101.1" z="358.5" yaw="-360.1" />
+            <start_actor_flow x="-588.4" y="3101.2" z="358.5" />
+            <end_actor_flow x="-340.2" y="3100.9" z="358.5" />
+            <flow_speed value="18" />
+            <source_dist_interval from="15" to="35" />
+         </scenario>
+         <scenario name="MergerIntoSlowTraffic_2" type="MergerIntoSlowTraffic">
+            <trigger_point x="596.8" y="3099.9" z="361.8" yaw="-0.1" />
+         </scenario>
+         <scenario name="HighwayCutIn_3" type="HighwayCutIn">
+            <trigger_point x="1732.0" y="3098.6" z="361.0" yaw="-0.1" />
+         </scenario>
+         <scenario name="HazardAtSideLane_4" type="HazardAtSideLane">
+            <trigger_point x="2464.5" y="3542.4" z="354.9" yaw="99.6" />
+            <distance value="50" />
+            <bicycle_drive_distance value="80" />
+            <bicycle_speed value="7" />
+         </scenario>
+         <scenario name="HighwayExit_5" type="HighwayExit">
+            <trigger_point x="2572.3" y="4402.8" z="360.9" yaw="279.4" />
+            <start_actor_flow x="2537.3" y="4429.0" z="360.9" />
+            <end_actor_flow x="2585.6" y="4201.9" z="360.9" />
+            <flow_speed value="18" />
+            <source_dist_interval from="15" to="35" />
+         </scenario>
+      </scenarios>
+   </route>
+</routes>

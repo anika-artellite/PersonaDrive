@@ -1,0 +1,31 @@
+<?xml version="1.0" ?>
+<routes>
+   <route id="0" town="Town13">
+      <weathers>
+         <weather route_percentage="0.0" cloudiness="0.0" precipitation="80.0" precipitation_deposits="0.0" wetness="8.0" wind_intensity="50.0" sun_azimuth_angle="270.0" sun_altitude_angle="70.0" fog_density="3.0"/>
+         <weather route_percentage="100.0" cloudiness="100.0" precipitation="40.0" precipitation_deposits="4.0" wetness="4.0" wind_intensity="30.0" sun_azimuth_angle="225.0" sun_altitude_angle="-15.0" fog_density="1.0"/>
+      </weathers>
+      <waypoints>
+         <position x="-4379.4" y="-249.2" z="169.1"/>
+         <position x="-4687.7" y="-352.2" z="164.9"/>
+      </waypoints>
+      <scenarios>
+         <scenario name="NonSignalizedJunctionRightTurn_9" type="NonSignalizedJunctionRightTurn">
+            <trigger_point x="-4399.3" y="-246.8" z="168.8" yaw="172.7"/>
+            <flow_speed value="8"/>
+            <source_dist_interval from="10" to="60"/>
+         </scenario>
+         <scenario name="DynamicObjectCrossing_14" type="DynamicObjectCrossing">
+            <trigger_point x="-4475.9" y="-254.0" z="167.8" yaw="252.1"/>
+            <distance value="75"/>
+            <blocker_model value="static.prop.haybalelb"/>
+            <crossing_angle value="3"/>
+         </scenario>
+         <scenario name="InvadingTurn_7" type="InvadingTurn">
+            <trigger_point x="-4545.7" y="-397.7" z="166.3" yaw="158.5"/>
+            <distance value="100"/>
+            <offset value="0.6"/>
+         </scenario>
+      </scenarios>
+   </route>
+</routes>

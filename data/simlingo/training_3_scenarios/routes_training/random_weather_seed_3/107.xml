@@ -1,0 +1,32 @@
+<?xml version="1.0" ?>
+<routes>
+   <route id="0" town="Town12">
+      <weathers>
+         <weather route_percentage="0.0" cloudiness="10.0" precipitation="20.0" precipitation_deposits="50.0" wetness="100.0" wind_intensity="80.0" sun_azimuth_angle="360.0" sun_altitude_angle="15.0" fog_density="3.0"/>
+         <weather route_percentage="100.0" cloudiness="10.0" precipitation="40.0" precipitation_deposits="16.0" wetness="80.0" wind_intensity="30.0" sun_azimuth_angle="270.0" sun_altitude_angle="-30.0" fog_density="70.0"/>
+      </weathers>
+      <waypoints>
+         <position x="3710.5" y="1905.2" z="349.2"/>
+         <position x="3710.8" y="2465.8" z="362.7"/>
+         <position x="3661.3" y="2522.4" z="364.4"/>
+         <position x="3601.0" y="2497.1" z="363.5"/>
+         <position x="3601.1" y="2495.6" z="363.5"/>
+      </waypoints>
+      <scenarios>
+         <scenario name="AccidentTwoWays_1" type="AccidentTwoWays">
+            <trigger_point x="3710.6" y="1925.2" z="349.2" yaw="90.0"/>
+            <distance value="75"/>
+            <frequency from="40" to="115"/>
+         </scenario>
+         <scenario name="DynamicObjectCrossing_1" type="DynamicObjectCrossing">
+            <trigger_point x="3710.7" y="2114.2" z="356.3" yaw="90.0"/>
+            <distance value="45"/>
+            <blocker_model value="static.prop.foodcart"/>
+            <crossing_angle value="15"/>
+         </scenario>
+         <scenario name="VehicleTurningRoute_1" type="VehicleTurningRoute">
+            <trigger_point x="3710.8" y="2467.8" z="362.8" yaw="90.0"/>
+         </scenario>
+      </scenarios>
+   </route>
+</routes>

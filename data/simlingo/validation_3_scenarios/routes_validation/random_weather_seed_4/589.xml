@@ -1,0 +1,29 @@
+<?xml version="1.0" ?>
+<routes>
+   <route id="0" town="Town13">
+      <weathers>
+         <weather route_percentage="0.0" cloudiness="40.0" precipitation="50.0" precipitation_deposits="40.0" wetness="4.0" wind_intensity="50.0" sun_azimuth_angle="270.0" sun_altitude_angle="-45.0" fog_density="3.0"/>
+         <weather route_percentage="100.0" cloudiness="60.0" precipitation="8.0" precipitation_deposits="40.0" wetness="20.0" wind_intensity="30.0" sun_azimuth_angle="0.0" sun_altitude_angle="15.0" fog_density="2.0"/>
+      </weathers>
+      <waypoints>
+         <position x="2638.1" y="4999.1" z="167.4"/>
+         <position x="2916.8" y="4976.5" z="176.5"/>
+         <position x="3040.2" y="5018.5" z="178.4"/>
+      </waypoints>
+      <scenarios>
+         <scenario name="DynamicObjectCrossing_7" type="DynamicObjectCrossing">
+            <trigger_point x="2658.2" y="4971.2" z="168.7" yaw="1.2"/>
+            <distance value="65"/>
+            <blocker_model value="static.prop.foodcart"/>
+         </scenario>
+         <scenario name="ParkedObstacleTwoWays_3" type="ParkedObstacleTwoWays">
+            <trigger_point x="2822.1" y="4974.5" z="173.9" yaw="1.2"/>
+            <distance value="78"/>
+            <frequency from="18" to="99"/>
+         </scenario>
+         <scenario name="BlockedIntersection_6" type="BlockedIntersection">
+            <trigger_point x="2983.7" y="4977.8" z="178.1" yaw="1.2"/>
+         </scenario>
+      </scenarios>
+   </route>
+</routes>

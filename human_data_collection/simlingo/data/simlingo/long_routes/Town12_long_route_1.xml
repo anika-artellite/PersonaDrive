@@ -1,0 +1,36 @@
+<?xml version='1.0' encoding='utf-8'?>
+<routes>
+   <route id="30000" town="Town12">
+      <weathers>
+         <weather route_percentage="0" cloudiness="35" precipitation="0" precipitation_deposits="0" wetness="0" wind_intensity="10" sun_azimuth_angle="80" sun_altitude_angle="50" fog_density="2" fog_distance="90" fog_falloff="0.0" scattering_intensity="1.0" mie_scattering_scale="0.03" />
+         <weather route_percentage="100" cloudiness="75" precipitation="0" precipitation_deposits="0" wetness="0" wind_intensity="15" sun_azimuth_angle="220" sun_altitude_angle="35" fog_density="3" fog_distance="90" fog_falloff="0.0" scattering_intensity="1.0" mie_scattering_scale="0.03" />
+      </weathers>
+      <waypoints>
+         <position x="986.9" y="5199.7" z="371.6" />
+         <position x="1058.3" y="4783.5" z="370.4" />
+         <position x="1503.3" y="4737.1" z="369.9" />
+         <position x="1706.6" y="4995.0" z="368.6" />
+         <position x="1595.4" y="4728.5" z="368.1" />
+         <position x="1883.9" y="4558.0" z="363.0" />
+         <position x="2334.4" y="4631.9" z="363.8" />
+         <position x="2702.2" y="4574.9" z="363.5" />
+      </waypoints>
+      <scenarios>
+         <scenario name="VehicleTurningRoute_1" type="VehicleTurningRoute">
+            <trigger_point x="987.2" y="5039.7" z="371.5" yaw="270.1" />
+         </scenario>
+         <scenario name="BlockedIntersection_2" type="BlockedIntersection">
+            <trigger_point x="1444.3" y="4736.8" z="370.3" yaw="0.3" />
+         </scenario>
+         <scenario name="DynamicObjectCrossing_3" type="DynamicObjectCrossing">
+            <trigger_point x="1752.5" y="4855.4" z="367.2" yaw="270.2" />
+         </scenario>
+         <scenario name="ControlLoss_4" type="ControlLoss">
+            <trigger_point x="1846.4" y="4551.8" z="363.4" yaw="9.3" />
+         </scenario>
+         <scenario name="Accident_5" type="Accident">
+            <trigger_point x="2531.7" y="4648.5" z="364.3" yaw="279.4" />
+         </scenario>
+      </scenarios>
+   </route>
+</routes>

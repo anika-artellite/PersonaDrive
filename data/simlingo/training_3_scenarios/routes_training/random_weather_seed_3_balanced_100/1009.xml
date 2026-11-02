@@ -1,0 +1,27 @@
+<routes><route id="0" town="Town12">
+      <weathers>
+         <weather route_percentage="0.0" cloudiness="50.0" precipitation="2.0" precipitation_deposits="4.0" wetness="2.0" wind_intensity="25.0" sun_azimuth_angle="45.0" sun_altitude_angle="-10.0" fog_density="8.0" />
+         <weather route_percentage="100.0" cloudiness="10.0" precipitation="15.0" precipitation_deposits="12.0" wetness="0.0" wind_intensity="25.0" sun_azimuth_angle="360.0" sun_altitude_angle="-10.0" fog_density="20.0" />
+      </weathers>
+      <waypoints>
+         <position x="-1402.7" y="3795.2" z="360.3" />
+         <position x="-1494.4" y="3794.2" z="362.0" />
+         <position x="-1678.8" y="3850.8" z="363.0" />
+         <position x="-1682.1" y="4102.4" z="368.0" />
+         <position x="-1682.1" y="4109.0" z="367.7" />
+      </waypoints>
+      <scenarios>
+         <scenario name="OppositeVehicleTakingPriority_5" type="OppositeVehicleTakingPriority">
+            <trigger_point x="-1423.5" y="3795.1" z="361" yaw="181" />
+            <direction value="left" />
+         </scenario>
+         <scenario name="VehicleTurningRoutePedestrian_2" type="VehicleTurningRoutePedestrian">
+            <trigger_point x="-1643.1" y="3788.1" z="362.4" yaw="180.3" />
+         </scenario>
+         <scenario name="OppositeVehicleRunningRedLight_1" type="OppositeVehicleRunningRedLight">
+            <trigger_point x="-1678.7" y="4021.8" z="366.0" yaw="90.0" />
+            <direction value="right" />
+         </scenario>
+      </scenarios>
+   </route>
+</routes>

@@ -1,0 +1,28 @@
+<?xml version="1.0" ?>
+<routes>
+   <route id="0" town="Town13">
+      <weathers>
+         <weather route_percentage="0.0" cloudiness="60.0" precipitation="8.0" precipitation_deposits="40.0" wetness="80.0" wind_intensity="50.0" sun_azimuth_angle="225.0" sun_altitude_angle="60.0" fog_density="8.0"/>
+         <weather route_percentage="100.0" cloudiness="5.0" precipitation="30.0" precipitation_deposits="0.0" wetness="10.0" wind_intensity="5.0" sun_azimuth_angle="45.0" sun_altitude_angle="80.0" fog_density="7.0"/>
+      </weathers>
+      <waypoints>
+         <position x="5450.4" y="3558.0" z="158.7"/>
+         <position x="5492.2" y="3788.6" z="159.0"/>
+         <position x="5567.8" y="3787.9" z="158.6"/>
+      </waypoints>
+      <scenarios>
+         <scenario name="ControlLoss_1" type="ControlLoss">
+            <trigger_point x="5416.7" y="3580.1" z="158.9" yaw="90.3"/>
+         </scenario>
+         <scenario name="ParkingCrossingPedestrian_2" type="ParkingCrossingPedestrian">
+            <trigger_point x="5416.7" y="3584.6" z="158.9" yaw="90.3"/>
+            <distance value="80"/>
+            <crossing_angle value="-2"/>
+         </scenario>
+         <scenario name="ParkingCrossingPedestrian_3" type="ParkingCrossingPedestrian">
+            <trigger_point x="5432.9" y="3789.2" z="159.4" yaw="359.4"/>
+            <distance value="75"/>
+         </scenario>
+      </scenarios>
+   </route>
+</routes>

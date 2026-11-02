@@ -1,0 +1,30 @@
+<?xml version="1.0" ?>
+<routes>
+   <route id="0" town="Town13">
+      <weathers>
+         <weather route_percentage="0.0" cloudiness="2.0" precipitation="2.0" precipitation_deposits="30.0" wetness="100.0" wind_intensity="30.0" sun_azimuth_angle="270.0" sun_altitude_angle="-15.0" fog_density="3.0"/>
+         <weather route_percentage="100.0" cloudiness="60.0" precipitation="80.0" precipitation_deposits="4.0" wetness="4.0" wind_intensity="50.0" sun_azimuth_angle="45.0" sun_altitude_angle="30.0" fog_density="70.0"/>
+      </weathers>
+      <waypoints>
+         <position x="1995.8" y="5164.6" z="149.4"/>
+         <position x="2119.5" y="5431.1" z="150.2"/>
+         <position x="2119.6" y="5444.2" z="150.2"/>
+      </waypoints>
+      <scenarios>
+         <scenario name="NonSignalizedJunctionLeftTurn_7" type="NonSignalizedJunctionLeftTurn">
+            <trigger_point x="1984.6" y="5181.5" z="149.2" yaw="123.5"/>
+            <flow_speed value="13"/>
+            <source_dist_interval from="18" to="45"/>
+         </scenario>
+         <scenario name="BlockedIntersection_8" type="BlockedIntersection">
+            <trigger_point x="2060.5" y="5228.1" z="150.0" yaw="0.6"/>
+         </scenario>
+         <scenario name="DynamicObjectCrossing_12" type="DynamicObjectCrossing">
+            <trigger_point x="2119.0" y="5324.1" z="150.5" yaw="89.7"/>
+            <distance value="50"/>
+            <blocker_model value="static.prop.advertisement"/>
+            <crossing_angle value="5"/>
+         </scenario>
+      </scenarios>
+   </route>
+</routes>

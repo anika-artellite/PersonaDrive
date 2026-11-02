@@ -1,0 +1,31 @@
+<routes><route id="0" town="Town12">
+      <weathers>
+         <weather route_percentage="0.0" cloudiness="0.0" precipitation="20.0" precipitation_deposits="50.0" wetness="60.0" wind_intensity="5.0" sun_azimuth_angle="270.0" sun_altitude_angle="90.0" fog_density="20.0" />
+         <weather route_percentage="100.0" cloudiness="20.0" precipitation="100.0" precipitation_deposits="60.0" wetness="80.0" wind_intensity="30.0" sun_azimuth_angle="45.0" sun_altitude_angle="5.0" fog_density="10.0" />
+      </weathers>
+      <waypoints>
+         <position x="80.8" y="3100.4" z="356.5" />
+         <position x="422.2" y="3100.0" z="360.1" />
+         <position x="721.2" y="3099.7" z="362.2" />
+         <position x="979.2" y="3237.3" z="367.4" />
+         <position x="921.4" y="3623.4" z="370.9" />
+      </waypoints>
+      <scenarios>
+         <scenario name="YieldToEmergencyVehicle_3" type="YieldToEmergencyVehicle">
+            <trigger_point x="101.1" y="3100.4" z="355.6" yaw="-0.1" />
+            <distance value="130" />
+         </scenario>
+         <scenario name="HazardAtSideLane_1" type="HazardAtSideLane">
+            <trigger_point x="971.6" y="3311.1" z="369.0" yaw="97.9" />
+            <distance value="91.6" />
+            <speed value="60" />
+            <bicycle_drive_distance value="60" />
+            <bicycle_speed value="12" />
+         </scenario>
+         <scenario name="OppositeVehicleRunningRedLight_1" type="OppositeVehicleRunningRedLight">
+            <trigger_point x="940.3" y="3506.1" z="370.8" yaw="99.1" />
+            <direction value="left" />
+         </scenario>
+      </scenarios>
+   </route>
+</routes>

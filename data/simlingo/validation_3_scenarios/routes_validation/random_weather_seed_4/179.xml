@@ -1,0 +1,34 @@
+<?xml version="1.0" ?>
+<routes>
+   <route id="0" town="Town13">
+      <weathers>
+         <weather route_percentage="0.0" cloudiness="50.0" precipitation="50.0" precipitation_deposits="16.0" wetness="6.0" wind_intensity="80.0" sun_azimuth_angle="315.0" sun_altitude_angle="-30.0" fog_density="100.0"/>
+         <weather route_percentage="100.0" cloudiness="50.0" precipitation="10.0" precipitation_deposits="4.0" wetness="80.0" wind_intensity="80.0" sun_azimuth_angle="135.0" sun_altitude_angle="10.0" fog_density="100.0"/>
+      </weathers>
+      <waypoints>
+         <position x="-1233.1" y="376.7" z="152.8"/>
+         <position x="-1188.3" y="383.9" z="152.4"/>
+         <position x="-1092.5" y="461.5" z="151.5"/>
+         <position x="-1143.2" y="547.2" z="151.7"/>
+      </waypoints>
+      <scenarios>
+         <scenario name="DynamicObjectCrossing_4" type="DynamicObjectCrossing">
+            <trigger_point x="-1212.72" y="380.14" z="152.61" yaw="9.27"/>
+            <distance value="65"/>
+            <blocker_model value="static.prop.haybalelb"/>
+            <crossing_angle value="-2"/>
+         </scenario>
+         <scenario name="NonSignalizedJunctionRightTurn_2" type="NonSignalizedJunctionRightTurn">
+            <trigger_point x="-1138.4" y="390.7" z="152.0" yaw="7.0"/>
+            <flow_speed value="9"/>
+            <source_dist_interval from="18" to="55"/>
+         </scenario>
+         <scenario name="DynamicObjectCrossing_5" type="DynamicObjectCrossing">
+            <trigger_point x="-1073.6" y="412.6" z="151.5" yaw="105.7"/>
+            <distance value="98"/>
+            <blocker_model value="static.prop.haybalelb"/>
+            <crossing_angle value="5"/>
+         </scenario>
+      </scenarios>
+   </route>
+</routes>

@@ -1,0 +1,45 @@
+<?xml version='1.0' encoding='utf-8'?>
+<routes>
+   <route id="30006" town="Town12">
+      <weathers>
+         <weather route_percentage="0" cloudiness="20" precipitation="0" precipitation_deposits="0" wetness="0" wind_intensity="5" sun_azimuth_angle="60" sun_altitude_angle="8" fog_density="5" fog_distance="90" fog_falloff="0.0" scattering_intensity="1.0" mie_scattering_scale="0.03" />
+         <weather route_percentage="100" cloudiness="35" precipitation="0" precipitation_deposits="0" wetness="0" wind_intensity="10" sun_azimuth_angle="80" sun_altitude_angle="50" fog_density="2" fog_distance="90" fog_falloff="0.0" scattering_intensity="1.0" mie_scattering_scale="0.03" />
+      </weathers>
+      <waypoints>
+         <position x="2707.8" y="3155.3" z="364.6" />
+         <position x="3431.1" y="3114.9" z="368.1" />
+         <position x="4090.6" y="3295.2" z="370.0" />
+         <position x="4041.2" y="4001.4" z="369.0" />
+         <position x="3928.3" y="4689.1" z="368.2" />
+         <position x="3272.5" y="4661.1" z="367.2" />
+         <position x="2733.8" y="4796.7" z="366.3" />
+         <position x="2101.1" y="4874.3" z="364.0" />
+      </waypoints>
+      <scenarios>
+         <scenario name="EnterActorFlowV2_1" type="EnterActorFlowV2">
+            <trigger_point x="2959.2" y="3117.1" z="363.5" yaw="-0.3" />
+            <start_actor_flow x="2909.2" y="3117.3" z="363.5" />
+            <end_actor_flow x="3159.1" y="3116.2" z="363.5" />
+            <flow_speed value="18" />
+            <source_dist_interval from="15" to="35" />
+         </scenario>
+         <scenario name="MergerIntoSlowTrafficV2_2" type="MergerIntoSlowTrafficV2">
+            <trigger_point x="3843.1" y="3119.7" z="369.9" yaw="12.6" />
+         </scenario>
+         <scenario name="StaticCutIn_3" type="StaticCutIn">
+            <trigger_point x="4065.4" y="3848.9" z="370.1" yaw="99.0" />
+            <distance value="100" />
+            <direction value="right" />
+         </scenario>
+         <scenario name="CrossingBicycleFlow_4" type="CrossingBicycleFlow">
+            <trigger_point x="3927.8" y="4692.0" z="368.2" yaw="99.0" />
+         </scenario>
+         <scenario name="HardBreakRoute_5" type="HardBreakRoute">
+            <trigger_point x="3115.5" y="4635.6" z="366.2" yaw="189.2" />
+         </scenario>
+         <scenario name="PedestrianCrossing_6" type="PedestrianCrossing">
+            <trigger_point x="2486.3" y="4864.4" z="367.1" yaw="99.4" />
+         </scenario>
+      </scenarios>
+   </route>
+</routes>

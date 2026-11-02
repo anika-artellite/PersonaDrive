@@ -1,0 +1,28 @@
+<?xml version="1.0" ?>
+<routes>
+   <route id="0" town="Town13">
+      <weathers>
+         <weather route_percentage="0.0" cloudiness="80.0" precipitation="4.0" precipitation_deposits="100.0" wetness="8.0" wind_intensity="50.0" sun_azimuth_angle="180.0" sun_altitude_angle="90.0" fog_density="40.0"/>
+         <weather route_percentage="100.0" cloudiness="60.0" precipitation="80.0" precipitation_deposits="12.0" wetness="60.0" wind_intensity="100.0" sun_azimuth_angle="315.0" sun_altitude_angle="5.0" fog_density="10.0"/>
+      </weathers>
+      <waypoints>
+         <position x="-3471.5" y="3788.5" z="180.1"/>
+         <position x="-3541.8" y="3717.1" z="180.7"/>
+         <position x="-3644.0" y="3614.7" z="181.8"/>
+         <position x="-3695.1" y="3581.0" z="182.6"/>
+      </waypoints>
+      <scenarios>
+         <scenario name="NonSignalizedJunctionRightTurn_7" type="NonSignalizedJunctionRightTurn">
+            <trigger_point x="-3492.2" y="3788.3" z="180.5" yaw="180.5"/>
+            <flow_speed value="7"/>
+            <source_dist_interval from="10" to="45"/>
+         </scenario>
+         <scenario name="VehicleTurningRoute_2" type="VehicleTurningRoute">
+            <trigger_point x="-3541.3" y="3673.7" z="180.2" yaw="270.7"/>
+         </scenario>
+         <scenario name="ControlLoss_12" type="ControlLoss">
+            <trigger_point x="-3565.7" y="3615.7" z="180.1" yaw="180.7"/>
+         </scenario>
+      </scenarios>
+   </route>
+</routes>

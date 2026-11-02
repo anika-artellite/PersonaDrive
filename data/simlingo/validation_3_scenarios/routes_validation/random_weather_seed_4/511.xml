@@ -1,0 +1,36 @@
+<?xml version="1.0" ?>
+<routes>
+   <route id="0" town="Town13">
+      <weathers>
+         <weather route_percentage="0.0" cloudiness="50.0" precipitation="40.0" precipitation_deposits="100.0" wetness="60.0" wind_intensity="25.0" sun_azimuth_angle="135.0" sun_altitude_angle="-10.0" fog_density="70.0"/>
+         <weather route_percentage="100.0" cloudiness="15.0" precipitation="60.0" precipitation_deposits="100.0" wetness="100.0" wind_intensity="100.0" sun_azimuth_angle="90.0" sun_altitude_angle="5.0" fog_density="100.0"/>
+      </weathers>
+      <waypoints>
+         <position x="-3693.7" y="4301.2" z="179.4"/>
+         <position x="-3653.2" y="4158.1" z="181.6"/>
+         <position x="-3257.0" y="4041.7" z="180.2"/>
+         <position x="-3291.7" y="3932.7" z="179.5"/>
+         <position x="-3386.6" y="3620.7" z="176.5"/>
+         <position x="-3343.6" y="3789.7" z="178.4"/>
+         <position x="-3469.7" y="3788.5" z="180.1"/>
+         <position x="-3541.8" y="3717.1" z="180.7"/>
+         <position x="-3644.0" y="3614.7" z="181.8"/>
+         <position x="-3695.8" y="3571.0" z="182.5"/>
+      </waypoints>
+      <scenarios>
+         <scenario name="ControlLoss_7" type="ControlLoss">
+            <trigger_point x="-3693.5" y="4280.7" z="179.8" yaw="270.5"/>
+         </scenario>
+         <scenario name="DynamicObjectCrossing_7" type="DynamicObjectCrossing">
+            <trigger_point x="-3671.4" y="4158.0" z="181.7" yaw="0.3"/>
+            <distance value="65"/>
+            <blocker_model value="static.prop.haybalelb"/>
+            <crossing_angle value="3"/>
+         </scenario>
+         <scenario name="OppositeVehicleRunningRedLight_1" type="OppositeVehicleRunningRedLight">
+            <trigger_point x="-3602.1" y="4158.4" z="181.5" yaw="0.3"/>
+            <direction value="left"/>
+         </scenario>
+      </scenarios>
+   </route>
+</routes>

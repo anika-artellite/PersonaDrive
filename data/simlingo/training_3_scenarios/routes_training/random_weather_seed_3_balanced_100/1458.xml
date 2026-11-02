@@ -1,0 +1,28 @@
+<routes><route id="0" town="Town12">
+      <weathers>
+         <weather route_percentage="0.0" cloudiness="50.0" precipitation="80.0" precipitation_deposits="12.0" wetness="20.0" wind_intensity="10.0" sun_azimuth_angle="90.0" sun_altitude_angle="-15.0" fog_density="0.0" />
+         <weather route_percentage="100.0" cloudiness="100.0" precipitation="8.0" precipitation_deposits="16.0" wetness="20.0" wind_intensity="60.0" sun_azimuth_angle="315.0" sun_altitude_angle="15.0" fog_density="1.0" />
+      </weathers>
+      <waypoints>
+         <position x="-832.6" y="1476.7" z="330.7" />
+         <position x="-831.9" y="1347.4" z="332.0" />
+         <position x="-830.7" y="728.6" z="340.7" />
+      </waypoints>
+      <scenarios>
+         <scenario name="ParkedObstacleTwoWays_7" type="ParkedObstacleTwoWays">
+            <trigger_point x="-832.5" y="1455.8" z="330.5" yaw="270.3" />
+            <distance value="90" />
+            <frequency from="55" to="140" />
+         </scenario>
+         <scenario name="AccidentTwoWays_8" type="AccidentTwoWays">
+            <trigger_point x="-830.9" y="1171.2" z="337.2" yaw="270.3" />
+            <frequency from="70" to="150" />
+         </scenario>
+         <scenario name="ConstructionObstacleTwoWays_5" type="ConstructionObstacleTwoWays">
+            <trigger_point x="-829.4" y="908.6" z="342.4" yaw="269.6" />
+            <distance value="110" />
+            <frequency from="60" to="140" />
+         </scenario>
+      </scenarios>
+   </route>
+</routes>

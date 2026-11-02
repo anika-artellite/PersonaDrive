@@ -1,0 +1,802 @@
+[
+ {
+  "route": "training_1_scenario/routes_training/random_weather_seed_1_balanced_150/Town12_Rep0_914_route0_01_10_18_45_08",
+  "frame_idx": 119
+ },
+ {
+  "route": "training_1_scenario/routes_training/random_weather_seed_1_balanced_150/Town12_Rep0_914_route0_01_10_18_45_08",
+  "frame_idx": 23
+ },
+ {
+  "route": "training_1_scenario/routes_training/random_weather_seed_1_balanced_150/Town12_Rep0_914_route0_01_10_18_45_08",
+  "frame_idx": 26
+ },
+ {
+  "route": "training_1_scenario/routes_training/random_weather_seed_1_balanced_150/Town12_Rep0_2950_route0_01_11_18_04_42",
+  "frame_idx": 72
+ },
+ {
+  "route": "training_1_scenario/routes_training/random_weather_seed_1_balanced_150/Town12_Rep0_2950_route0_01_11_18_04_42",
+  "frame_idx": 86
+ },
+ {
+  "route": "training_1_scenario/routes_training/random_weather_seed_1_balanced_150/Town12_Rep0_2950_route0_01_11_18_04_42",
+  "frame_idx": 59
+ },
+ {
+  "route": "training_1_scenario/routes_training/random_weather_seed_1_balanced_150/Town12_Rep0_3123_route0_01_11_16_51_44",
+  "frame_idx": 20
+ },
+ {
+  "route": "training_1_scenario/routes_training/random_weather_seed_1_balanced_150/Town12_Rep0_3123_route0_01_11_16_51_44",
+  "frame_idx": 24
+ },
+ {
+  "route": "training_1_scenario/routes_training/random_weather_seed_1_balanced_150/Town12_Rep0_3123_route0_01_11_16_51_44",
+  "frame_idx": 28
+ },
+ {
+  "route": "training_1_scenario/routes_training/random_weather_seed_1_balanced_150/Town12_Rep0_3587_route0_01_10_22_15_48",
+  "frame_idx": 14
+ },
+ {
+  "route": "training_1_scenario/routes_training/random_weather_seed_1_balanced_150/Town12_Rep0_3587_route0_01_10_22_15_48",
+  "frame_idx": 37
+ },
+ {
+  "route": "training_1_scenario/routes_training/random_weather_seed_1_balanced_150/Town12_Rep0_3587_route0_01_10_22_15_48",
+  "frame_idx": 25
+ },
+ {
+  "route": "training_1_scenario/routes_training/random_weather_seed_1_balanced_150/Town12_Rep0_3905_route0_01_11_11_36_09",
+  "frame_idx": 23
+ },
+ {
+  "route": "training_1_scenario/routes_training/random_weather_seed_1_balanced_150/Town12_Rep0_3905_route0_01_11_11_36_09",
+  "frame_idx": 90
+ },
+ {
+  "route": "training_1_scenario/routes_training/random_weather_seed_1_balanced_150/Town12_Rep0_3905_route0_01_11_11_36_09",
+  "frame_idx": 57
+ },
+ {
+  "route": "fast/lb1_split/routes_training/OppositeVehicleRunningRedLight/Town03_Scenario8_22/Town03_Rep0_None",
+  "frame_idx": 15
+ },
+ {
+  "route": "fast/lb1_split/routes_training/OppositeVehicleRunningRedLight/Town03_Scenario8_22/Town03_Rep0_None",
+  "frame_idx": 17
+ },
+ {
+  "route": "fast/lb1_split/routes_training/OppositeVehicleRunningRedLight/Town03_Scenario8_22/Town03_Rep0_None",
+  "frame_idx": 12
+ },
+ {
+  "route": "fast/lb1_split/routes_training/SignalizedJunctionLeftTurn/Town02_Scenario7_2/Town02_Rep0_None",
+  "frame_idx": 15
+ },
+ {
+  "route": "fast/lb1_split/routes_training/SignalizedJunctionLeftTurn/Town02_Scenario7_2/Town02_Rep0_None",
+  "frame_idx": 18
+ },
+ {
+  "route": "fast/lb1_split/routes_training/SignalizedJunctionLeftTurn/Town02_Scenario7_2/Town02_Rep0_None",
+  "frame_idx": 29
+ },
+ {
+  "route": "training_1_scenario/routes_training/random_weather_seed_1_balanced_150/Town12_Rep0_3473_route0_01_12_01_59_40",
+  "frame_idx": 16
+ },
+ {
+  "route": "training_1_scenario/routes_training/random_weather_seed_1_balanced_150/Town12_Rep0_3473_route0_01_12_01_59_40",
+  "frame_idx": 705
+ },
+ {
+  "route": "training_1_scenario/routes_training/random_weather_seed_1_balanced_150/Town12_Rep0_3473_route0_01_12_01_59_40",
+  "frame_idx": 806
+ },
+ {
+  "route": "slow/lb1_split/routes_training/SignalizedJunctionRightTurn/Town01_Scenario9_5/Town01_Rep0_None",
+  "frame_idx": 45
+ },
+ {
+  "route": "slow/lb1_split/routes_training/SignalizedJunctionRightTurn/Town01_Scenario9_5/Town01_Rep0_None",
+  "frame_idx": 29
+ },
+ {
+  "route": "slow/lb1_split/routes_training/SignalizedJunctionRightTurn/Town01_Scenario9_5/Town01_Rep0_None",
+  "frame_idx": 73
+ },
+ {
+  "route": "training_1_scenario/routes_training/random_weather_seed_1_balanced_150/Town12_Rep0_3528_route0_01_11_09_35_42",
+  "frame_idx": 22
+ },
+ {
+  "route": "training_1_scenario/routes_training/random_weather_seed_1_balanced_150/Town12_Rep0_3528_route0_01_11_09_35_42",
+  "frame_idx": 61
+ },
+ {
+  "route": "training_1_scenario/routes_training/random_weather_seed_1_balanced_150/Town12_Rep0_3528_route0_01_11_09_35_42",
+  "frame_idx": 49
+ },
+ {
+  "route": "training_1_scenario/routes_training/random_weather_seed_1_balanced_150/Town12_Rep0_4963_route0_01_11_22_28_58",
+  "frame_idx": 14
+ },
+ {
+  "route": "training_1_scenario/routes_training/random_weather_seed_1_balanced_150/Town12_Rep0_4963_route0_01_11_22_28_58",
+  "frame_idx": 21
+ },
+ {
+  "route": "training_1_scenario/routes_training/random_weather_seed_1_balanced_150/Town12_Rep0_4963_route0_01_11_22_28_58",
+  "frame_idx": 65
+ },
+ {
+  "route": "fast/lb1_split/routes_training/VehicleTurningRoute/Town01_Scenario4_21/Town01_Rep0_None",
+  "frame_idx": 11
+ },
+ {
+  "route": "fast/lb1_split/routes_training/VehicleTurningRoute/Town01_Scenario4_21/Town01_Rep0_None",
+  "frame_idx": 52
+ },
+ {
+  "route": "fast/lb1_split/routes_training/VehicleTurningRoute/Town01_Scenario4_21/Town01_Rep0_None",
+  "frame_idx": 34
+ },
+ {
+  "route": "training_1_scenario/routes_training/random_weather_seed_1_balanced_150/Town12_Rep0_3753_route0_01_12_03_14_43",
+  "frame_idx": 23
+ },
+ {
+  "route": "training_1_scenario/routes_training/random_weather_seed_1_balanced_150/Town12_Rep0_3753_route0_01_12_03_14_43",
+  "frame_idx": 40
+ },
+ {
+  "route": "training_1_scenario/routes_training/random_weather_seed_1_balanced_150/Town12_Rep0_3753_route0_01_12_03_14_43",
+  "frame_idx": 24
+ },
+ {
+  "route": "fast/lb1_split/routes_training/noScenarios/Town03_lr_3/Town03_Rep0_None",
+  "frame_idx": 16
+ },
+ {
+  "route": "fast/lb1_split/routes_training/noScenarios/Town03_lr_3/Town03_Rep0_None",
+  "frame_idx": 22
+ },
+ {
+  "route": "fast/lb1_split/routes_training/noScenarios/Town03_lr_3/Town03_Rep0_None",
+  "frame_idx": 24
+ },
+ {
+  "route": "slow/lb1_split/routes_training/SignalizedJunctionLeftTurn/Town03_Scenario7_17/Town03_Rep0_None",
+  "frame_idx": 72
+ },
+ {
+  "route": "slow/lb1_split/routes_training/SignalizedJunctionLeftTurn/Town03_Scenario7_17/Town03_Rep0_None",
+  "frame_idx": 44
+ },
+ {
+  "route": "slow/lb1_split/routes_training/SignalizedJunctionLeftTurn/Town03_Scenario7_17/Town03_Rep0_None",
+  "frame_idx": 40
+ },
+ {
+  "route": "slow/lb1_split/routes_training/OppositeVehicleRunningRedLight/Town01_Scenario8_44/Town01_Rep0_None",
+  "frame_idx": 68
+ },
+ {
+  "route": "slow/lb1_split/routes_training/OppositeVehicleRunningRedLight/Town01_Scenario8_44/Town01_Rep0_None",
+  "frame_idx": 63
+ },
+ {
+  "route": "slow/lb1_split/routes_training/OppositeVehicleRunningRedLight/Town01_Scenario8_44/Town01_Rep0_None",
+  "frame_idx": 69
+ },
+ {
+  "route": "fast/lb1_split/routes_training/SignalizedJunctionRightTurn/Town01_Scenario9_25/Town01_Rep0_None",
+  "frame_idx": 15
+ },
+ {
+  "route": "fast/lb1_split/routes_training/SignalizedJunctionRightTurn/Town01_Scenario9_25/Town01_Rep0_None",
+  "frame_idx": 22
+ },
+ {
+  "route": "fast/lb1_split/routes_training/SignalizedJunctionRightTurn/Town01_Scenario9_25/Town01_Rep0_None",
+  "frame_idx": 13
+ },
+ {
+  "route": "training_1_scenario/routes_training/random_weather_seed_1_balanced_150/Town12_Rep0_2553_route0_01_11_01_40_44",
+  "frame_idx": 14
+ },
+ {
+  "route": "training_1_scenario/routes_training/random_weather_seed_1_balanced_150/Town12_Rep0_2553_route0_01_11_01_40_44",
+  "frame_idx": 48
+ },
+ {
+  "route": "training_1_scenario/routes_training/random_weather_seed_1_balanced_150/Town12_Rep0_2553_route0_01_11_01_40_44",
+  "frame_idx": 99
+ },
+ {
+  "route": "training_1_scenario/routes_training/random_weather_seed_1_balanced_150/Town12_Rep0_5314_route0_01_11_11_38_15",
+  "frame_idx": 69
+ },
+ {
+  "route": "training_1_scenario/routes_training/random_weather_seed_1_balanced_150/Town12_Rep0_5314_route0_01_11_11_38_15",
+  "frame_idx": 61
+ },
+ {
+  "route": "training_1_scenario/routes_training/random_weather_seed_1_balanced_150/Town12_Rep0_5314_route0_01_11_11_38_15",
+  "frame_idx": 148
+ },
+ {
+  "route": "training_1_scenario/routes_training/random_weather_seed_1_balanced_150/Town12_Rep0_169_route0_01_11_12_27_56",
+  "frame_idx": 43
+ },
+ {
+  "route": "training_1_scenario/routes_training/random_weather_seed_1_balanced_150/Town12_Rep0_169_route0_01_11_12_27_56",
+  "frame_idx": 96
+ },
+ {
+  "route": "training_1_scenario/routes_training/random_weather_seed_1_balanced_150/Town12_Rep0_169_route0_01_11_12_27_56",
+  "frame_idx": 50
+ },
+ {
+  "route": "training_1_scenario/routes_training/random_weather_seed_1_balanced_150/Town12_Rep0_3671_route0_01_11_18_11_18",
+  "frame_idx": 16
+ },
+ {
+  "route": "training_1_scenario/routes_training/random_weather_seed_1_balanced_150/Town12_Rep0_3671_route0_01_11_18_11_18",
+  "frame_idx": 14
+ },
+ {
+  "route": "training_1_scenario/routes_training/random_weather_seed_1_balanced_150/Town12_Rep0_3671_route0_01_11_18_11_18",
+  "frame_idx": 39
+ },
+ {
+  "route": "fast/lb1_split/routes_training/SignalizedJunctionLeftTurn/Town02_Scenario7_37/Town02_Rep0_None",
+  "frame_idx": 22
+ },
+ {
+  "route": "fast/lb1_split/routes_training/SignalizedJunctionLeftTurn/Town02_Scenario7_37/Town02_Rep0_None",
+  "frame_idx": 11
+ },
+ {
+  "route": "fast/lb1_split/routes_training/SignalizedJunctionLeftTurn/Town02_Scenario7_37/Town02_Rep0_None",
+  "frame_idx": 32
+ },
+ {
+  "route": "training_1_scenario/routes_training/random_weather_seed_1_balanced_150/Town12_Rep0_4897_route0_01_11_07_42_21",
+  "frame_idx": 127
+ },
+ {
+  "route": "training_1_scenario/routes_training/random_weather_seed_1_balanced_150/Town12_Rep0_4897_route0_01_11_07_42_21",
+  "frame_idx": 178
+ },
+ {
+  "route": "training_1_scenario/routes_training/random_weather_seed_1_balanced_150/Town12_Rep0_4897_route0_01_11_07_42_21",
+  "frame_idx": 228
+ },
+ {
+  "route": "training_1_scenario/routes_training/random_weather_seed_1_balanced_150/Town12_Rep0_5674_route0_01_10_22_07_44",
+  "frame_idx": 92
+ },
+ {
+  "route": "training_1_scenario/routes_training/random_weather_seed_1_balanced_150/Town12_Rep0_5674_route0_01_10_22_07_44",
+  "frame_idx": 37
+ },
+ {
+  "route": "training_1_scenario/routes_training/random_weather_seed_1_balanced_150/Town12_Rep0_5674_route0_01_10_22_07_44",
+  "frame_idx": 47
+ },
+ {
+  "route": "fast/lb1_split/routes_training/ControlLoss/Town03_Scenario1_22/Town03_Rep0_None",
+  "frame_idx": 29
+ },
+ {
+  "route": "fast/lb1_split/routes_training/ControlLoss/Town03_Scenario1_22/Town03_Rep0_None",
+  "frame_idx": 64
+ },
+ {
+  "route": "fast/lb1_split/routes_training/ControlLoss/Town03_Scenario1_22/Town03_Rep0_None",
+  "frame_idx": 81
+ },
+ {
+  "route": "fast/lb1_split/routes_training/SignalizedJunctionRightTurn/Town01_Scenario9_38/Town01_Rep0_None",
+  "frame_idx": 149
+ },
+ {
+  "route": "fast/lb1_split/routes_training/SignalizedJunctionRightTurn/Town01_Scenario9_38/Town01_Rep0_None",
+  "frame_idx": 83
+ },
+ {
+  "route": "fast/lb1_split/routes_training/SignalizedJunctionRightTurn/Town01_Scenario9_38/Town01_Rep0_None",
+  "frame_idx": 142
+ },
+ {
+  "route": "training_1_scenario/routes_training/random_weather_seed_1_balanced_150/Town12_Rep0_3527_route0_01_12_02_34_33",
+  "frame_idx": 43
+ },
+ {
+  "route": "training_1_scenario/routes_training/random_weather_seed_1_balanced_150/Town12_Rep0_3527_route0_01_12_02_34_33",
+  "frame_idx": 21
+ },
+ {
+  "route": "training_1_scenario/routes_training/random_weather_seed_1_balanced_150/Town12_Rep0_3527_route0_01_12_02_34_33",
+  "frame_idx": 19
+ },
+ {
+  "route": "training_1_scenario/routes_training/random_weather_seed_1_balanced_150/Town12_Rep0_601_route0_01_11_03_08_38",
+  "frame_idx": 84
+ },
+ {
+  "route": "training_1_scenario/routes_training/random_weather_seed_1_balanced_150/Town12_Rep0_601_route0_01_11_03_08_38",
+  "frame_idx": 14
+ },
+ {
+  "route": "training_1_scenario/routes_training/random_weather_seed_1_balanced_150/Town12_Rep0_601_route0_01_11_03_08_38",
+  "frame_idx": 15
+ },
+ {
+  "route": "training_1_scenario/routes_training/random_weather_seed_1_balanced_150/Town12_Rep0_1791_route0_01_11_03_23_12",
+  "frame_idx": 17
+ },
+ {
+  "route": "training_1_scenario/routes_training/random_weather_seed_1_balanced_150/Town12_Rep0_1791_route0_01_11_03_23_12",
+  "frame_idx": 22
+ },
+ {
+  "route": "training_1_scenario/routes_training/random_weather_seed_1_balanced_150/Town12_Rep0_1791_route0_01_11_03_23_12",
+  "frame_idx": 41
+ },
+ {
+  "route": "training_1_scenario/routes_training/random_weather_seed_1_balanced_150/Town12_Rep0_4717_route0_01_11_08_21_36",
+  "frame_idx": 16
+ },
+ {
+  "route": "training_1_scenario/routes_training/random_weather_seed_1_balanced_150/Town12_Rep0_4717_route0_01_11_08_21_36",
+  "frame_idx": 18
+ },
+ {
+  "route": "training_1_scenario/routes_training/random_weather_seed_1_balanced_150/Town12_Rep0_4717_route0_01_11_08_21_36",
+  "frame_idx": 29
+ },
+ {
+  "route": "training_1_scenario/routes_training/random_weather_seed_1_balanced_150/Town12_Rep0_3750_route0_01_11_15_14_56",
+  "frame_idx": 40
+ },
+ {
+  "route": "training_1_scenario/routes_training/random_weather_seed_1_balanced_150/Town12_Rep0_3750_route0_01_11_15_14_56",
+  "frame_idx": 35
+ },
+ {
+  "route": "training_1_scenario/routes_training/random_weather_seed_1_balanced_150/Town12_Rep0_3750_route0_01_11_15_14_56",
+  "frame_idx": 34
+ },
+ {
+  "route": "training_1_scenario/routes_training/random_weather_seed_1_balanced_150/Town12_Rep0_5006_route0_01_11_22_33_30",
+  "frame_idx": 38
+ },
+ {
+  "route": "training_1_scenario/routes_training/random_weather_seed_1_balanced_150/Town12_Rep0_5006_route0_01_11_22_33_30",
+  "frame_idx": 51
+ },
+ {
+  "route": "training_1_scenario/routes_training/random_weather_seed_1_balanced_150/Town12_Rep0_5006_route0_01_11_22_33_30",
+  "frame_idx": 76
+ },
+ {
+  "route": "training_1_scenario/routes_training/random_weather_seed_1_balanced_150/Town12_Rep0_3696_route0_01_11_00_53_52",
+  "frame_idx": 46
+ },
+ {
+  "route": "training_1_scenario/routes_training/random_weather_seed_1_balanced_150/Town12_Rep0_3696_route0_01_11_00_53_52",
+  "frame_idx": 33
+ },
+ {
+  "route": "training_1_scenario/routes_training/random_weather_seed_1_balanced_150/Town12_Rep0_3696_route0_01_11_00_53_52",
+  "frame_idx": 47
+ },
+ {
+  "route": "training_1_scenario/routes_training/random_weather_seed_1_balanced_150/Town12_Rep0_1994_route0_01_11_13_13_26",
+  "frame_idx": 20
+ },
+ {
+  "route": "training_1_scenario/routes_training/random_weather_seed_1_balanced_150/Town12_Rep0_1994_route0_01_11_13_13_26",
+  "frame_idx": 14
+ },
+ {
+  "route": "training_1_scenario/routes_training/random_weather_seed_1_balanced_150/Town12_Rep0_1994_route0_01_11_13_13_26",
+  "frame_idx": 46
+ },
+ {
+  "route": "training_1_scenario/routes_training/random_weather_seed_1_balanced_150/Town12_Rep0_3306_route0_01_11_15_10_25",
+  "frame_idx": 12
+ },
+ {
+  "route": "training_1_scenario/routes_training/random_weather_seed_1_balanced_150/Town12_Rep0_3306_route0_01_11_15_10_25",
+  "frame_idx": 42
+ },
+ {
+  "route": "training_1_scenario/routes_training/random_weather_seed_1_balanced_150/Town12_Rep0_3306_route0_01_11_15_10_25",
+  "frame_idx": 29
+ },
+ {
+  "route": "training_1_scenario/routes_training/random_weather_seed_1_balanced_150/Town12_Rep0_4298_route0_01_10_19_04_53",
+  "frame_idx": 93
+ },
+ {
+  "route": "training_1_scenario/routes_training/random_weather_seed_1_balanced_150/Town12_Rep0_4298_route0_01_10_19_04_53",
+  "frame_idx": 35
+ },
+ {
+  "route": "training_1_scenario/routes_training/random_weather_seed_1_balanced_150/Town12_Rep0_4298_route0_01_10_19_04_53",
+  "frame_idx": 94
+ },
+ {
+  "route": "training_1_scenario/routes_training/random_weather_seed_1_balanced_150/Town12_Rep0_2204_route0_01_11_06_28_37",
+  "frame_idx": 49
+ },
+ {
+  "route": "training_1_scenario/routes_training/random_weather_seed_1_balanced_150/Town12_Rep0_2204_route0_01_11_06_28_37",
+  "frame_idx": 15
+ },
+ {
+  "route": "training_1_scenario/routes_training/random_weather_seed_1_balanced_150/Town12_Rep0_2204_route0_01_11_06_28_37",
+  "frame_idx": 46
+ },
+ {
+  "route": "training_1_scenario/routes_training/random_weather_seed_1_balanced_150/Town12_Rep0_129_route0_01_12_01_23_54",
+  "frame_idx": 160
+ },
+ {
+  "route": "training_1_scenario/routes_training/random_weather_seed_1_balanced_150/Town12_Rep0_129_route0_01_12_01_23_54",
+  "frame_idx": 122
+ },
+ {
+  "route": "training_1_scenario/routes_training/random_weather_seed_1_balanced_150/Town12_Rep0_129_route0_01_12_01_23_54",
+  "frame_idx": 17
+ },
+ {
+  "route": "training_1_scenario/routes_training/random_weather_seed_1_balanced_150/Town12_Rep0_1277_route0_01_11_03_30_40",
+  "frame_idx": 37
+ },
+ {
+  "route": "training_1_scenario/routes_training/random_weather_seed_1_balanced_150/Town12_Rep0_1277_route0_01_11_03_30_40",
+  "frame_idx": 26
+ },
+ {
+  "route": "training_1_scenario/routes_training/random_weather_seed_1_balanced_150/Town12_Rep0_1277_route0_01_11_03_30_40",
+  "frame_idx": 39
+ },
+ {
+  "route": "fast/lb1_split/routes_training/OppositeVehicleRunningRedLight/Town03_Scenario8_13/Town03_Rep0_None",
+  "frame_idx": 11
+ },
+ {
+  "route": "fast/lb1_split/routes_training/OppositeVehicleRunningRedLight/Town03_Scenario8_13/Town03_Rep0_None",
+  "frame_idx": 14
+ },
+ {
+  "route": "fast/lb1_split/routes_training/OppositeVehicleRunningRedLight/Town03_Scenario8_13/Town03_Rep0_None",
+  "frame_idx": 13
+ },
+ {
+  "route": "training_1_scenario/routes_training/random_weather_seed_1_balanced_150/Town12_Rep0_2004_route0_01_10_19_46_11",
+  "frame_idx": 29
+ },
+ {
+  "route": "training_1_scenario/routes_training/random_weather_seed_1_balanced_150/Town12_Rep0_2004_route0_01_10_19_46_11",
+  "frame_idx": 15
+ },
+ {
+  "route": "training_1_scenario/routes_training/random_weather_seed_1_balanced_150/Town12_Rep0_2004_route0_01_10_19_46_11",
+  "frame_idx": 21
+ },
+ {
+  "route": "slow/lb1_split/routes_training/SignalizedJunctionRightTurn/Town01_Scenario9_55/Town01_Rep0_None",
+  "frame_idx": 56
+ },
+ {
+  "route": "slow/lb1_split/routes_training/SignalizedJunctionRightTurn/Town01_Scenario9_55/Town01_Rep0_None",
+  "frame_idx": 31
+ },
+ {
+  "route": "slow/lb1_split/routes_training/SignalizedJunctionRightTurn/Town01_Scenario9_55/Town01_Rep0_None",
+  "frame_idx": 19
+ },
+ {
+  "route": "slow/lb1_split/routes_training/DynamicObjectCrossing/Town01_Scenario3_1/Town01_Rep0_None",
+  "frame_idx": 121
+ },
+ {
+  "route": "slow/lb1_split/routes_training/DynamicObjectCrossing/Town01_Scenario3_1/Town01_Rep0_None",
+  "frame_idx": 78
+ },
+ {
+  "route": "slow/lb1_split/routes_training/DynamicObjectCrossing/Town01_Scenario3_1/Town01_Rep0_None",
+  "frame_idx": 44
+ },
+ {
+  "route": "training_1_scenario/routes_training/random_weather_seed_1_balanced_150/Town12_Rep0_5671_route0_01_10_16_26_48",
+  "frame_idx": 12
+ },
+ {
+  "route": "training_1_scenario/routes_training/random_weather_seed_1_balanced_150/Town12_Rep0_5671_route0_01_10_16_26_48",
+  "frame_idx": 48
+ },
+ {
+  "route": "training_1_scenario/routes_training/random_weather_seed_1_balanced_150/Town12_Rep0_5671_route0_01_10_16_26_48",
+  "frame_idx": 30
+ },
+ {
+  "route": "training_1_scenario/routes_training/random_weather_seed_1_balanced_150/Town12_Rep0_4349_route0_01_11_14_34_26",
+  "frame_idx": 120
+ },
+ {
+  "route": "training_1_scenario/routes_training/random_weather_seed_1_balanced_150/Town12_Rep0_4349_route0_01_11_14_34_26",
+  "frame_idx": 75
+ },
+ {
+  "route": "training_1_scenario/routes_training/random_weather_seed_1_balanced_150/Town12_Rep0_4349_route0_01_11_14_34_26",
+  "frame_idx": 24
+ },
+ {
+  "route": "training_1_scenario/routes_training/random_weather_seed_1_balanced_150/Town12_Rep0_1066_route0_01_11_09_08_39",
+  "frame_idx": 36
+ },
+ {
+  "route": "training_1_scenario/routes_training/random_weather_seed_1_balanced_150/Town12_Rep0_1066_route0_01_11_09_08_39",
+  "frame_idx": 126
+ },
+ {
+  "route": "training_1_scenario/routes_training/random_weather_seed_1_balanced_150/Town12_Rep0_1066_route0_01_11_09_08_39",
+  "frame_idx": 118
+ },
+ {
+  "route": "slow/lb1_split/routes_training/ControlLoss/Town03_Scenario1_14/Town03_Rep0_None",
+  "frame_idx": 90
+ },
+ {
+  "route": "slow/lb1_split/routes_training/ControlLoss/Town03_Scenario1_14/Town03_Rep0_None",
+  "frame_idx": 51
+ },
+ {
+  "route": "slow/lb1_split/routes_training/ControlLoss/Town03_Scenario1_14/Town03_Rep0_None",
+  "frame_idx": 62
+ },
+ {
+  "route": "training_1_scenario/routes_training/random_weather_seed_1_balanced_150/Town12_Rep0_3464_route0_01_11_03_06_00",
+  "frame_idx": 16
+ },
+ {
+  "route": "training_1_scenario/routes_training/random_weather_seed_1_balanced_150/Town12_Rep0_3464_route0_01_11_03_06_00",
+  "frame_idx": 28
+ },
+ {
+  "route": "training_1_scenario/routes_training/random_weather_seed_1_balanced_150/Town12_Rep0_3464_route0_01_11_03_06_00",
+  "frame_idx": 11
+ },
+ {
+  "route": "training_1_scenario/routes_training/random_weather_seed_1_balanced_150/Town12_Rep0_4046_route0_01_11_04_22_29",
+  "frame_idx": 13
+ },
+ {
+  "route": "training_1_scenario/routes_training/random_weather_seed_1_balanced_150/Town12_Rep0_4046_route0_01_11_04_22_29",
+  "frame_idx": 48
+ },
+ {
+  "route": "training_1_scenario/routes_training/random_weather_seed_1_balanced_150/Town12_Rep0_4046_route0_01_11_04_22_29",
+  "frame_idx": 28
+ },
+ {
+  "route": "training_1_scenario/routes_training/random_weather_seed_1_balanced_150/Town12_Rep0_3574_route0_01_11_00_38_23",
+  "frame_idx": 27
+ },
+ {
+  "route": "training_1_scenario/routes_training/random_weather_seed_1_balanced_150/Town12_Rep0_3574_route0_01_11_00_38_23",
+  "frame_idx": 52
+ },
+ {
+  "route": "training_1_scenario/routes_training/random_weather_seed_1_balanced_150/Town12_Rep0_3574_route0_01_11_00_38_23",
+  "frame_idx": 50
+ },
+ {
+  "route": "training_1_scenario/routes_training/random_weather_seed_1_balanced_150/Town12_Rep0_1399_route0_01_12_00_34_09",
+  "frame_idx": 191
+ },
+ {
+  "route": "training_1_scenario/routes_training/random_weather_seed_1_balanced_150/Town12_Rep0_1399_route0_01_12_00_34_09",
+  "frame_idx": 166
+ },
+ {
+  "route": "training_1_scenario/routes_training/random_weather_seed_1_balanced_150/Town12_Rep0_1399_route0_01_12_00_34_09",
+  "frame_idx": 208
+ },
+ {
+  "route": "training_1_scenario/routes_training/random_weather_seed_1_balanced_150/Town12_Rep0_3711_route0_01_11_09_52_23",
+  "frame_idx": 27
+ },
+ {
+  "route": "training_1_scenario/routes_training/random_weather_seed_1_balanced_150/Town12_Rep0_3711_route0_01_11_09_52_23",
+  "frame_idx": 11
+ },
+ {
+  "route": "training_1_scenario/routes_training/random_weather_seed_1_balanced_150/Town12_Rep0_3711_route0_01_11_09_52_23",
+  "frame_idx": 20
+ },
+ {
+  "route": "training_1_scenario/routes_training/random_weather_seed_1_balanced_150/Town12_Rep0_694_route0_01_10_19_13_58",
+  "frame_idx": 14
+ },
+ {
+  "route": "training_1_scenario/routes_training/random_weather_seed_1_balanced_150/Town12_Rep0_694_route0_01_10_19_13_58",
+  "frame_idx": 72
+ },
+ {
+  "route": "training_1_scenario/routes_training/random_weather_seed_1_balanced_150/Town12_Rep0_694_route0_01_10_19_13_58",
+  "frame_idx": 32
+ },
+ {
+  "route": "training_1_scenario/routes_training/random_weather_seed_1_balanced_150/Town12_Rep0_334_route0_01_11_15_55_31",
+  "frame_idx": 272
+ },
+ {
+  "route": "training_1_scenario/routes_training/random_weather_seed_1_balanced_150/Town12_Rep0_334_route0_01_11_15_55_31",
+  "frame_idx": 260
+ },
+ {
+  "route": "training_1_scenario/routes_training/random_weather_seed_1_balanced_150/Town12_Rep0_334_route0_01_11_15_55_31",
+  "frame_idx": 69
+ },
+ {
+  "route": "training_1_scenario/routes_training/random_weather_seed_1_balanced_150/Town12_Rep0_5588_route0_01_11_11_54_16",
+  "frame_idx": 78
+ },
+ {
+  "route": "training_1_scenario/routes_training/random_weather_seed_1_balanced_150/Town12_Rep0_5588_route0_01_11_11_54_16",
+  "frame_idx": 43
+ },
+ {
+  "route": "training_1_scenario/routes_training/random_weather_seed_1_balanced_150/Town12_Rep0_5588_route0_01_11_11_54_16",
+  "frame_idx": 24
+ },
+ {
+  "route": "training_1_scenario/routes_training/random_weather_seed_1_balanced_150/Town12_Rep0_2921_route0_01_11_05_28_16",
+  "frame_idx": 135
+ },
+ {
+  "route": "training_1_scenario/routes_training/random_weather_seed_1_balanced_150/Town12_Rep0_2921_route0_01_11_05_28_16",
+  "frame_idx": 188
+ },
+ {
+  "route": "training_1_scenario/routes_training/random_weather_seed_1_balanced_150/Town12_Rep0_2921_route0_01_11_05_28_16",
+  "frame_idx": 17
+ },
+ {
+  "route": "fast/lb1_split/routes_training/noScenarios/Town04_ll_23/Town04_Rep0_None",
+  "frame_idx": 13
+ },
+ {
+  "route": "fast/lb1_split/routes_training/noScenarios/Town04_ll_23/Town04_Rep0_None",
+  "frame_idx": 19
+ },
+ {
+  "route": "fast/lb1_split/routes_training/noScenarios/Town04_ll_23/Town04_Rep0_None",
+  "frame_idx": 21
+ },
+ {
+  "route": "training_1_scenario/routes_training/random_weather_seed_1_balanced_150/Town12_Rep0_578_route0_01_12_02_09_01",
+  "frame_idx": 70
+ },
+ {
+  "route": "training_1_scenario/routes_training/random_weather_seed_1_balanced_150/Town12_Rep0_578_route0_01_12_02_09_01",
+  "frame_idx": 47
+ },
+ {
+  "route": "training_1_scenario/routes_training/random_weather_seed_1_balanced_150/Town12_Rep0_578_route0_01_12_02_09_01",
+  "frame_idx": 79
+ },
+ {
+  "route": "training_1_scenario/routes_training/random_weather_seed_1_balanced_150/Town12_Rep0_1641_route0_01_11_01_46_19",
+  "frame_idx": 71
+ },
+ {
+  "route": "training_1_scenario/routes_training/random_weather_seed_1_balanced_150/Town12_Rep0_1641_route0_01_11_01_46_19",
+  "frame_idx": 20
+ },
+ {
+  "route": "training_1_scenario/routes_training/random_weather_seed_1_balanced_150/Town12_Rep0_1641_route0_01_11_01_46_19",
+  "frame_idx": 25
+ },
+ {
+  "route": "slow/lb1_split/routes_training/SignalizedJunctionRightTurn/Town01_Scenario9_9/Town01_Rep0_None",
+  "frame_idx": 45
+ },
+ {
+  "route": "slow/lb1_split/routes_training/SignalizedJunctionRightTurn/Town01_Scenario9_9/Town01_Rep0_None",
+  "frame_idx": 50
+ },
+ {
+  "route": "slow/lb1_split/routes_training/SignalizedJunctionRightTurn/Town01_Scenario9_9/Town01_Rep0_None",
+  "frame_idx": 43
+ },
+ {
+  "route": "training_1_scenario/routes_training/random_weather_seed_1_balanced_150/Town12_Rep0_248_route0_01_11_09_54_22",
+  "frame_idx": 49
+ },
+ {
+  "route": "training_1_scenario/routes_training/random_weather_seed_1_balanced_150/Town12_Rep0_248_route0_01_11_09_54_22",
+  "frame_idx": 20
+ },
+ {
+  "route": "training_1_scenario/routes_training/random_weather_seed_1_balanced_150/Town12_Rep0_248_route0_01_11_09_54_22",
+  "frame_idx": 94
+ },
+ {
+  "route": "training_1_scenario/routes_training/random_weather_seed_1_balanced_150/Town12_Rep0_2790_route0_01_11_01_02_26",
+  "frame_idx": 26
+ },
+ {
+  "route": "training_1_scenario/routes_training/random_weather_seed_1_balanced_150/Town12_Rep0_2790_route0_01_11_01_02_26",
+  "frame_idx": 22
+ },
+ {
+  "route": "training_1_scenario/routes_training/random_weather_seed_1_balanced_150/Town12_Rep0_2790_route0_01_11_01_02_26",
+  "frame_idx": 13
+ },
+ {
+  "route": "training_1_scenario/routes_training/random_weather_seed_1_balanced_150/Town12_Rep0_4569_route0_01_11_13_25_30",
+  "frame_idx": 98
+ },
+ {
+  "route": "training_1_scenario/routes_training/random_weather_seed_1_balanced_150/Town12_Rep0_4569_route0_01_11_13_25_30",
+  "frame_idx": 30
+ },
+ {
+  "route": "training_1_scenario/routes_training/random_weather_seed_1_balanced_150/Town12_Rep0_4569_route0_01_11_13_25_30",
+  "frame_idx": 59
+ },
+ {
+  "route": "training_1_scenario/routes_training/random_weather_seed_1_balanced_150/Town12_Rep0_554_route0_01_10_08_50_29",
+  "frame_idx": 11
+ },
+ {
+  "route": "training_1_scenario/routes_training/random_weather_seed_1_balanced_150/Town12_Rep0_554_route0_01_10_08_50_29",
+  "frame_idx": 14
+ },
+ {
+  "route": "training_1_scenario/routes_training/random_weather_seed_1_balanced_150/Town12_Rep0_554_route0_01_10_08_50_29",
+  "frame_idx": 22
+ },
+ {
+  "route": "training_1_scenario/routes_training/random_weather_seed_1_balanced_150/Town12_Rep0_2904_route0_01_11_04_46_48",
+  "frame_idx": 123
+ },
+ {
+  "route": "training_1_scenario/routes_training/random_weather_seed_1_balanced_150/Town12_Rep0_2904_route0_01_11_04_46_48",
+  "frame_idx": 176
+ },
+ {
+  "route": "training_1_scenario/routes_training/random_weather_seed_1_balanced_150/Town12_Rep0_2904_route0_01_11_04_46_48",
+  "frame_idx": 165
+ },
+ {
+  "route": "slow/lb1_split/routes_training/SignalizedJunctionLeftTurn/Town01_Scenario7_17/Town01_Rep0_None",
+  "frame_idx": 28
+ },
+ {
+  "route": "slow/lb1_split/routes_training/SignalizedJunctionLeftTurn/Town01_Scenario7_17/Town01_Rep0_None",
+  "frame_idx": 22
+ },
+ {
+  "route": "slow/lb1_split/routes_training/SignalizedJunctionLeftTurn/Town01_Scenario7_17/Town01_Rep0_None",
+  "frame_idx": 61
+ },
+ {
+  "route": "training_1_scenario/routes_training/random_weather_seed_1_balanced_150/Town12_Rep0_2210_route0_01_11_03_02_06",
+  "frame_idx": 13
+ },
+ {
+  "route": "training_1_scenario/routes_training/random_weather_seed_1_balanced_150/Town12_Rep0_2210_route0_01_11_03_02_06",
+  "frame_idx": 108
+ }
+]

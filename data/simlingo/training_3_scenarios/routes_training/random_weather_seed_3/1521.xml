@@ -1,0 +1,28 @@
+<?xml version="1.0" ?>
+<routes>
+   <route id="0" town="Town12">
+      <weathers>
+         <weather route_percentage="0.0" cloudiness="10.0" precipitation="10.0" precipitation_deposits="60.0" wetness="20.0" wind_intensity="100.0" sun_azimuth_angle="270.0" sun_altitude_angle="-30.0" fog_density="40.0"/>
+         <weather route_percentage="100.0" cloudiness="100.0" precipitation="30.0" precipitation_deposits="60.0" wetness="8.0" wind_intensity="5.0" sun_azimuth_angle="225.0" sun_altitude_angle="80.0" fog_density="15.0"/>
+      </weathers>
+      <waypoints>
+         <position x="-1571.0" y="6465.1" z="373.1"/>
+         <position x="-2200.7" y="6408.4" z="377.9"/>
+         <position x="-2280.7" y="6302.7" z="378.4"/>
+         <position x="-2516.9" y="5942.3" z="379.5"/>
+      </waypoints>
+      <scenarios>
+         <scenario name="HardBreakRoute_1" type="HardBreakRoute">
+            <trigger_point x="-1621.4" y="6471.4" z="372.6" yaw="-188.4"/>
+         </scenario>
+         <scenario name="YieldToEmergencyVehicle_1" type="YieldToEmergencyVehicle">
+            <trigger_point x="-1817.8" y="6515.3" z="372.7" yaw="166.5"/>
+            <distance value="130"/>
+         </scenario>
+         <scenario name="HighwayCutIn_1" type="HighwayCutIn">
+            <trigger_point x="-2287.5" y="6293.4" z="378.5" yaw="233.5"/>
+            <other_actor_location x="-2306.1" y="6204.2" z="378.6"/>
+         </scenario>
+      </scenarios>
+   </route>
+</routes>

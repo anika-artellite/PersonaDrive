@@ -1,0 +1,23 @@
+# PersonaDrive conda environment (conda layer only).
+#
+# This file creates the base env; the pip layer (torch cu121, flash-attn,
+# deepspeed, carla and the pinned requirements) must be installed in a fixed
+# order, so use the installer instead of `conda env create` alone:
+#
+#     bash environment/setup_env.sh -n personadrive
+#
+# Captured from the environment that trained and evaluated PersonaDrive
+# (Python 3.10.20, torch 2.2.2+cu121, flash-attn 2.7.0.post2).
+name: personadrive
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.10
+  - pip
+  - hydra-core=1.3.2
+  - omegaconf=2.3.0
+  # DeepSpeed checks the CUDA toolkit version on import (needs CUDA_HOME with
+  # bin/nvcc). The reference runs used the cluster's CUDA module; shipping nvcc
+  # here makes the env self-contained. The activation hook sets CUDA_HOME.
+  - cuda-nvcc=12.1

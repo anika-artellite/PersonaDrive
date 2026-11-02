@@ -1,0 +1,27 @@
+<routes><route id="0" town="Town12">
+      <weathers>
+         <weather route_percentage="0.0" cloudiness="15.0" precipitation="0.0" precipitation_deposits="8.0" wetness="20.0" wind_intensity="50.0" sun_azimuth_angle="135.0" sun_altitude_angle="70.0" fog_density="1.0" />
+         <weather route_percentage="100.0" cloudiness="2.0" precipitation="2.0" precipitation_deposits="30.0" wetness="0.0" wind_intensity="50.0" sun_azimuth_angle="180.0" sun_altitude_angle="20.0" fog_density="0.0" />
+      </weathers>
+      <waypoints>
+         <position x="3679.3" y="4610.7" z="368.0" />
+         <position x="3588.9" y="4596.0" z="368.1" />
+         <position x="3447.8" y="4764.7" z="368.0" />
+         <position x="3435.6" y="4837.3" z="367.9" />
+      </waypoints>
+      <scenarios>
+         <scenario name="AccidentTwoWays_2" type="AccidentTwoWays">
+            <trigger_point x="3659.5" y="4607.5" z="368.1" yaw="189.2" />
+            <distance value="87.6" />
+            <frequency from="45" to="105" />
+         </scenario>
+         <scenario name="OppositeVehicleRunningRedLight_6" type="OppositeVehicleRunningRedLight">
+            <trigger_point x="3468.3" y="4636.9" z="368.0" yaw="98.3" />
+            <direction value="right" />
+         </scenario>
+         <scenario name="ParkingCutIn_3" type="ParkingCutIn">
+            <trigger_point x="3455.5" y="4719.2" z="368.0" yaw="99.6" />
+         </scenario>
+      </scenarios>
+   </route>
+</routes>

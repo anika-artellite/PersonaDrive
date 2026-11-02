@@ -1,0 +1,56 @@
+# @package _global_
+# PersonaDrive Stage 3 - in-context SFT of the SimLingo backbone.
+#
+# This is the configuration of the run that produced the released PersonaDrive
+# backbone (hydra output dir 2026-05-01/13-46-51). That run was launched as a
+# plain `python simlingo_training/train.py` with config/config.yaml ->
+# `experiment: debug`; this file is a verbatim copy of experiment/debug.yaml with
+# only `name:` changed. Launch it with:
+#   python simlingo_training/train.py experiment=personadrive_icl_sft
+#
+# Hardware of the reported run: 4x NVIDIA L40S (48 GB), DeepSpeed ZeRO-2, bf16,
+# ~12 h for the single epoch. Model-side defaults not set here come from
+# simlingo_training/config.py (LoRA r=32, alpha=64, dropout=0.1, seed=42).
+# Batch 6 per GPU needs a 48 GB GPU; on 24 GB GPUs keep the same effective batch
+# with data_module.batch_size=2 accumulate_grad_batches=3.
+# `data_path` is relative to the repo root; point it (or a `database` symlink)
+# at the dataset root described in datasets/README.md.
+defaults:
+  - /data_module: carla_no_buckets
+  - /model/vision_model: vlm
+  - /data_module/base_dataset: dataset
+
+model:
+  lr: 3e-5
+  predict_route_as_wps: True
+  speed_wps_mode: 2d
+  vision_model:
+    freeze: True
+
+data_module:
+  batch_size: 6
+  num_workers: 6
+  dreamer_dataset: null
+  base_dataset:
+    data_path: database/simlingo
+    bucket_path: null
+    use_aggregated_dataset: True
+    cache_dataset: False
+    cache_index_to_disk: False
+    cut_bottom_quarter: True
+    use_commentary: True
+    use_qa: True
+    use_old_towns: True
+    use_town13: True
+    use_safety_flag: True
+    use_icl: True
+    img_shift_augmentation: True # enable shifted-camera augmentation paths
+    img_shift_augmentation_prob: 0.5 # probability to use shifted images when available
+    hist_len: 1 # number of history frames per sample
+
+name: personadrive_icl_sft
+max_epochs: 1
+val_every_n_epochs: 1
+gpus: 4
+
+checkpoint: pretrained/RenzKa_simlingo/simlingo/checkpoints/epoch=013.ckpt/pytorch_model.pt

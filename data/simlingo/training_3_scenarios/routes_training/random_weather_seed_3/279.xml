@@ -1,0 +1,34 @@
+<?xml version="1.0" ?>
+<routes>
+   <route id="0" town="Town12">
+      <weathers>
+         <weather route_percentage="0.0" cloudiness="10.0" precipitation="60.0" precipitation_deposits="0.0" wetness="4.0" wind_intensity="50.0" sun_azimuth_angle="90.0" sun_altitude_angle="30.0" fog_density="10.0"/>
+         <weather route_percentage="100.0" cloudiness="2.0" precipitation="20.0" precipitation_deposits="0.0" wetness="80.0" wind_intensity="50.0" sun_azimuth_angle="270.0" sun_altitude_angle="-30.0" fog_density="8.0"/>
+      </weathers>
+      <waypoints>
+         <position x="1942.7" y="4092.5" z="359.1"/>
+         <position x="1841.2" y="4076.1" z="359.0"/>
+         <position x="1734.3" y="4062.0" z="359.1"/>
+         <position x="1692.8" y="4118.8" z="360.0"/>
+         <position x="1650.5" y="4163.2" z="361.0"/>
+      </waypoints>
+      <scenarios>
+         <scenario name="HardBreakRoute_2" type="HardBreakRoute">
+            <trigger_point x="1892.8" y="4084.5" z="359.1" yaw="189.2"/>
+         </scenario>
+         <scenario name="CrossingBicycleFlow_2" type="CrossingBicycleFlow">
+            <trigger_point x="1775.1" y="4068.7" z="359.0" yaw="189.2"/>
+            <start_actor_flow x="1659.0" y="4056.4" z="359.4"/>
+            <flow_speed value="10"/>
+            <source_dist_interval from="5" to="30"/>
+         </scenario>
+         <scenario name="DynamicObjectCrossing_4" type="DynamicObjectCrossing">
+            <trigger_point x="1697.3" y="4091.1" z="359.7" yaw="99.3"/>
+            <distance value="40"/>
+            <direction value="right"/>
+            <blocker_model value="static.prop.container"/>
+            <crossing_angle value="10"/>
+         </scenario>
+      </scenarios>
+   </route>
+</routes>

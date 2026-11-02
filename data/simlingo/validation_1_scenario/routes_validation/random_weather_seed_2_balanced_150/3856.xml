@@ -1,0 +1,16 @@
+<routes><route id="0" town="Town13">
+      <weathers>
+         <weather route_percentage="0.0" cloudiness="60.0" precipitation="50.0" precipitation_deposits="80.0" wetness="8.0" wind_intensity="80.0" sun_azimuth_angle="135.0" sun_altitude_angle="90.0" fog_density="0.0" />
+         <weather route_percentage="100.0" cloudiness="20.0" precipitation="20.0" precipitation_deposits="100.0" wetness="0.0" wind_intensity="10.0" sun_azimuth_angle="90.0" sun_altitude_angle="5.0" fog_density="2.0" />
+      </weathers>
+      <waypoints>
+         <position x="7032.6" y="5016.9" z="183.6" />
+         <position x="7035.1" y="4864.5" z="183.5" />
+      </waypoints>
+      <scenarios>
+         <scenario name="PedestrianCrossing_2" type="PedestrianCrossing">
+            <trigger_point x="7032.9" y="4996.3" z="183.6" yaw="270.9" />
+         </scenario>
+      </scenarios>
+   </route>
+</routes>

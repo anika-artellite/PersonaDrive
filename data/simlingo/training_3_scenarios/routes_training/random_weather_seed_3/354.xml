@@ -1,0 +1,34 @@
+<?xml version="1.0" ?>
+<routes>
+   <route id="0" town="Town12">
+      <weathers>
+         <weather route_percentage="0.0" cloudiness="50.0" precipitation="10.0" precipitation_deposits="80.0" wetness="60.0" wind_intensity="80.0" sun_azimuth_angle="135.0" sun_altitude_angle="-15.0" fog_density="7.0"/>
+         <weather route_percentage="100.0" cloudiness="60.0" precipitation="100.0" precipitation_deposits="0.0" wetness="0.0" wind_intensity="80.0" sun_azimuth_angle="270.0" sun_altitude_angle="-30.0" fog_density="15.0"/>
+      </weathers>
+      <waypoints>
+         <position x="2322.7" y="3136.6" z="359.9"/>
+         <position x="2332.2" y="3138.8" z="360.6"/>
+         <position x="2767.5" y="3145.9" z="362.4"/>
+         <position x="3271.1" y="3115.7" z="367.0"/>
+      </waypoints>
+      <scenarios>
+         <scenario name="MergerIntoSlowTraffic_3" type="MergerIntoSlowTraffic">
+            <trigger_point x="2342.8" y="3141.0" z="361.3" yaw="10.9"/>
+            <start_actor_flow x="2435.1" y="3117.9" z="366.0"/>
+            <end_actor_flow x="2482.5" y="3195.1" z="366.0"/>
+            <flow_speed value="10"/>
+            <source_dist_interval from="10" to="30"/>
+         </scenario>
+         <scenario name="EnterActorFlow_3" type="EnterActorFlow">
+            <trigger_point x="2726.7" y="3152.3" z="363.9" yaw="-8.0"/>
+            <start_actor_flow x="2777.0" y="3117.1" z="360.8"/>
+            <end_actor_flow x="3059.2" y="3116.6" z="364.6"/>
+            <flow_speed value="17"/>
+            <source_dist_interval from="20" to="30"/>
+         </scenario>
+         <scenario name="HardBreakRoute_5" type="HardBreakRoute">
+            <trigger_point x="3205.7" y="3116.0" z="366.4" yaw="-0.3"/>
+         </scenario>
+      </scenarios>
+   </route>
+</routes>

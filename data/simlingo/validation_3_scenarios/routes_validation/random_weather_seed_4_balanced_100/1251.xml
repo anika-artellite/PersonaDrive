@@ -1,0 +1,29 @@
+<routes><route id="0" town="Town13">
+      <weathers>
+         <weather route_percentage="0.0" cloudiness="80.0" precipitation="2.0" precipitation_deposits="16.0" wetness="4.0" wind_intensity="80.0" sun_azimuth_angle="135.0" sun_altitude_angle="20.0" fog_density="1.0" />
+         <weather route_percentage="100.0" cloudiness="40.0" precipitation="40.0" precipitation_deposits="50.0" wetness="80.0" wind_intensity="80.0" sun_azimuth_angle="90.0" sun_altitude_angle="-15.0" fog_density="1.0" />
+      </weathers>
+      <waypoints>
+         <position x="6850.9" y="5077.0" z="181.2" />
+         <position x="6795.8" y="5076.4" z="180.4" />
+         <position x="6776.1" y="4810.6" z="179.9" />
+      </waypoints>
+      <scenarios>
+         <scenario name="SignalizedJunctionRightTurn_3" type="SignalizedJunctionRightTurn">
+            <trigger_point x="6829.9" y="5076.7" z="180.9" yaw="180.6" />
+            <flow_speed value="12" />
+            <source_dist_interval from="18" to="50" />
+         </scenario>
+         <scenario name="VehicleOpensDoorTwoWays_2" type="VehicleOpensDoorTwoWays">
+            <trigger_point x="6774.0" y="5060.9" z="180.1" yaw="-89.5" />
+            <distance value="73.1" />
+            <frequency from="40" to="110" />
+         </scenario>
+         <scenario name="VehicleOpensDoorTwoWays_3" type="VehicleOpensDoorTwoWays">
+            <trigger_point x="6775.3" y="4910.8" z="180.1" yaw="-89.5" />
+            <distance value="60" />
+            <frequency from="40" to="115" />
+         </scenario>
+      </scenarios>
+   </route>
+</routes>

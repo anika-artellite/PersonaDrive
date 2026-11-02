@@ -1,0 +1,42 @@
+# Python dependencies for PersonaDrive data collection, i.e. for this repository's
+# scripts plus the bundled SimLingo DataAgent in simlingo/.
+#
+#     pip install -r requirements.txt
+#
+# Versions are the ones this collection rig was actually run with, not upper bounds.
+# simlingo/team_code/requirements.txt is upstream SimLingo's full list (training,
+# evaluation, language labels) and is kept unmodified for reference - you do not need
+# it for collection.
+#
+# Also install the requirements of your CARLA Leaderboard 2.0 and scenario_runner
+# checkouts; they bring their own (dictor, tabulate, pexpect, transforms3d, requests).
+
+# CARLA client. MUST match the running server exactly.
+carla==0.9.15
+
+numpy==1.26.4
+scipy==1.15.3
+shapely==2.1.2
+Pillow==12.2.0
+h5py==3.16.0
+tqdm==4.67.3
+ujson==5.13.0
+webcolors==25.10.0
+rdp==0.8
+pygame==2.6.1
+py-trees==0.8.3
+
+# transfuser_utils.py and data_agent.py import torch at module level. Collection does
+# no inference, so a CPU-only build is sufficient.
+torch==2.13.0
+
+# LiDAR is written as compressed .laz; lazrs is the backend laspy uses for it.
+laspy==2.7.0
+lazrs==0.8.2
+
+# birds_eye_view/chauffeurnet.py imports gym for its observation-space declaration.
+gym==0.26.2
+
+# opencv-python supplies cv2. A distro package (e.g. apt python3-opencv) works too -
+# this rig ran against the system cv2 4.5.4 rather than a pip install.
+opencv-python==4.5.5.64

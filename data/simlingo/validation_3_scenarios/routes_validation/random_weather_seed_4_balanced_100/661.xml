@@ -1,0 +1,31 @@
+<routes><route id="0" town="Town13">
+      <weathers>
+         <weather route_percentage="0.0" cloudiness="40.0" precipitation="4.0" precipitation_deposits="50.0" wetness="4.0" wind_intensity="80.0" sun_azimuth_angle="270.0" sun_altitude_angle="0.0" fog_density="20.0" />
+         <weather route_percentage="100.0" cloudiness="40.0" precipitation="20.0" precipitation_deposits="80.0" wetness="40.0" wind_intensity="10.0" sun_azimuth_angle="225.0" sun_altitude_angle="20.0" fog_density="20.0" />
+      </weathers>
+      <waypoints>
+         <position x="-5066.9" y="5873.8" z="186.4" />
+         <position x="-5401.9" y="5828.6" z="189.5" />
+         <position x="-5555.3" y="5719.8" z="191.4" />
+         <position x="-5603.3" y="5667.1" z="191.8" />
+         <position x="-5681.3" y="5539.5" z="192.4" />
+      </waypoints>
+      <scenarios>
+         <scenario name="HardBreakRoute_4" type="HardBreakRoute">
+            <trigger_point x="-5117.1" y="5871.7" z="186.8" yaw="-177.3" />
+         </scenario>
+         <scenario name="EnterActorFlow_1" type="EnterActorFlow">
+            <trigger_point x="-5362.0" y="5843.5" z="189.1" yaw="-162.2" />
+            <start_actor_flow x="-5375.3" y="5866.8" z="189.5" />
+            <end_actor_flow x="-5590.5" y="5678.0" z="191.7" />
+            <flow_speed value="17" />
+            <source_dist_interval from="15" to="65" />
+         </scenario>
+         <scenario name="StaticCutIn_1" type="StaticCutIn">
+            <trigger_point x="-5584.7" y="5690.9" z="191.6" yaw="-129.1" />
+            <distance value="100" />
+            <direction value="right" />
+         </scenario>
+      </scenarios>
+   </route>
+</routes>

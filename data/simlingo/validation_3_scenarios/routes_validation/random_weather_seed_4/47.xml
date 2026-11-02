@@ -1,0 +1,29 @@
+<?xml version="1.0" ?>
+<routes>
+   <route id="0" town="Town13">
+      <weathers>
+         <weather route_percentage="0.0" cloudiness="15.0" precipitation="0.0" precipitation_deposits="20.0" wetness="80.0" wind_intensity="10.0" sun_azimuth_angle="270.0" sun_altitude_angle="60.0" fog_density="8.0"/>
+         <weather route_percentage="100.0" cloudiness="40.0" precipitation="0.0" precipitation_deposits="50.0" wetness="10.0" wind_intensity="30.0" sun_azimuth_angle="45.0" sun_altitude_angle="-45.0" fog_density="4.0"/>
+      </weathers>
+      <waypoints>
+         <position x="7048.4" y="4047.6" z="178.0"/>
+         <position x="6874.1" y="3973.3" z="174.6"/>
+      </waypoints>
+      <scenarios>
+         <scenario name="SignalizedJunctionLeftTurn_3" type="SignalizedJunctionLeftTurn">
+            <trigger_point x="7048.7" y="4026.7" z="177.8" yaw="-89.1"/>
+            <flow_speed value="15"/>
+            <source_dist_interval from="15" to="60"/>
+         </scenario>
+         <scenario name="ParkingCrossingPedestrian_6" type="ParkingCrossingPedestrian">
+            <trigger_point x="7025.8" y="3972.5" z="176.9" yaw="179.7"/>
+            <distance value="60"/>
+            <direction value="right"/>
+            <crossing_angle value="2"/>
+         </scenario>
+         <scenario name="HardBreakRoute_6" type="HardBreakRoute">
+            <trigger_point x="6971.6" y="3972.8" z="176.1" yaw="179.7"/>
+         </scenario>
+      </scenarios>
+   </route>
+</routes>

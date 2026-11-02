@@ -1,0 +1,29 @@
+<?xml version="1.0" ?>
+<routes>
+   <route id="0" town="Town13">
+      <weathers>
+         <weather route_percentage="0.0" cloudiness="40.0" precipitation="2.0" precipitation_deposits="20.0" wetness="60.0" wind_intensity="25.0" sun_azimuth_angle="0.0" sun_altitude_angle="-45.0" fog_density="3.0"/>
+         <weather route_percentage="100.0" cloudiness="5.0" precipitation="30.0" precipitation_deposits="100.0" wetness="0.0" wind_intensity="50.0" sun_azimuth_angle="90.0" sun_altitude_angle="90.0" fog_density="7.0"/>
+      </weathers>
+      <waypoints>
+         <position x="-520.2" y="1733.7" z="147.7"/>
+         <position x="-687.0" y="1634.4" z="147.6"/>
+         <position x="-1173.8" y="1565.3" z="147.9"/>
+      </waypoints>
+      <scenarios>
+         <scenario name="ConstructionObstacleTwoWays_2" type="ConstructionObstacleTwoWays">
+            <trigger_point x="-524.0" y="1698.1" z="147.8" yaw="201.3"/>
+            <distance value="80"/>
+            <frequency from="45" to="100"/>
+         </scenario>
+         <scenario name="ControlLoss_13" type="ControlLoss">
+            <trigger_point x="-867.1" y="1564.1" z="147.5" yaw="201.3"/>
+         </scenario>
+         <scenario name="InvadingTurn_10" type="InvadingTurn">
+            <trigger_point x="-1002.5" y="1522.4" z="147.6" yaw="185.3"/>
+            <distance value="130"/>
+            <offset value="0.4"/>
+         </scenario>
+      </scenarios>
+   </route>
+</routes>

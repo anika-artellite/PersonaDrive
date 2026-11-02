@@ -1,0 +1,28 @@
+<routes><route id="0" town="Town12">
+      <weathers>
+         <weather route_percentage="0.0" cloudiness="40.0" precipitation="50.0" precipitation_deposits="16.0" wetness="8.0" wind_intensity="50.0" sun_azimuth_angle="180.0" sun_altitude_angle="5.0" fog_density="100.0" />
+         <weather route_percentage="100.0" cloudiness="10.0" precipitation="50.0" precipitation_deposits="40.0" wetness="40.0" wind_intensity="25.0" sun_azimuth_angle="45.0" sun_altitude_angle="30.0" fog_density="3.0" />
+      </weathers>
+      <waypoints>
+         <position x="2402.0" y="5940.3" z="370.3" />
+         <position x="2333.5" y="6107.6" z="369.1" />
+         <position x="1995.3" y="6040.7" z="369.1" />
+      </waypoints>
+      <scenarios>
+         <scenario name="ParkedObstacle_2" type="ParkedObstacle">
+            <trigger_point x="2402.1" y="5960.7" z="370.4" yaw="89.7" />
+            <distance value="65.7" />
+            <direction value="right" />
+            <speed value="55" />
+         </scenario>
+         <scenario name="NonSignalizedJunctionRightTurn_2" type="NonSignalizedJunctionRightTurn">
+            <trigger_point x="2402.6" y="6073.3" z="370.1" yaw="89.7" />
+            <flow_speed value="15" />
+            <source_dist_interval from="15" to="60" />
+         </scenario>
+         <scenario name="Accident_3" type="Accident">
+            <trigger_point x="2196.2" y="6086.2" z="370.3" yaw="-171.1" />
+         </scenario>
+      </scenarios>
+   </route>
+</routes>

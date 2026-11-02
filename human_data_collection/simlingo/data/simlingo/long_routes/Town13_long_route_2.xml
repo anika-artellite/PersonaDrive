@@ -1,0 +1,36 @@
+<?xml version='1.0' encoding='utf-8'?>
+<routes>
+   <route id="30008" town="Town13">
+      <weathers>
+         <weather route_percentage="0" cloudiness="90" precipitation="0" precipitation_deposits="5" wetness="0" wind_intensity="20" sun_azimuth_angle="200" sun_altitude_angle="40" fog_density="5" fog_distance="90" fog_falloff="0.0" scattering_intensity="1.0" mie_scattering_scale="0.03" />
+         <weather route_percentage="100" cloudiness="80" precipitation="15" precipitation_deposits="25" wetness="20" wind_intensity="15" sun_azimuth_angle="210" sun_altitude_angle="40" fog_density="3" fog_distance="85" fog_falloff="0.0" scattering_intensity="1.0" mie_scattering_scale="0.03" />
+      </weathers>
+      <waypoints>
+         <position x="-4000.6" y="5080.8" z="166.0" />
+         <position x="-4426.6" y="5077.3" z="167.8" />
+         <position x="-4446.3" y="4843.7" z="166.7" />
+         <position x="-4305.4" y="4537.0" z="169.6" />
+         <position x="-4522.1" y="4323.0" z="170.8" />
+         <position x="-4281.7" y="4154.6" z="177.5" />
+         <position x="-3853.7" y="4157.0" z="181.7" />
+         <position x="-3798.7" y="4330.2" z="178.4" />
+      </waypoints>
+      <scenarios>
+         <scenario name="NonSignalizedJunctionRightTurn_1" type="NonSignalizedJunctionRightTurn">
+            <trigger_point x="-4149.2" y="5079.6" z="166.4" yaw="180.5" />
+         </scenario>
+         <scenario name="OppositeVehicleRunningRedLight_2" type="OppositeVehicleRunningRedLight">
+            <trigger_point x="-4501.3" y="4846.4" z="166.9" yaw="-2.8" />
+         </scenario>
+         <scenario name="PedestrianCrossing_3" type="PedestrianCrossing">
+            <trigger_point x="-4302.0" y="4368.9" z="172.7" yaw="271.2" />
+         </scenario>
+         <scenario name="HardBreakRoute_4" type="HardBreakRoute">
+            <trigger_point x="-4317.7" y="4154.4" z="176.9" yaw="0.3" />
+         </scenario>
+         <scenario name="Accident_5" type="Accident">
+            <trigger_point x="-3696.3" y="4189.9" z="181.2" yaw="90.5" />
+         </scenario>
+      </scenarios>
+   </route>
+</routes>

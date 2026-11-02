@@ -1,0 +1,30 @@
+<routes><route id="0" town="Town12">
+      <weathers>
+         <weather route_percentage="0.0" cloudiness="40.0" precipitation="6.0" precipitation_deposits="8.0" wetness="20.0" wind_intensity="5.0" sun_azimuth_angle="45.0" sun_altitude_angle="90.0" fog_density="1.0" />
+         <weather route_percentage="100.0" cloudiness="100.0" precipitation="40.0" precipitation_deposits="8.0" wetness="8.0" wind_intensity="5.0" sun_azimuth_angle="180.0" sun_altitude_angle="30.0" fog_density="10.0" />
+      </weathers>
+      <waypoints>
+         <position x="3329.1" y="3115.4" z="367.4" />
+         <position x="3721.5" y="3110.1" z="369.6" />
+         <position x="3945.6" y="2963.8" z="369.5" />
+      </waypoints>
+      <scenarios>
+         <scenario name="Accident_3" type="Accident">
+            <trigger_point x="3349.2" y="3115.3" z="367.5" yaw="-0.3" />
+            <distance value="110" />
+            <direction value="right" />
+            <speed value="50" />
+         </scenario>
+         <scenario name="MergerIntoSlowTraffic_4" type="MergerIntoSlowTraffic">
+            <trigger_point x="3598.9" y="3110.7" z="369.3" yaw="-0.3" />
+            <start_actor_flow x="3661.5" y="3106.9" z="369.4" />
+            <end_actor_flow x="3893.4" y="3130.7" z="370.0" />
+            <flow_speed value="17" />
+            <source_dist_interval from="15" to="35" />
+         </scenario>
+         <scenario name="ControlLoss_6" type="ControlLoss">
+            <trigger_point x="3904.5" y="3081.9" z="369.9" yaw="319.0" />
+         </scenario>
+      </scenarios>
+   </route>
+</routes>

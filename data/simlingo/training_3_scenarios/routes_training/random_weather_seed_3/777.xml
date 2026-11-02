@@ -1,0 +1,31 @@
+<?xml version="1.0" ?>
+<routes>
+   <route id="0" town="Town12">
+      <weathers>
+         <weather route_percentage="0.0" cloudiness="60.0" precipitation="8.0" precipitation_deposits="50.0" wetness="40.0" wind_intensity="50.0" sun_azimuth_angle="360.0" sun_altitude_angle="0.0" fog_density="0.0"/>
+         <weather route_percentage="100.0" cloudiness="20.0" precipitation="0.0" precipitation_deposits="60.0" wetness="6.0" wind_intensity="25.0" sun_azimuth_angle="315.0" sun_altitude_angle="60.0" fog_density="0.0"/>
+      </weathers>
+      <waypoints>
+         <position x="3592.1" y="4599.6" z="368.1"/>
+         <position x="3604.2" y="4601.6" z="368.1"/>
+         <position x="3695.6" y="4665.3" z="367.9"/>
+         <position x="3658.9" y="4887.6" z="367.9"/>
+      </waypoints>
+      <scenarios>
+         <scenario name="HardBreakRoute_1" type="HardBreakRoute">
+            <trigger_point x="3640.8" y="4607.5" z="368.1" yaw="9.2"/>
+         </scenario>
+         <scenario name="OppositeVehicleRunningRedLight_1" type="OppositeVehicleRunningRedLight">
+            <trigger_point x="3692.6" y="4684.5" z="367.9" yaw="98.9"/>
+            <direction value="left"/>
+         </scenario>
+         <scenario name="DynamicObjectCrossing_3" type="DynamicObjectCrossing">
+            <trigger_point x="3678.9" y="4769.6" z="367.8" yaw="99.6"/>
+            <distance value="50"/>
+            <direction value="right"/>
+            <blocker_model value="static.prop.container"/>
+            <crossing_angle value="10"/>
+         </scenario>
+      </scenarios>
+   </route>
+</routes>

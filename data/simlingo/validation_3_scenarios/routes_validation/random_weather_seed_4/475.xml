@@ -1,0 +1,28 @@
+<?xml version="1.0" ?>
+<routes>
+   <route id="0" town="Town13">
+      <weathers>
+         <weather route_percentage="0.0" cloudiness="10.0" precipitation="50.0" precipitation_deposits="40.0" wetness="20.0" wind_intensity="30.0" sun_azimuth_angle="270.0" sun_altitude_angle="45.0" fog_density="1.0"/>
+         <weather route_percentage="100.0" cloudiness="10.0" precipitation="4.0" precipitation_deposits="30.0" wetness="10.0" wind_intensity="5.0" sun_azimuth_angle="135.0" sun_altitude_angle="-45.0" fog_density="1.0"/>
+      </weathers>
+      <waypoints>
+         <position x="-1589.0" y="-10.5" z="156.8"/>
+         <position x="-1452.9" y="-96.2" z="154.5"/>
+      </waypoints>
+      <scenarios>
+         <scenario name="DynamicObjectCrossing_1" type="DynamicObjectCrossing">
+            <trigger_point x="-1580.6" y="-10.5" z="156.6" yaw="0.0"/>
+            <distance value="70"/>
+            <blocker_model value="static.prop.haybalelb"/>
+         </scenario>
+         <scenario name="NonSignalizedJunctionLeftTurn_1" type="NonSignalizedJunctionLeftTurn">
+            <trigger_point x="-1493.8" y="-10.5" z="155.4" yaw="0.0"/>
+            <flow_speed value="10"/>
+            <source_dist_interval from="10" to="50"/>
+         </scenario>
+         <scenario name="HardBreakRoute_1" type="HardBreakRoute">
+            <trigger_point x="-1452.3" y="-31.1" z="154.8" yaw="270.3"/>
+         </scenario>
+      </scenarios>
+   </route>
+</routes>

@@ -1,0 +1,119 @@
+[01:22:02] [36mINFO    [0m ======================================================================
+[01:22:02] [36mINFO    [0m RAG Contrastive Data Pipeline  —  OPTIMIZED
+[01:22:02] [36mINFO    [0m   Started   : 2026-05-05 01:22:02
+[01:22:02] [36mINFO    [0m   Device    : cuda  (NVIDIA L40S)
+[01:22:02] [36mINFO    [0m   VRAM      : 47.7GB free / 47.7GB total
+[01:22:02] [36mINFO    [0m   SIM_CHUNK : 8000  (auto-tuned)
+[01:22:02] [36mINFO    [0m   MINING_CHUNK: 2000  (auto-tuned)
+[01:22:02] [36mINFO    [0m   SIM_DTYPE : torch.float16
+[01:22:02] [36mINFO    [0m   Features  : VISUAL_HARD_NEG=False  EXCLUDE_SAME_ROUTE=False  MIN_TEMPORAL_GAP=0
+[01:22:02] [36mINFO    [0m   Log file  : ${PERSONADRIVE_ROOT}/persona_drive_rag/pipeline.log
+[01:22:02] [36mINFO    [0m ======================================================================
+
+▶ Pipeline:   0%|          | 0/8 stages  [00:00<?][01:22:02] [36mINFO    [0m ┌─ START  Load dataset
+[01:22:02] [36mINFO    [0m Pre-merged embeddings detected — loading metadata from embeddings_v2/fast/frame_ids.json
+[01:22:02] [36mINFO    [0m   (skipping JSON re-parse to preserve embedding ↔ metadata alignment)
+[01:22:02] [36mINFO    [0m Loaded 4559 entries from pre-merged index
+[01:22:02] [36mINFO    [0m   unique actions: 6
+[01:22:02] [36mINFO    [0m     Follow Lane                       4322  (94.8%)
+[01:22:02] [36mINFO    [0m     Go Straight                         55  (1.2%)
+[01:22:02] [36mINFO    [0m     Change Lane Right                   53  (1.2%)
+[01:22:02] [36mINFO    [0m     Change Lane Left                    50  (1.1%)
+[01:22:02] [36mINFO    [0m     Go Right                            45  (1.0%)
+[01:22:02] [36mINFO    [0m     Go Left                             34  (0.7%)
+[01:22:02] [36mINFO    [0m └─ DONE   Load dataset  [0.0s]  |  VRAM peak=0.00GB curr=0.00GB
+[01:22:02] [36mINFO    [0m ┌─ START  Text embeddings (BGE-M3)
+[01:22:02] [36mINFO    [0m Cache found  →  embeddings_v2/fast/text_embeddings.pt
+[01:22:02] [36mINFO    [0m Cache hit  |  shape=(4559, 1024)
+[01:22:02] [36mINFO    [0m └─ DONE   Text embeddings (BGE-M3)  [0.1s]  |  VRAM peak=0.02GB curr=0.02GB
+
+▶ Pipeline:  25%|██▌       | 2/8 stages  [00:00<00:00][01:22:02] [36mINFO    [0m ┌─ START  Image embeddings (SigLIP)
+[01:22:02] [36mINFO    [0m Cache found  →  embeddings_v2/fast/image_embeddings.pt
+[01:22:02] [36mINFO    [0m Cache hit  |  shape=(4559, 768)
+[01:22:02] [36mINFO    [0m └─ DONE   Image embeddings (SigLIP)  [0.0s]  |  VRAM peak=0.03GB curr=0.03GB
+[01:22:02] [36mINFO    [0m Chunk sizes re-resolved after embedding  |  SIM_CHUNK=8000  MINING_CHUNK=2000
+[01:22:02] [36mINFO    [0m ┌─ START  Similarity matrices (GPU)
+[01:22:02] [36mINFO    [0m Sim matrices  |  N=4559  chunk=8000  dtype=torch.float16  est_VRAM=0.12GB  current=0.05/47.67GB
+
+
+  Sim matrix (GPU):   0%|          | 0/1 [00:00<?, ?it/s][A
+
+  Sim matrix (GPU): 100%|██████████| 1/1 [00:00<00:00,  8.27it/s][A
+
+                                                                 [A[01:22:03] [36mINFO    [0m Sim matrices done  |  VRAM=0.17/47.67GB
+[01:22:03] [36mINFO    [0m └─ DONE   Similarity matrices (GPU)  [0.1s]  |  VRAM peak=0.31GB curr=0.17GB
+
+▶ Pipeline:  50%|█████     | 4/8 stages  [00:00<00:00][01:22:03] [36mINFO    [0m ┌─ START  Diagnose similarities
+[01:22:03] [36mINFO    [0m Diagnosing  |  anchors=500  peers=200 each
+
+
+  Diagnosis:   0%|          | 0/500 [00:00<?, ?it/s][A
+
+                                                    [A[01:22:03] [36mINFO    [0m ── Same-action pairs ─────────────────────────────────────────
+[01:22:03] [36mINFO    [0m   text_sim      mean=0.960  p10=0.935  p25=0.948  p50=0.962  p75=0.974  p90=0.982  max=1.000
+[01:22:03] [36mINFO    [0m   image_sim     mean=0.868  p10=0.799  p25=0.840  p50=0.876  p75=0.904  p90=0.926  max=0.998
+[01:22:03] [36mINFO    [0m ── Diff-action pairs ─────────────────────────────────────────
+[01:22:03] [36mINFO    [0m   text_sim      mean=0.955  p10=0.935  p25=0.945  p50=0.955  p75=0.966  p90=0.973  max=0.988
+[01:22:03] [36mINFO    [0m   image_sim     mean=0.845  p10=0.759  p25=0.802  p50=0.857  p75=0.891  p90=0.917  max=0.979
+[01:22:03] [36mINFO    [0m Separation gap  |  text=+0.0052  image=+0.0233
+[01:22:03] [33mWARNING [0m Text separation gap < 0.01 — text embeddings may not discriminate actions
+[01:22:03] [36mINFO    [0m └─ DONE   Diagnose similarities  [0.1s]  |  VRAM peak=0.17GB curr=0.17GB
+[01:22:03] [36mINFO    [0m ┌─ START  Adaptive thresholds
+[01:22:03] [36mINFO    [0m Adaptive thresholds  |  sample=3000  peers=100 each
+
+
+  Threshold sampling:   0%|          | 0/3000 [00:00<?, ?it/s][A
+
+  Threshold sampling:  29%|██▊       | 860/3000 [00:00<00:00, 8598.39it/s][A
+
+  Threshold sampling:  57%|█████▋    | 1720/3000 [00:00<00:00, 8335.93it/s][A
+
+  Threshold sampling:  85%|████████▌ | 2561/3000 [00:00<00:00, 8364.82it/s][A
+
+                                                                           [A[01:22:03] [36mINFO    [0m Thresholds  |  POS text≥0.9663 img≥0.8877  |  HARD text≥0.9478 img≥0.8252  |  NEG text≤0.9478 img≤0.8252
+[01:22:03] [36mINFO    [0m Pass rates  |  pos=55566/270224 (20.6%)  hard=14958/29710 (50.3%)  easy=3078/29710 (10.4%)
+[01:22:03] [36mINFO    [0m └─ DONE   Adaptive thresholds  [0.4s]  |  VRAM peak=0.17GB curr=0.17GB
+
+▶ Pipeline:  75%|███████▌  | 6/8 stages  [00:00<00:00][01:22:03] [36mINFO    [0m ┌─ START  Triplet mining
+[01:22:03] [36mINFO    [0m Mining  |  N=4559  MINING_CHUNK=2000  n_chunks=3  |  VRAM=0.17/47.67GB
+[01:22:03] [36mINFO    [0m   pos  : same-action  text≥0.9663  img≥0.8877  top-1000 pool
+  hard : diff-action  text≥0.9478  img≥0.8252  top-1000 pool
+  easy : diff-action  text≤0.9478  img≤0.8252  bot-200 pool
+
+
+  Triplet mining:   0%|          | 0/3 [00:00<?, ?it/s][A
+
+  Triplet mining:  33%|███▎      | 1/3 [00:01<00:02,  1.21s/it][A
+
+  Triplet mining:  67%|██████▋   | 2/3 [00:02<00:01,  1.16s/it][A
+
+  Triplet mining: 100%|██████████| 3/3 [00:02<00:00,  1.30it/s][A
+
+                                                               [A[01:22:06] [36mINFO    [0m Mining done  |  triplets=3875  skipped: no_pos=11  no_hard=597  no_easy=76  post_exclusion=0
+[01:22:06] [36mINFO    [0m └─ DONE   Triplet mining  [2.6s]  |  VRAM peak=0.48GB curr=0.17GB
+
+▶ Pipeline:  88%|████████▊ | 7/8 stages  [00:03<00:00][01:22:06] [36mINFO    [0m ┌─ START  Save outputs
+[01:22:06] [36mINFO    [0m Triplets  →  triplets_v2/fast/triplets.jsonl  (3875 lines)
+[01:22:06] [36mINFO    [0m Thresholds  →  embeddings_v2/fast/thresholds.json
+[01:22:06] [36mINFO    [0m └─ DONE   Save outputs  [0.2s]  |  VRAM peak=0.17GB curr=0.17GB
+
+▶ Pipeline: 100%|██████████| 8/8 stages  [00:03<00:00]
+▶ Pipeline: 100%|██████████| 8/8 stages  [00:03<00:00]
+[01:22:06] [36mINFO    [0m ======================================================================
+[01:22:06] [36mINFO    [0m PIPELINE COMPLETE
+[01:22:06] [36mINFO    [0m   Wall time          : 0.1 min  (4s)
+[01:22:06] [36mINFO    [0m   Total frames       : 4559
+[01:22:06] [36mINFO    [0m   Triplets generated : 3875
+[01:22:06] [36mINFO    [0m   Coverage           : 85.0%
+[01:22:06] [36mINFO    [0m   Avg pos/anchor     : 5.94
+[01:22:06] [36mINFO    [0m   Avg neg/anchor     : 5.23  (saturation 74.5%)
+[01:22:06] [36mINFO    [0m   Avg hard/anchor    : 5.02  (saturation 69.4%)
+[01:22:06] [36mINFO    [0m   Triplets per action:
+[01:22:06] [36mINFO    [0m     Follow Lane                       3645  (94.1%)
+[01:22:06] [36mINFO    [0m     Go Straight                         52  (1.3%)
+[01:22:06] [36mINFO    [0m     Change Lane Right                   51  (1.3%)
+[01:22:06] [36mINFO    [0m     Change Lane Left                    49  (1.3%)
+[01:22:06] [36mINFO    [0m     Go Right                            44  (1.1%)
+[01:22:06] [36mINFO    [0m     Go Left                             34  (0.9%)
+[01:22:06] [36mINFO    [0m   Log file           : ${PERSONADRIVE_ROOT}/persona_drive_rag/pipeline.log
+[01:22:06] [36mINFO    [0m ======================================================================

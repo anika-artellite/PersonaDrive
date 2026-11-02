@@ -1,0 +1,29 @@
+<routes><route id="0" town="Town12">
+      <weathers>
+         <weather route_percentage="0.0" cloudiness="20.0" precipitation="8.0" precipitation_deposits="30.0" wetness="80.0" wind_intensity="25.0" sun_azimuth_angle="0.0" sun_altitude_angle="90.0" fog_density="0.0" />
+         <weather route_percentage="100.0" cloudiness="10.0" precipitation="50.0" precipitation_deposits="16.0" wetness="80.0" wind_intensity="50.0" sun_azimuth_angle="225.0" sun_altitude_angle="80.0" fog_density="15.0" />
+      </weathers>
+      <waypoints>
+         <position x="-4003.5" y="2027.0" z="337.0" />
+         <position x="-3632.3" y="1903.8" z="338.1" />
+         <position x="-3339.6" y="1646.5" z="350.3" />
+      </waypoints>
+      <scenarios>
+         <scenario name="InterurbanActorFlow_1" type="InterurbanActorFlow">
+            <trigger_point x="-3988.5" y="2040.6" z="337.4" yaw="42.2" />
+            <start_actor_flow x="-3827.9" y="2182.1" z="345.0" />
+            <end_actor_flow x="-3984.2" y="2039.7" z="337.4" />
+            <flow_speed value="20" />
+            <source_dist_interval from="40" to="120" />
+         </scenario>
+         <scenario name="AccidentTwoWays_5" type="AccidentTwoWays">
+            <trigger_point x="-3735.6" y="1951.2" z="336.5" yaw="329.3" />
+            <distance value="70" />
+            <frequency from="70" to="105" />
+         </scenario>
+         <scenario name="ControlLoss_7" type="ControlLoss">
+            <trigger_point x="-3408.2" y="1791.3" z="349.6" yaw="313.8" />
+         </scenario>
+      </scenarios>
+   </route>
+</routes>

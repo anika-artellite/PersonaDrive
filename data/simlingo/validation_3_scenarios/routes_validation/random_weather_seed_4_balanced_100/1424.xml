@@ -1,0 +1,29 @@
+<routes><route id="0" town="Town13">
+      <weathers>
+         <weather route_percentage="0.0" cloudiness="10.0" precipitation="6.0" precipitation_deposits="40.0" wetness="0.0" wind_intensity="60.0" sun_azimuth_angle="225.0" sun_altitude_angle="5.0" fog_density="1.0" />
+         <weather route_percentage="100.0" cloudiness="2.0" precipitation="30.0" precipitation_deposits="20.0" wetness="100.0" wind_intensity="80.0" sun_azimuth_angle="180.0" sun_altitude_angle="80.0" fog_density="1.0" />
+      </weathers>
+      <waypoints>
+         <position x="3283.9" y="4069.2" z="181.9" />
+         <position x="3513.3" y="4079.0" z="172.6" />
+         <position x="3517.9" y="4164.0" z="173.7" />
+      </waypoints>
+      <scenarios>
+         <scenario name="AccidentTwoWays_3" type="AccidentTwoWays">
+            <trigger_point x="3325.4" y="4069.7" z="180.7" yaw="-0.1" />
+            <distance value="70" />
+            <frequency from="55" to="120" />
+         </scenario>
+         <scenario name="NonSignalizedJunctionRightTurn_6" type="NonSignalizedJunctionRightTurn">
+            <trigger_point x="3471.8" y="4054.0" z="174.4" yaw="-13.6" />
+            <flow_speed value="6" />
+            <source_dist_interval from="10" to="45" />
+         </scenario>
+         <scenario name="InvadingTurn_4" type="InvadingTurn">
+            <trigger_point x="3506.2" y="4055.1" z="172.6" yaw="70.6" />
+            <distance value="54.7" />
+            <offset value="0.5" />
+         </scenario>
+      </scenarios>
+   </route>
+</routes>

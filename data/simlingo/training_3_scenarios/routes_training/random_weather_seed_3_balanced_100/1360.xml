@@ -1,0 +1,29 @@
+<routes><route id="0" town="Town12">
+      <weathers>
+         <weather route_percentage="0.0" cloudiness="0.0" precipitation="100.0" precipitation_deposits="4.0" wetness="40.0" wind_intensity="25.0" sun_azimuth_angle="135.0" sun_altitude_angle="15.0" fog_density="4.0" />
+         <weather route_percentage="100.0" cloudiness="50.0" precipitation="20.0" precipitation_deposits="60.0" wetness="6.0" wind_intensity="50.0" sun_azimuth_angle="135.0" sun_altitude_angle="15.0" fog_density="1.0" />
+      </weathers>
+      <waypoints>
+         <position x="-519.0" y="4085.4" z="372.4" />
+         <position x="-530.1" y="4085.5" z="372.4" />
+         <position x="-709.4" y="4058.3" z="369.8" />
+         <position x="-820.9" y="3963.5" z="366.7" />
+         <position x="-698.4" y="3926.5" z="370.4" />
+         <position x="-615.8" y="3926.2" z="370.7" />
+      </waypoints>
+      <scenarios>
+         <scenario name="OppositeVehicleRunningRedLight_3" type="OppositeVehicleRunningRedLight">
+            <trigger_point x="-539.4" y="4085.5" z="372.4" yaw="179.8" />
+            <direction value="right" />
+         </scenario>
+         <scenario name="SignalizedJunctionRightTurn_3" type="SignalizedJunctionRightTurn">
+            <trigger_point x="-775.4" y="3979.5" z="368.4" yaw="179.9" />
+            <flow_speed value="15" />
+            <source_dist_interval from="25" to="70" />
+         </scenario>
+         <scenario name="ConstructionObstacle_1" type="ConstructionObstacle">
+            <trigger_point x="-784.4" y="3927.0" z="368.0" yaw="-0.3" />
+         </scenario>
+      </scenarios>
+   </route>
+</routes>

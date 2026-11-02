@@ -1,0 +1,30 @@
+<?xml version="1.0" ?>
+<routes>
+   <route id="0" town="Town12">
+      <weathers>
+         <weather route_percentage="0.0" cloudiness="80.0" precipitation="20.0" precipitation_deposits="12.0" wetness="6.0" wind_intensity="5.0" sun_azimuth_angle="225.0" sun_altitude_angle="5.0" fog_density="20.0"/>
+         <weather route_percentage="100.0" cloudiness="40.0" precipitation="60.0" precipitation_deposits="12.0" wetness="80.0" wind_intensity="80.0" sun_azimuth_angle="180.0" sun_altitude_angle="45.0" fog_density="1.0"/>
+      </weathers>
+      <waypoints>
+         <position x="-1270.3" y="1609.6" z="328.8"/>
+         <position x="-1691.3" y="1606.1" z="326.8"/>
+      </waypoints>
+      <scenarios>
+         <scenario name="ConstructionObstacleTwoWays_1" type="ConstructionObstacleTwoWays">
+            <trigger_point x="-1291.0" y="1609.4" z="328.6" yaw="-179.5"/>
+            <distance value="80"/>
+            <frequency from="45" to="105"/>
+         </scenario>
+         <scenario name="HazardAtSideLaneTwoWays_1" type="HazardAtSideLaneTwoWays">
+            <trigger_point x="-1474.7" y="1607.9" z="325.7" yaw="-179.5"/>
+            <distance value="70"/>
+            <frequency value="80"/>
+            <bicycle_drive_distance value="100"/>
+            <bicycle_speed value="7"/>
+         </scenario>
+         <scenario name="HardBreakRoute_1" type="HardBreakRoute">
+            <trigger_point x="-1626.7" y="1606.6" z="324.9" yaw="-179.5"/>
+         </scenario>
+      </scenarios>
+   </route>
+</routes>

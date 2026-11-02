@@ -1,0 +1,28 @@
+<?xml version="1.0" ?>
+<routes>
+   <route id="0" town="Town12">
+      <weathers>
+         <weather route_percentage="0.0" cloudiness="60.0" precipitation="50.0" precipitation_deposits="80.0" wetness="8.0" wind_intensity="60.0" sun_azimuth_angle="225.0" sun_altitude_angle="0.0" fog_density="15.0"/>
+         <weather route_percentage="100.0" cloudiness="10.0" precipitation="20.0" precipitation_deposits="40.0" wetness="6.0" wind_intensity="50.0" sun_azimuth_angle="225.0" sun_altitude_angle="30.0" fog_density="2.0"/>
+      </weathers>
+      <waypoints>
+         <position x="986.6" y="5392.3" z="371.4"/>
+         <position x="987.0" y="5139.4" z="371.6"/>
+         <position x="987.1" y="5084.7" z="371.6"/>
+      </waypoints>
+      <scenarios>
+         <scenario name="OppositeVehicleRunningRedLight_7" type="OppositeVehicleRunningRedLight">
+            <trigger_point x="986.6" y="5371.5" z="371.4" yaw="270.1"/>
+            <direction value="right"/>
+         </scenario>
+         <scenario name="HardBreakRoute_4" type="HardBreakRoute">
+            <trigger_point x="986.8" y="5240.9" z="371.6" yaw="270.1"/>
+         </scenario>
+         <scenario name="VehicleOpensDoorTwoWays_12" type="VehicleOpensDoorTwoWays">
+            <trigger_point x="986.9" y="5191.2" z="371.6" yaw="270.1"/>
+            <distance value="67"/>
+            <frequency from="35" to="80"/>
+         </scenario>
+      </scenarios>
+   </route>
+</routes>

@@ -1,0 +1,29 @@
+<routes><route id="0" town="Town12">
+      <weathers>
+         <weather route_percentage="0.0" cloudiness="60.0" precipitation="80.0" precipitation_deposits="12.0" wetness="60.0" wind_intensity="50.0" sun_azimuth_angle="360.0" sun_altitude_angle="20.0" fog_density="7.0" />
+         <weather route_percentage="100.0" cloudiness="50.0" precipitation="30.0" precipitation_deposits="80.0" wetness="20.0" wind_intensity="25.0" sun_azimuth_angle="315.0" sun_altitude_angle="20.0" fog_density="70.0" />
+      </weathers>
+      <waypoints>
+         <position x="-504.2" y="6101.0" z="360.9" />
+         <position x="-536.9" y="6071.1" z="363.0" />
+         <position x="-537.4" y="6000.8" z="365.0" />
+         <position x="-620.9" y="6001.5" z="367.0" />
+         <position x="-647.5" y="6036.9" z="366.1" />
+      </waypoints>
+      <scenarios>
+         <scenario name="NonSignalizedJunctionRightTurn_2" type="NonSignalizedJunctionRightTurn">
+            <trigger_point x="-524.7" y="6101.0" z="361.3" yaw="180.0" />
+            <flow_speed value="15" />
+            <source_dist_interval from="15" to="65" />
+         </scenario>
+         <scenario name="NonSignalizedJunctionLeftTurn_3" type="NonSignalizedJunctionLeftTurn">
+            <trigger_point x="-536.9" y="6071.1" z="363" yaw="300" />
+            <flow_speed value="10" />
+            <source_dist_interval from="30" to="50" />
+         </scenario>
+         <scenario name="VehicleTurningRoutePedestrian_1" type="VehicleTurningRoutePedestrian">
+            <trigger_point x="-561.2" y="5977.1" z="366.3" yaw="224.4" />
+         </scenario>
+      </scenarios>
+   </route>
+</routes>

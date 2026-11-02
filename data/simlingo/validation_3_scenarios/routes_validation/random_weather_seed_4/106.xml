@@ -1,0 +1,26 @@
+<?xml version="1.0" ?>
+<routes>
+   <route id="0" town="Town13">
+      <weathers>
+         <weather route_percentage="0.0" cloudiness="60.0" precipitation="2.0" precipitation_deposits="8.0" wetness="100.0" wind_intensity="100.0" sun_azimuth_angle="90.0" sun_altitude_angle="-10.0" fog_density="6.0"/>
+         <weather route_percentage="100.0" cloudiness="15.0" precipitation="10.0" precipitation_deposits="40.0" wetness="100.0" wind_intensity="25.0" sun_azimuth_angle="135.0" sun_altitude_angle="45.0" fog_density="20.0"/>
+      </weathers>
+      <waypoints>
+         <position x="2632.0" y="5712.2" z="156.9"/>
+         <position x="2995.1" y="5578.7" z="165.3"/>
+      </waypoints>
+      <scenarios>
+         <scenario name="ControlLoss_9" type="ControlLoss">
+            <trigger_point x="2656.2" y="5742.2" z="157.0" yaw="-22.4"/>
+         </scenario>
+         <scenario name="HardBreakRoute_13" type="HardBreakRoute">
+            <trigger_point x="2677.5" y="5732.8" z="157.4" yaw="-25.1"/>
+         </scenario>
+         <scenario name="StaticCutIn_2" type="StaticCutIn">
+            <trigger_point x="2817.0" y="5654.5" z="160.8" yaw="-29.2"/>
+            <distance value="113"/>
+            <direction value="right"/>
+         </scenario>
+      </scenarios>
+   </route>
+</routes>

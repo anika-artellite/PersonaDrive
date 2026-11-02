@@ -1,0 +1,500 @@
+[01:02:31] [36mINFO    [0m ======================================================================
+[01:02:31] [36mINFO    [0m RAG Contrastive Data Pipeline  —  OPTIMIZED
+[01:02:31] [36mINFO    [0m   Started   : 2026-05-05 01:02:31
+[01:02:31] [36mINFO    [0m   Device    : cuda  (NVIDIA L40S)
+[01:02:31] [36mINFO    [0m   VRAM      : 47.7GB free / 47.7GB total
+[01:02:31] [36mINFO    [0m   SIM_CHUNK : 8000  (auto-tuned)
+[01:02:31] [36mINFO    [0m   MINING_CHUNK: 2000  (auto-tuned)
+[01:02:31] [36mINFO    [0m   SIM_DTYPE : torch.float16
+[01:02:31] [36mINFO    [0m   Features  : VISUAL_HARD_NEG=False  EXCLUDE_SAME_ROUTE=False  MIN_TEMPORAL_GAP=0
+[01:02:31] [36mINFO    [0m   Log file  : ${PERSONADRIVE_ROOT}/persona_drive_rag/pipeline.log
+[01:02:31] [36mINFO    [0m ======================================================================
+
+▶ Pipeline:   0%|          | 0/8 stages  [00:00<?][01:02:31] [36mINFO    [0m ┌─ START  Load dataset
+[01:02:31] [36mINFO    [0m No pre-merged embeddings — parsing JSON directory
+[01:02:31] [36mINFO    [0m Loading dataset from processed_routes/slow/slow_dataset_processed.json
+[01:02:32] [36mINFO    [0m Shuffled dataset entries
+[01:02:32] [36mINFO    [0m STRIP_PREFIX active: will remove leading 'database/simlingo' from frame paths
+
+
+  Parsing JSON:   0%|          | 0/8960 [00:00<?, ?it/s][A[01:02:32] [36mINFO    [0m Path resolution sample:
+[01:02:32] [36mINFO    [0m   JSON raw   : ${PERSONADRIVE_DATA_ROOT}/simlingo/data/simlingo/slow/lb1_split/routes_training/ControlLoss/Town03_Scenario1_2/Town03_Rep0_None/rgb/0175.jpg
+[01:02:32] [36mINFO    [0m   Resolved   : ${PERSONADRIVE_DATA_ROOT}/simlingo/data/simlingo/slow/lb1_split/routes_training/ControlLoss/Town03_Scenario1_2/Town03_Rep0_None/rgb/0175.jpg  (found)
+
+
+  Parsing JSON:   0%|          | 24/8960 [00:00<00:38, 234.65it/s][A
+
+  Parsing JSON:   1%|          | 54/8960 [00:00<00:32, 272.43it/s][A
+
+  Parsing JSON:   1%|          | 94/8960 [00:00<00:27, 327.29it/s][A
+
+  Parsing JSON:   2%|▏         | 149/8960 [00:00<00:21, 410.15it/s][A
+
+  Parsing JSON:   2%|▏         | 211/8960 [00:00<00:18, 482.41it/s][A
+
+  Parsing JSON:   3%|▎         | 285/8960 [00:00<00:15, 566.65it/s][A
+
+  Parsing JSON:   4%|▍         | 387/8960 [00:00<00:12, 707.83it/s][A
+
+  Parsing JSON:   6%|▌         | 521/8960 [00:00<00:09, 905.51it/s][A
+
+  Parsing JSON:   8%|▊         | 736/8960 [00:00<00:06, 1288.20it/s][A
+
+  Parsing JSON:  10%|█         | 928/8960 [00:01<00:05, 1481.41it/s][A
+
+  Parsing JSON:  14%|█▍        | 1292/8960 [00:01<00:03, 2138.29it/s][A
+
+  Parsing JSON:  20%|██        | 1816/8960 [00:01<00:02, 3076.15it/s][A
+
+  Parsing JSON:  28%|██▊       | 2489/8960 [00:01<00:01, 4177.37it/s][A
+
+  Parsing JSON:  39%|███▊      | 3470/8960 [00:01<00:00, 5852.27it/s][A
+
+  Parsing JSON:  45%|████▌     | 4055/8960 [00:01<00:00, 5455.26it/s][A
+
+  Parsing JSON:  59%|█████▊    | 5255/8960 [00:01<00:00, 7323.93it/s][A
+
+  Parsing JSON:  74%|███████▍  | 6623/8960 [00:01<00:00, 9164.81it/s][A
+
+  Parsing JSON:  90%|█████████ | 8093/8960 [00:01<00:00, 10784.94it/s][A
+
+                                                                      [A[01:02:34] [36mINFO    [0m Loaded 8960 frames  |  unique actions: 6  |  unresolved paths: 0
+[01:02:34] [36mINFO    [0m   Follow Lane                       8382  (93.5%)
+[01:02:34] [36mINFO    [0m   Go Straight                        162  (1.8%)
+[01:02:34] [36mINFO    [0m   Go Right                           137  (1.5%)
+[01:02:34] [36mINFO    [0m   Go Left                            111  (1.2%)
+[01:02:34] [36mINFO    [0m   Change Lane Right                   98  (1.1%)
+[01:02:34] [36mINFO    [0m   Change Lane Left                    70  (0.8%)
+[01:02:34] [36mINFO    [0m Frame index  →  embeddings_v2/slow/frame_ids.json
+[01:02:34] [36mINFO    [0m └─ DONE   Load dataset  [2.5s]  |  VRAM peak=0.00GB curr=0.00GB
+
+▶ Pipeline:  12%|█▎        | 1/8 stages  [00:02<00:17][01:02:34] [36mINFO    [0m ┌─ START  Text embeddings (BGE-M3)
+${PERSONADRIVE_HF_CACHE}/envs/HF/lib/python3.11/site-packages/transformers/utils/hub.py:110: FutureWarning: Using `TRANSFORMERS_CACHE` is deprecated and will be removed in v5 of Transformers. Use `HF_HOME` instead.
+  warnings.warn(
+[01:02:37] [36mINFO    [0m Loading BGE-M3  |  device=cuda  VRAM=0.00/47.67GB
+
+
+Fetching 30 files:   0%|          | 0/30 [00:00<?, ?it/s][A
+Fetching 30 files: 100%|██████████| 30/30 [00:00<00:00, 38280.84it/s]
+
+
+  Text embeddings:   0%|          | 0/18 [00:00<?, ?it/s][A
+
+
+pre tokenize:   0%|          | 0/1 [00:00<?, ?it/s][A[A
+
+
+pre tokenize: 100%|██████████| 1/1 [00:00<00:00,  9.78it/s][A[A
+pre tokenize: 100%|██████████| 1/1 [00:00<00:00,  9.77it/s]
+You're using a XLMRobertaTokenizerFast tokenizer. Please note that with a fast tokenizer, using the `__call__` method is faster than using a method to encode the text followed by a call to the `pad` method to get a padded encoding.
+
+
+
+Inference Embeddings:   0%|          | 0/1 [00:00<?, ?it/s][A[A
+
+
+Inference Embeddings: 100%|██████████| 1/1 [00:03<00:00,  3.28s/it][A[A
+Inference Embeddings: 100%|██████████| 1/1 [00:03<00:00,  3.28s/it]
+
+
+  Text embeddings:   6%|▌         | 1/18 [00:07<02:00,  7.06s/it][A
+
+
+pre tokenize:   0%|          | 0/1 [00:00<?, ?it/s][A[A
+
+
+pre tokenize: 100%|██████████| 1/1 [00:00<00:00,  9.77it/s][A[A
+pre tokenize: 100%|██████████| 1/1 [00:00<00:00,  9.76it/s]
+
+
+
+Inference Embeddings:   0%|          | 0/1 [00:00<?, ?it/s][A[A
+
+
+Inference Embeddings: 100%|██████████| 1/1 [00:06<00:00,  6.29s/it][A[A
+Inference Embeddings: 100%|██████████| 1/1 [00:06<00:00,  6.29s/it]
+
+
+  Text embeddings:  11%|█         | 2/18 [00:13<01:48,  6.78s/it][A
+
+
+pre tokenize:   0%|          | 0/1 [00:00<?, ?it/s][A[A
+
+
+pre tokenize: 100%|██████████| 1/1 [00:00<00:00,  9.92it/s][A[A
+pre tokenize: 100%|██████████| 1/1 [00:00<00:00,  9.90it/s]
+
+
+
+Inference Embeddings:   0%|          | 0/1 [00:00<?, ?it/s][A[A
+
+
+Inference Embeddings: 100%|██████████| 1/1 [00:06<00:00,  6.35s/it][A[A
+Inference Embeddings: 100%|██████████| 1/1 [00:06<00:00,  6.35s/it]
+
+
+  Text embeddings:  17%|█▋        | 3/18 [00:20<01:40,  6.71s/it][A
+
+
+pre tokenize:   0%|          | 0/1 [00:00<?, ?it/s][A[A
+pre tokenize: 100%|██████████| 1/1 [00:00<00:00, 10.21it/s]
+
+
+
+Inference Embeddings:   0%|          | 0/1 [00:00<?, ?it/s][A[A
+
+
+Inference Embeddings: 100%|██████████| 1/1 [00:06<00:00,  6.39s/it][A[A
+Inference Embeddings: 100%|██████████| 1/1 [00:06<00:00,  6.39s/it]
+
+
+  Text embeddings:  22%|██▏       | 4/18 [00:26<01:33,  6.69s/it][A
+
+
+pre tokenize:   0%|          | 0/1 [00:00<?, ?it/s][A[A
+pre tokenize: 100%|██████████| 1/1 [00:00<00:00, 10.19it/s]
+
+
+
+Inference Embeddings:   0%|          | 0/1 [00:00<?, ?it/s][A[A
+
+
+Inference Embeddings: 100%|██████████| 1/1 [00:06<00:00,  6.42s/it][A[A
+Inference Embeddings: 100%|██████████| 1/1 [00:06<00:00,  6.42s/it]
+
+
+  Text embeddings:  28%|██▊       | 5/18 [00:33<01:27,  6.69s/it][A
+
+
+pre tokenize:   0%|          | 0/1 [00:00<?, ?it/s][A[A
+pre tokenize: 100%|██████████| 1/1 [00:00<00:00, 10.03it/s]
+
+
+
+Inference Embeddings:   0%|          | 0/1 [00:00<?, ?it/s][A[A
+
+
+Inference Embeddings: 100%|██████████| 1/1 [00:06<00:00,  6.44s/it][A[A
+Inference Embeddings: 100%|██████████| 1/1 [00:06<00:00,  6.44s/it]
+
+
+  Text embeddings:  33%|███▎      | 6/18 [00:40<01:20,  6.70s/it][A
+
+
+pre tokenize:   0%|          | 0/1 [00:00<?, ?it/s][A[A
+
+
+pre tokenize: 100%|██████████| 1/1 [00:00<00:00,  9.63it/s][A[A
+pre tokenize: 100%|██████████| 1/1 [00:00<00:00,  9.61it/s]
+
+
+
+Inference Embeddings:   0%|          | 0/1 [00:00<?, ?it/s][A[A
+
+
+Inference Embeddings: 100%|██████████| 1/1 [00:06<00:00,  6.48s/it][A[A
+Inference Embeddings: 100%|██████████| 1/1 [00:06<00:00,  6.48s/it]
+
+
+  Text embeddings:  39%|███▉      | 7/18 [00:47<01:13,  6.72s/it][A
+
+
+pre tokenize:   0%|          | 0/1 [00:00<?, ?it/s][A[A
+
+
+pre tokenize: 100%|██████████| 1/1 [00:00<00:00,  9.72it/s][A[A
+pre tokenize: 100%|██████████| 1/1 [00:00<00:00,  9.70it/s]
+
+
+
+Inference Embeddings:   0%|          | 0/1 [00:00<?, ?it/s][A[A
+
+
+Inference Embeddings: 100%|██████████| 1/1 [00:06<00:00,  6.48s/it][A[A
+Inference Embeddings: 100%|██████████| 1/1 [00:06<00:00,  6.48s/it]
+
+
+  Text embeddings:  44%|████▍     | 8/18 [00:53<01:07,  6.74s/it][A
+
+
+pre tokenize:   0%|          | 0/1 [00:00<?, ?it/s][A[A
+pre tokenize: 100%|██████████| 1/1 [00:00<00:00, 10.07it/s]
+
+
+
+Inference Embeddings:   0%|          | 0/1 [00:00<?, ?it/s][A[A
+
+
+Inference Embeddings: 100%|██████████| 1/1 [00:06<00:00,  6.50s/it][A[A
+Inference Embeddings: 100%|██████████| 1/1 [00:06<00:00,  6.50s/it]
+
+
+  Text embeddings:  50%|█████     | 9/18 [01:00<01:00,  6.75s/it][A
+
+
+pre tokenize:   0%|          | 0/1 [00:00<?, ?it/s][A[A
+pre tokenize: 100%|██████████| 1/1 [00:00<00:00, 10.13it/s]
+
+
+
+Inference Embeddings:   0%|          | 0/1 [00:00<?, ?it/s][A[A
+
+
+Inference Embeddings: 100%|██████████| 1/1 [00:06<00:00,  6.52s/it][A[A
+Inference Embeddings: 100%|██████████| 1/1 [00:06<00:00,  6.52s/it]
+
+
+  Text embeddings:  56%|█████▌    | 10/18 [01:07<00:54,  6.77s/it][A
+
+
+pre tokenize:   0%|          | 0/1 [00:00<?, ?it/s][A[A
+pre tokenize: 100%|██████████| 1/1 [00:00<00:00, 10.34it/s]
+
+
+
+Inference Embeddings:   0%|          | 0/1 [00:00<?, ?it/s][A[A
+
+
+Inference Embeddings: 100%|██████████| 1/1 [00:06<00:00,  6.49s/it][A[A
+Inference Embeddings: 100%|██████████| 1/1 [00:06<00:00,  6.49s/it]
+
+
+  Text embeddings:  61%|██████    | 11/18 [01:14<00:47,  6.77s/it][A
+
+
+pre tokenize:   0%|          | 0/1 [00:00<?, ?it/s][A[A
+pre tokenize: 100%|██████████| 1/1 [00:00<00:00, 10.30it/s]
+
+
+
+Inference Embeddings:   0%|          | 0/1 [00:00<?, ?it/s][A[A
+
+
+Inference Embeddings: 100%|██████████| 1/1 [00:06<00:00,  6.54s/it][A[A
+Inference Embeddings: 100%|██████████| 1/1 [00:06<00:00,  6.54s/it]
+
+
+  Text embeddings:  67%|██████▋   | 12/18 [01:21<00:40,  6.78s/it][A
+
+
+pre tokenize:   0%|          | 0/1 [00:00<?, ?it/s][A[A
+
+
+pre tokenize: 100%|██████████| 1/1 [00:00<00:00,  9.96it/s][A[A
+pre tokenize: 100%|██████████| 1/1 [00:00<00:00,  9.94it/s]
+
+
+
+Inference Embeddings:   0%|          | 0/1 [00:00<?, ?it/s][A[A
+
+
+Inference Embeddings: 100%|██████████| 1/1 [00:06<00:00,  6.55s/it][A[A
+Inference Embeddings: 100%|██████████| 1/1 [00:06<00:00,  6.55s/it]
+
+
+  Text embeddings:  72%|███████▏  | 13/18 [01:27<00:33,  6.80s/it][A
+
+
+pre tokenize:   0%|          | 0/1 [00:00<?, ?it/s][A[A
+
+
+pre tokenize: 100%|██████████| 1/1 [00:00<00:00,  9.97it/s][A[A
+pre tokenize: 100%|██████████| 1/1 [00:00<00:00,  9.95it/s]
+
+
+
+Inference Embeddings:   0%|          | 0/1 [00:00<?, ?it/s][A[A
+
+
+Inference Embeddings: 100%|██████████| 1/1 [00:06<00:00,  6.55s/it][A[A
+Inference Embeddings: 100%|██████████| 1/1 [00:06<00:00,  6.55s/it]
+
+
+  Text embeddings:  78%|███████▊  | 14/18 [01:34<00:27,  6.81s/it][A
+
+
+pre tokenize:   0%|          | 0/1 [00:00<?, ?it/s][A[A
+pre tokenize: 100%|██████████| 1/1 [00:00<00:00, 10.22it/s]
+
+
+
+Inference Embeddings:   0%|          | 0/1 [00:00<?, ?it/s][A[A
+
+
+Inference Embeddings: 100%|██████████| 1/1 [00:06<00:00,  6.55s/it][A[A
+Inference Embeddings: 100%|██████████| 1/1 [00:06<00:00,  6.55s/it]
+
+
+  Text embeddings:  83%|████████▎ | 15/18 [01:41<00:20,  6.81s/it][A
+
+
+pre tokenize:   0%|          | 0/1 [00:00<?, ?it/s][A[A
+pre tokenize: 100%|██████████| 1/1 [00:00<00:00, 10.22it/s]
+
+
+
+Inference Embeddings:   0%|          | 0/1 [00:00<?, ?it/s][A[A
+
+
+Inference Embeddings: 100%|██████████| 1/1 [00:06<00:00,  6.51s/it][A[A
+Inference Embeddings: 100%|██████████| 1/1 [00:06<00:00,  6.51s/it]
+
+
+  Text embeddings:  89%|████████▉ | 16/18 [01:48<00:13,  6.81s/it][A
+
+
+pre tokenize:   0%|          | 0/1 [00:00<?, ?it/s][A[A
+pre tokenize: 100%|██████████| 1/1 [00:00<00:00, 10.55it/s]
+
+
+
+Inference Embeddings:   0%|          | 0/1 [00:00<?, ?it/s][A[A
+
+
+Inference Embeddings: 100%|██████████| 1/1 [00:06<00:00,  6.56s/it][A[A
+Inference Embeddings: 100%|██████████| 1/1 [00:06<00:00,  6.56s/it]
+
+
+  Text embeddings:  94%|█████████▍| 17/18 [01:55<00:06,  6.82s/it][A
+
+  Text embeddings: 100%|██████████| 18/18 [01:58<00:00,  5.80s/it][A
+
+                                                                  [A[01:04:38] [36mINFO    [0m Text embeddings saved  |  shape=(8960, 1024)  →  embeddings_v2/slow/text_embeddings.pt
+[01:04:39] [36mINFO    [0m └─ DONE   Text embeddings (BGE-M3)  [125.3s]  |  VRAM peak=14.04GB curr=0.05GB
+
+▶ Pipeline:  25%|██▌       | 2/8 stages  [02:07<07:28][01:04:39] [36mINFO    [0m ┌─ START  Image embeddings (SigLIP)
+[01:04:39] [36mINFO    [0m Loading SigLIP  |  device=cuda  VRAM=0.05/47.67GB
+Using a slow image processor as `use_fast` is unset and a slow processor was saved with this model. `use_fast=True` will be the default behavior in v4.52, even if the model was saved with a slow processor. This will result in minor differences in outputs. You'll still be able to use a slow processor with `use_fast=False`.
+[01:04:41] [36mINFO    [0m SigLIP ready  |  VRAM=0.86/47.67GB
+
+
+  Image embeddings:   0%|          | 0/18 [00:00<?, ?it/s][A
+
+  Image embeddings:   6%|▌         | 1/18 [00:35<10:07, 35.75s/it][A
+
+  Image embeddings:  11%|█         | 2/18 [00:36<04:02, 15.15s/it][A
+
+  Image embeddings:  17%|█▋        | 3/18 [00:37<02:12,  8.84s/it][A
+
+  Image embeddings:  22%|██▏       | 4/18 [00:38<01:19,  5.65s/it][A
+
+  Image embeddings:  28%|██▊       | 5/18 [00:39<00:50,  3.88s/it][A
+
+  Image embeddings:  33%|███▎      | 6/18 [00:40<00:33,  2.81s/it][A
+
+  Image embeddings:  39%|███▉      | 7/18 [00:40<00:23,  2.14s/it][A
+
+  Image embeddings:  44%|████▍     | 8/18 [00:41<00:16,  1.70s/it][A
+
+  Image embeddings:  50%|█████     | 9/18 [01:02<01:10,  7.87s/it][A
+
+  Image embeddings:  56%|█████▌    | 10/18 [01:03<00:45,  5.67s/it][A
+
+  Image embeddings:  61%|██████    | 11/18 [01:04<00:29,  4.17s/it][A
+
+  Image embeddings:  67%|██████▋   | 12/18 [01:05<00:18,  3.12s/it][A
+
+  Image embeddings:  72%|███████▏  | 13/18 [01:05<00:12,  2.40s/it][A
+
+  Image embeddings:  78%|███████▊  | 14/18 [01:06<00:07,  1.90s/it][A
+
+  Image embeddings:  83%|████████▎ | 15/18 [01:07<00:04,  1.56s/it][A
+
+  Image embeddings:  89%|████████▉ | 16/18 [01:08<00:02,  1.31s/it][A
+
+  Image embeddings:  94%|█████████▍| 17/18 [01:22<00:05,  5.32s/it][A
+
+  Image embeddings: 100%|██████████| 18/18 [01:23<00:00,  3.83s/it][A
+
+                                                                   [A[01:06:04] [36mINFO    [0m Image embeddings saved  |  shape=(8960, 768)  →  embeddings_v2/slow/image_embeddings.pt
+[01:06:04] [36mINFO    [0m └─ DONE   Image embeddings (SigLIP)  [85.0s]  |  VRAM peak=4.87GB curr=0.07GB
+
+▶ Pipeline:  38%|███▊      | 3/8 stages  [03:32<06:36][01:06:04] [36mINFO    [0m Chunk sizes re-resolved after embedding  |  SIM_CHUNK=8000  MINING_CHUNK=2000
+[01:06:04] [36mINFO    [0m ┌─ START  Similarity matrices (GPU)
+[01:06:04] [36mINFO    [0m Sim matrices  |  N=8960  chunk=8000  dtype=torch.float16  est_VRAM=0.48GB  current=0.11/47.67GB
+
+
+  Sim matrix (GPU):   0%|          | 0/2 [00:00<?, ?it/s][A
+
+                                                         [A[01:06:04] [36mINFO    [0m Sim matrices done  |  VRAM=0.56/47.67GB
+[01:06:04] [36mINFO    [0m └─ DONE   Similarity matrices (GPU)  [0.0s]  |  VRAM peak=1.02GB curr=0.56GB
+[01:06:04] [36mINFO    [0m ┌─ START  Diagnose similarities
+[01:06:04] [36mINFO    [0m Diagnosing  |  anchors=500  peers=200 each
+
+
+  Diagnosis:   0%|          | 0/500 [00:00<?, ?it/s][A
+
+                                                    [A[01:06:04] [36mINFO    [0m ── Same-action pairs ─────────────────────────────────────────
+[01:06:04] [36mINFO    [0m   text_sim      mean=0.960  p10=0.934  p25=0.948  p50=0.962  p75=0.973  p90=0.981  max=1.000
+[01:06:04] [36mINFO    [0m   image_sim     mean=0.869  p10=0.794  p25=0.840  p50=0.878  p75=0.907  p90=0.928  max=0.998
+[01:06:04] [36mINFO    [0m ── Diff-action pairs ─────────────────────────────────────────
+[01:06:04] [36mINFO    [0m   text_sim      mean=0.955  p10=0.936  p25=0.945  p50=0.956  p75=0.965  p90=0.973  max=0.991
+[01:06:04] [36mINFO    [0m   image_sim     mean=0.834  p10=0.751  p25=0.792  p50=0.838  p75=0.879  p90=0.910  max=0.972
+[01:06:04] [36mINFO    [0m Separation gap  |  text=+0.0048  image=+0.0353
+[01:06:04] [33mWARNING [0m Text separation gap < 0.01 — text embeddings may not discriminate actions
+[01:06:04] [36mINFO    [0m └─ DONE   Diagnose similarities  [0.1s]  |  VRAM peak=0.56GB curr=0.56GB
+
+▶ Pipeline:  62%|██████▎   | 5/8 stages  [03:32<01:43][01:06:04] [36mINFO    [0m ┌─ START  Adaptive thresholds
+[01:06:04] [36mINFO    [0m Adaptive thresholds  |  sample=3000  peers=100 each
+
+
+  Threshold sampling:   0%|          | 0/3000 [00:00<?, ?it/s][A
+
+  Threshold sampling:  28%|██▊       | 844/3000 [00:00<00:00, 8436.17it/s][A
+
+  Threshold sampling:  56%|█████▋    | 1688/3000 [00:00<00:00, 8146.61it/s][A
+
+  Threshold sampling:  83%|████████▎ | 2504/3000 [00:00<00:00, 8117.69it/s][A
+
+                                                                           [A[01:06:04] [36mINFO    [0m Thresholds  |  POS text≥0.9663 img≥0.8901  |  HARD text≥0.9556 img≥0.8496  |  NEG text≤0.9468 img≤0.8169
+[01:06:05] [36mINFO    [0m Pass rates  |  pos=51903/264547 (19.6%)  hard=9247/35425 (26.1%)  easy=3398/35425 (9.6%)
+[01:06:05] [33mWARNING [0m Easy-neg pass rate < 10% — consider lowering NEG_PERCENTILE or raising BOTTOM_K_POOL
+[01:06:05] [36mINFO    [0m └─ DONE   Adaptive thresholds  [0.4s]  |  VRAM peak=0.56GB curr=0.56GB
+
+▶ Pipeline:  75%|███████▌  | 6/8 stages  [03:33<00:49][01:06:05] [36mINFO    [0m ┌─ START  Triplet mining
+[01:06:05] [36mINFO    [0m Mining  |  N=8960  MINING_CHUNK=2000  n_chunks=5  |  VRAM=0.56/47.67GB
+[01:06:05] [36mINFO    [0m   pos  : same-action  text≥0.9663  img≥0.8901  top-200 pool
+  hard : diff-action  text≥0.9556  img≥0.8496  top-200 pool
+  easy : diff-action  text≤0.9468  img≤0.8169  bot-200 pool
+
+
+  Triplet mining:   0%|          | 0/5 [00:00<?, ?it/s][A
+
+  Triplet mining:  20%|██        | 1/5 [00:00<00:02,  1.58it/s][A
+
+  Triplet mining:  40%|████      | 2/5 [00:01<00:01,  1.63it/s][A
+
+  Triplet mining:  60%|██████    | 3/5 [00:01<00:01,  1.67it/s][A
+
+  Triplet mining:  80%|████████  | 4/5 [00:02<00:00,  1.67it/s][A
+
+  Triplet mining: 100%|██████████| 5/5 [00:02<00:00,  2.03it/s][A
+
+                                                               [A[01:06:07] [36mINFO    [0m Mining done  |  triplets=3532  skipped: no_pos=6  no_hard=5362  no_easy=60  post_exclusion=0
+[01:06:07] [36mINFO    [0m └─ DONE   Triplet mining  [2.7s]  |  VRAM peak=1.14GB curr=0.56GB
+
+▶ Pipeline:  88%|████████▊ | 7/8 stages  [03:36<00:18][01:06:07] [36mINFO    [0m ┌─ START  Save outputs
+[01:06:13] [36mINFO    [0m Triplets  →  triplets_v2/slow/triplets.jsonl  (3532 lines)
+[01:06:13] [36mINFO    [0m Thresholds  →  embeddings_v2/slow/thresholds.json
+[01:06:13] [36mINFO    [0m └─ DONE   Save outputs  [5.9s]  |  VRAM peak=0.56GB curr=0.56GB
+
+▶ Pipeline: 100%|██████████| 8/8 stages  [03:41<00:00]
+▶ Pipeline: 100%|██████████| 8/8 stages  [03:41<00:00]
+[01:06:13] [36mINFO    [0m ======================================================================
+[01:06:13] [36mINFO    [0m PIPELINE COMPLETE
+[01:06:13] [36mINFO    [0m   Wall time          : 3.7 min  (222s)
+[01:06:13] [36mINFO    [0m   Total frames       : 8960
+[01:06:13] [36mINFO    [0m   Triplets generated : 3532
+[01:06:13] [36mINFO    [0m   Coverage           : 39.4%
+[01:06:13] [36mINFO    [0m   Avg pos/anchor     : 5.95
+[01:06:13] [36mINFO    [0m   Avg neg/anchor     : 5.47  (saturation 82.0%)
+[01:06:13] [36mINFO    [0m   Avg hard/anchor    : 4.87  (saturation 67.9%)
+[01:06:13] [36mINFO    [0m   Triplets per action:
+[01:06:13] [36mINFO    [0m     Follow Lane                       2956  (83.7%)
+[01:06:13] [36mINFO    [0m     Go Straight                        161  (4.6%)
+[01:06:13] [36mINFO    [0m     Go Right                           137  (3.9%)
+[01:06:13] [36mINFO    [0m     Go Left                            111  (3.1%)
+[01:06:13] [36mINFO    [0m     Change Lane Right                   98  (2.8%)
+[01:06:13] [36mINFO    [0m     Change Lane Left                    69  (2.0%)
+[01:06:13] [36mINFO    [0m   Log file           : ${PERSONADRIVE_ROOT}/persona_drive_rag/pipeline.log
+[01:06:13] [36mINFO    [0m ======================================================================

@@ -1,0 +1,51 @@
+<?xml version='1.0' encoding='utf-8'?>
+<routes>
+   <route id="30005" town="Town12">
+      <weathers>
+         <weather route_percentage="0" cloudiness="40" precipitation="0" precipitation_deposits="0" wetness="0" wind_intensity="8" sun_azimuth_angle="278" sun_altitude_angle="5" fog_density="4" fog_distance="90" fog_falloff="0.0" scattering_intensity="1.0" mie_scattering_scale="0.03" />
+         <weather route_percentage="100" cloudiness="80" precipitation="15" precipitation_deposits="25" wetness="20" wind_intensity="15" sun_azimuth_angle="210" sun_altitude_angle="40" fog_density="3" fog_distance="85" fog_falloff="0.0" scattering_intensity="1.0" mie_scattering_scale="0.03" />
+      </weathers>
+      <waypoints>
+         <position x="2449.3" y="3672.0" z="355.0" />
+         <position x="2631.3" y="3040.4" z="366.0" />
+         <position x="2656.0" y="2498.3" z="360.0" />
+         <position x="2538.2" y="2910.0" z="365.1" />
+         <position x="2844.5" y="3120.9" z="361.9" />
+         <position x="3547.1" y="3114.4" z="369.1" />
+         <position x="4125.1" y="3368.8" z="370.3" />
+         <position x="4045.7" y="4058.2" z="368.7" />
+      </waypoints>
+      <scenarios>
+         <scenario name="DynamicObjectCrossing_1" type="DynamicObjectCrossing">
+            <trigger_point x="2490.1" y="3430.4" z="356.6" yaw="279.6" />
+         </scenario>
+         <scenario name="ConstructionObstacle_2" type="ConstructionObstacle">
+            <trigger_point x="2541.4" y="2691.0" z="363.4" yaw="269.9" />
+            <distance value="80" />
+            <speed value="40" />
+         </scenario>
+         <scenario name="EnterActorFlow_3" type="EnterActorFlow">
+            <trigger_point x="2538.0" y="2760.7" z="363.0" yaw="89.9" />
+            <start_actor_flow x="2537.9" y="2710.7" z="363.0" />
+            <end_actor_flow x="2538.3" y="2958.4" z="363.0" />
+            <flow_speed value="18" />
+            <source_dist_interval from="15" to="35" />
+         </scenario>
+         <scenario name="HighwayCutIn_4" type="HighwayCutIn">
+            <trigger_point x="2846.4" y="3120.8" z="361.9" yaw="-1.6" />
+         </scenario>
+         <scenario name="HighwayExit_5" type="HighwayExit">
+            <trigger_point x="3699.2" y="3113.7" z="369.5" yaw="-0.3" />
+            <start_actor_flow x="3650.8" y="3114.0" z="369.5" />
+            <end_actor_flow x="3893.3" y="3138.1" z="369.5" />
+            <flow_speed value="18" />
+            <source_dist_interval from="15" to="35" />
+         </scenario>
+         <scenario name="NonSignalizedJunctionLeftTurnEnterFlow_6" type="NonSignalizedJunctionLeftTurnEnterFlow">
+            <trigger_point x="4093.7" y="3671.2" z="370.9" yaw="99.0" />
+            <flow_speed value="9" />
+            <source_dist_interval from="16" to="30" />
+         </scenario>
+      </scenarios>
+   </route>
+</routes>

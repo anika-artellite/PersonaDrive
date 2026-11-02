@@ -1,0 +1,166 @@
+[00:59:32] [36mINFO    [0m ======================================================================
+[00:59:32] [36mINFO    [0m RAG Contrastive Data Pipeline  —  OPTIMIZED
+[00:59:32] [36mINFO    [0m   Started   : 2026-05-05 00:59:32
+[00:59:32] [36mINFO    [0m   Device    : cuda  (NVIDIA L40S)
+[00:59:32] [36mINFO    [0m   VRAM      : 47.7GB free / 47.7GB total
+[00:59:32] [36mINFO    [0m   SIM_CHUNK : 8000  (auto-tuned)
+[00:59:32] [36mINFO    [0m   MINING_CHUNK: 2000  (auto-tuned)
+[00:59:32] [36mINFO    [0m   SIM_DTYPE : torch.float16
+[00:59:32] [36mINFO    [0m   Features  : VISUAL_HARD_NEG=False  EXCLUDE_SAME_ROUTE=False  MIN_TEMPORAL_GAP=0
+[00:59:32] [36mINFO    [0m   Log file  : ${PERSONADRIVE_ROOT}/persona_drive_rag/pipeline.log
+[00:59:32] [36mINFO    [0m ======================================================================
+
+▶ Pipeline:   0%|          | 0/8 stages  [00:00<?][00:59:32] [36mINFO    [0m ┌─ START  Load dataset
+[00:59:32] [36mINFO    [0m No pre-merged embeddings — parsing JSON directory
+[00:59:32] [36mINFO    [0m Loading dataset from processed_routes/default/default_dataset_processed.json
+[00:59:32] [36mINFO    [0m Shuffled dataset entries
+[00:59:32] [36mINFO    [0m STRIP_PREFIX active: will remove leading 'database/simlingo' from frame paths
+
+
+  Parsing JSON:   0%|          | 0/848 [00:00<?, ?it/s][A[00:59:32] [36mINFO    [0m Path resolution sample:
+[00:59:32] [36mINFO    [0m   JSON raw   : ${PERSONADRIVE_DATA_ROOT}/simlingo/data/simlingo/default/driver8/routes/HighwayCutIn/918/Town12_Rep0_None/rgb/0155.jpg
+[00:59:32] [36mINFO    [0m   Resolved   : ${PERSONADRIVE_DATA_ROOT}/simlingo/data/simlingo/default/driver8/routes/HighwayCutIn/918/Town12_Rep0_None/rgb/0155.jpg  (found)
+
+
+  Parsing JSON:   2%|▏         | 18/848 [00:00<00:04, 173.49it/s][A
+
+  Parsing JSON:  21%|██▏       | 182/848 [00:00<00:00, 1011.66it/s][A
+
+                                                                   [A[00:59:33] [36mINFO    [0m Loaded 848 frames  |  unique actions: 6  |  unresolved paths: 0
+[00:59:33] [36mINFO    [0m   Follow Lane                        670  (79.0%)
+[00:59:33] [36mINFO    [0m   Go Straight                         69  (8.1%)
+[00:59:33] [36mINFO    [0m   Go Left                             48  (5.7%)
+[00:59:33] [36mINFO    [0m   Go Right                            40  (4.7%)
+[00:59:33] [36mINFO    [0m   Change Lane Right                   19  (2.2%)
+[00:59:33] [36mINFO    [0m   Change Lane Left                     2  (0.2%)
+[00:59:33] [36mINFO    [0m Frame index  →  embeddings_v2/default/frame_ids.json
+[00:59:33] [36mINFO    [0m └─ DONE   Load dataset  [0.3s]  |  VRAM peak=0.00GB curr=0.00GB
+
+▶ Pipeline:  12%|█▎        | 1/8 stages  [00:00<00:02][00:59:33] [36mINFO    [0m ┌─ START  Text embeddings (BGE-M3)
+${PERSONADRIVE_HF_CACHE}/envs/HF/lib/python3.11/site-packages/transformers/utils/hub.py:110: FutureWarning: Using `TRANSFORMERS_CACHE` is deprecated and will be removed in v5 of Transformers. Use `HF_HOME` instead.
+  warnings.warn(
+[00:59:36] [36mINFO    [0m Loading BGE-M3  |  device=cuda  VRAM=0.00/47.67GB
+
+
+Fetching 30 files:   0%|          | 0/30 [00:00<?, ?it/s][A
+Fetching 30 files: 100%|██████████| 30/30 [00:00<00:00, 1770.47it/s]
+
+
+  Text embeddings:   0%|          | 0/2 [00:00<?, ?it/s][A
+
+
+pre tokenize:   0%|          | 0/1 [00:00<?, ?it/s][A[A
+
+
+pre tokenize: 100%|██████████| 1/1 [00:00<00:00,  9.18it/s][A[A
+pre tokenize: 100%|██████████| 1/1 [00:00<00:00,  9.17it/s]
+You're using a XLMRobertaTokenizerFast tokenizer. Please note that with a fast tokenizer, using the `__call__` method is faster than using a method to encode the text followed by a call to the `pad` method to get a padded encoding.
+
+
+
+Inference Embeddings:   0%|          | 0/1 [00:00<?, ?it/s][A[A
+
+
+Inference Embeddings: 100%|██████████| 1/1 [00:03<00:00,  3.22s/it][A[A
+Inference Embeddings: 100%|██████████| 1/1 [00:03<00:00,  3.22s/it]
+
+
+  Text embeddings:  50%|█████     | 1/2 [00:07<00:07,  7.96s/it][A
+
+  Text embeddings: 100%|██████████| 2/2 [00:12<00:00,  5.78s/it][A
+
+                                                                [A[00:59:55] [36mINFO    [0m Text embeddings saved  |  shape=(848, 1024)  →  embeddings_v2/default/text_embeddings.pt
+[00:59:56] [36mINFO    [0m └─ DONE   Text embeddings (BGE-M3)  [22.9s]  |  VRAM peak=14.04GB curr=0.01GB
+
+▶ Pipeline:  25%|██▌       | 2/8 stages  [00:23<01:21][00:59:56] [36mINFO    [0m ┌─ START  Image embeddings (SigLIP)
+[00:59:56] [36mINFO    [0m Loading SigLIP  |  device=cuda  VRAM=0.01/47.67GB
+Using a slow image processor as `use_fast` is unset and a slow processor was saved with this model. `use_fast=True` will be the default behavior in v4.52, even if the model was saved with a slow processor. This will result in minor differences in outputs. You'll still be able to use a slow processor with `use_fast=False`.
+[00:59:58] [36mINFO    [0m SigLIP ready  |  VRAM=0.83/47.67GB
+
+
+  Image embeddings:   0%|          | 0/2 [00:00<?, ?it/s][A
+
+  Image embeddings:  50%|█████     | 1/2 [00:24<00:24, 24.14s/it][A
+
+  Image embeddings: 100%|██████████| 2/2 [00:24<00:00, 10.22s/it][A
+
+                                                                 [A[01:00:23] [36mINFO    [0m Image embeddings saved  |  shape=(848, 768)  →  embeddings_v2/default/image_embeddings.pt
+[01:00:23] [36mINFO    [0m └─ DONE   Image embeddings (SigLIP)  [27.3s]  |  VRAM peak=4.83GB curr=0.02GB
+
+▶ Pipeline:  38%|███▊      | 3/8 stages  [00:50<01:39][01:00:23] [36mINFO    [0m Chunk sizes re-resolved after embedding  |  SIM_CHUNK=8000  MINING_CHUNK=2000
+[01:00:23] [36mINFO    [0m ┌─ START  Similarity matrices (GPU)
+[01:00:23] [36mINFO    [0m Sim matrices  |  N=848  chunk=8000  dtype=torch.float16  est_VRAM=0.00GB  current=0.02/47.67GB
+
+
+  Sim matrix (GPU):   0%|          | 0/1 [00:00<?, ?it/s][A
+
+                                                         [A[01:00:23] [36mINFO    [0m Sim matrices done  |  VRAM=0.02/47.67GB
+[01:00:23] [36mINFO    [0m └─ DONE   Similarity matrices (GPU)  [0.0s]  |  VRAM peak=0.03GB curr=0.02GB
+[01:00:23] [36mINFO    [0m ┌─ START  Diagnose similarities
+[01:00:23] [36mINFO    [0m Diagnosing  |  anchors=500  peers=200 each
+
+
+  Diagnosis:   0%|          | 0/500 [00:00<?, ?it/s][A
+
+  Diagnosis:  71%|███████   | 356/500 [00:00<00:00, 3556.00it/s][A
+
+                                                                [A[01:00:23] [36mINFO    [0m ── Same-action pairs ─────────────────────────────────────────
+[01:00:23] [36mINFO    [0m   text_sim      mean=0.962  p10=0.941  p25=0.952  p50=0.964  p75=0.974  p90=0.982  max=1.000
+[01:00:23] [36mINFO    [0m   image_sim     mean=0.824  p10=0.753  p25=0.789  p50=0.825  p75=0.860  p90=0.896  max=0.998
+[01:00:23] [36mINFO    [0m ── Diff-action pairs ─────────────────────────────────────────
+[01:00:23] [36mINFO    [0m   text_sim      mean=0.957  p10=0.938  p25=0.948  p50=0.959  p75=0.967  p90=0.974  max=0.992
+[01:00:23] [36mINFO    [0m   image_sim     mean=0.823  p10=0.750  p25=0.787  p50=0.826  p75=0.864  p90=0.895  max=0.981
+[01:00:23] [36mINFO    [0m Separation gap  |  text=+0.0053  image=+0.0005
+[01:00:23] [33mWARNING [0m Text separation gap < 0.01 — text embeddings may not discriminate actions
+[01:00:23] [33mWARNING [0m Image separation gap < 0.01 — image embeddings may not discriminate actions
+[01:00:23] [36mINFO    [0m └─ DONE   Diagnose similarities  [0.1s]  |  VRAM peak=0.02GB curr=0.02GB
+
+▶ Pipeline:  62%|██████▎   | 5/8 stages  [00:50<00:26][01:00:23] [36mINFO    [0m ┌─ START  Adaptive thresholds
+[01:00:23] [36mINFO    [0m Adaptive thresholds  |  sample=848  peers=100 each
+
+
+  Threshold sampling:   0%|          | 0/848 [00:00<?, ?it/s][A
+
+                                                             [A[01:00:23] [36mINFO    [0m Thresholds  |  POS text≥0.9683 img≥0.8384  |  HARD text≥0.9585 img≥0.8252  |  NEG text≤0.9502 img≤0.7939
+[01:00:23] [36mINFO    [0m Pass rates  |  pos=9118/54093 (16.9%)  hard=8066/30615 (26.3%)  easy=3008/30615 (9.8%)
+[01:00:23] [33mWARNING [0m Easy-neg pass rate < 10% — consider lowering NEG_PERCENTILE or raising BOTTOM_K_POOL
+[01:00:23] [36mINFO    [0m └─ DONE   Adaptive thresholds  [0.1s]  |  VRAM peak=0.02GB curr=0.02GB
+
+▶ Pipeline:  75%|███████▌  | 6/8 stages  [00:50<00:12][01:00:23] [36mINFO    [0m ┌─ START  Triplet mining
+[01:00:23] [36mINFO    [0m Mining  |  N=848  MINING_CHUNK=2000  n_chunks=1  |  VRAM=0.02/47.67GB
+[01:00:23] [36mINFO    [0m   pos  : same-action  text≥0.9683  img≥0.8384  top-200 pool
+  hard : diff-action  text≥0.9585  img≥0.8252  top-200 pool
+  easy : diff-action  text≤0.9502  img≤0.7939  bot-200 pool
+
+
+  Triplet mining:   0%|          | 0/1 [00:00<?, ?it/s][A
+
+  Triplet mining: 100%|██████████| 1/1 [00:00<00:00,  1.00it/s][A
+
+                                                               [A[01:00:24] [36mINFO    [0m Mining done  |  triplets=828  skipped: no_pos=4  no_hard=15  no_easy=1  post_exclusion=0
+[01:00:24] [36mINFO    [0m └─ DONE   Triplet mining  [1.0s]  |  VRAM peak=0.05GB curr=0.02GB
+
+▶ Pipeline:  88%|████████▊ | 7/8 stages  [00:51<00:04][01:00:24] [36mINFO    [0m ┌─ START  Save outputs
+[01:00:24] [36mINFO    [0m Triplets  →  triplets_v2/default/triplets.jsonl  (828 lines)
+[01:00:24] [36mINFO    [0m Thresholds  →  embeddings_v2/default/thresholds.json
+[01:00:24] [36mINFO    [0m └─ DONE   Save outputs  [0.1s]  |  VRAM peak=0.02GB curr=0.02GB
+
+▶ Pipeline: 100%|██████████| 8/8 stages  [00:51<00:00]
+[01:00:24] [36mINFO    [0m ======================================================================
+[01:00:24] [36mINFO    [0m PIPELINE COMPLETE
+[01:00:24] [36mINFO    [0m   Wall time          : 0.9 min  (52s)
+[01:00:24] [36mINFO    [0m   Total frames       : 848
+[01:00:24] [36mINFO    [0m   Triplets generated : 828
+[01:00:24] [36mINFO    [0m   Coverage           : 97.6%
+[01:00:24] [36mINFO    [0m   Avg pos/anchor     : 5.97
+[01:00:24] [36mINFO    [0m   Avg neg/anchor     : 5.21  (saturation 73.7%)
+[01:00:24] [36mINFO    [0m   Avg hard/anchor    : 5.91  (saturation 96.5%)
+[01:00:24] [36mINFO    [0m   Triplets per action:
+[01:00:24] [36mINFO    [0m     Follow Lane                        652  (78.7%)
+[01:00:24] [36mINFO    [0m     Go Straight                         68  (8.2%)
+[01:00:24] [36mINFO    [0m     Go Left                             48  (5.8%)
+[01:00:24] [36mINFO    [0m     Go Right                            39  (4.7%)
+[01:00:24] [36mINFO    [0m     Change Lane Right                   19  (2.3%)
+[01:00:24] [36mINFO    [0m     Change Lane Left                     2  (0.2%)
+[01:00:24] [36mINFO    [0m   Log file           : ${PERSONADRIVE_ROOT}/persona_drive_rag/pipeline.log
+[01:00:24] [36mINFO    [0m ======================================================================

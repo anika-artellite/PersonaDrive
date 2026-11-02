@@ -1,0 +1,31 @@
+<?xml version="1.0" ?>
+<routes>
+   <route id="0" town="Town12">
+      <weathers>
+         <weather route_percentage="0.0" cloudiness="100.0" precipitation="8.0" precipitation_deposits="30.0" wetness="4.0" wind_intensity="100.0" sun_azimuth_angle="225.0" sun_altitude_angle="15.0" fog_density="3.0"/>
+         <weather route_percentage="100.0" cloudiness="80.0" precipitation="4.0" precipitation_deposits="20.0" wetness="4.0" wind_intensity="60.0" sun_azimuth_angle="360.0" sun_altitude_angle="80.0" fog_density="7.0"/>
+      </weathers>
+      <waypoints>
+         <position x="2888.9" y="1745.7" z="345.5"/>
+         <position x="2888.7" y="1738.0" z="345.1"/>
+         <position x="2839.8" y="1676.5" z="342.6"/>
+         <position x="2771.0" y="1770.7" z="346.3"/>
+         <position x="2705.0" y="1829.7" z="349.5"/>
+         <position x="2684.2" y="1829.7" z="350.4"/>
+      </waypoints>
+      <scenarios>
+         <scenario name="VehicleTurningRoute_3" type="VehicleTurningRoute">
+            <trigger_point x="2888.6" y="1725.6" z="344.5" yaw="269.6"/>
+         </scenario>
+         <scenario name="DynamicObjectCrossing_10" type="DynamicObjectCrossing">
+            <trigger_point x="2770.4" y="1752.6" z="345.9" yaw="89.8"/>
+            <distance value="40"/>
+            <blocker_model value="static.prop.haybalelb"/>
+            <crossing_angle value="5"/>
+         </scenario>
+         <scenario name="VehicleTurningRoute_4" type="VehicleTurningRoute">
+            <trigger_point x="2771.1" y="1797.4" z="346.7" yaw="89.8"/>
+         </scenario>
+      </scenarios>
+   </route>
+</routes>

@@ -1,0 +1,30 @@
+<?xml version="1.0" ?>
+<routes>
+   <route id="0" town="Town12">
+      <weathers>
+         <weather route_percentage="0.0" cloudiness="80.0" precipitation="40.0" precipitation_deposits="40.0" wetness="4.0" wind_intensity="100.0" sun_azimuth_angle="315.0" sun_altitude_angle="-30.0" fog_density="2.0"/>
+         <weather route_percentage="100.0" cloudiness="15.0" precipitation="20.0" precipitation_deposits="40.0" wetness="100.0" wind_intensity="50.0" sun_azimuth_angle="45.0" sun_altitude_angle="15.0" fog_density="1.0"/>
+      </weathers>
+      <waypoints>
+         <position x="-828.3" y="3443.6" z="361.4"/>
+         <position x="-770.4" y="3492.8" z="362.0"/>
+         <position x="-605.0" y="3587.2" z="363.0"/>
+         <position x="-605.0" y="3623.1" z="364.0"/>
+      </waypoints>
+      <scenarios>
+         <scenario name="VehicleTurningRoutePedestrian_1" type="VehicleTurningRoutePedestrian">
+            <trigger_point x="-828.3" y="3464.3" z="361.6" yaw="89.9"/>
+         </scenario>
+         <scenario name="DynamicObjectCrossing_1" type="DynamicObjectCrossing">
+            <trigger_point x="-784.4" y="3492.9" z="361.9" yaw="-0.1"/>
+            <distance value="40"/>
+            <blocker_model value="static.prop.container"/>
+         </scenario>
+         <scenario name="ParkingCrossingPedestrian_1" type="ParkingCrossingPedestrian">
+            <trigger_point x="-605.0" y="3522.7" z="361.4" yaw="90.0"/>
+            <distance value="40"/>
+            <direction value="left"/>
+         </scenario>
+      </scenarios>
+   </route>
+</routes>

@@ -1,0 +1,30 @@
+<?xml version="1.0" ?>
+<routes>
+   <route id="0" town="Town12">
+      <weathers>
+         <weather route_percentage="0.0" cloudiness="5.0" precipitation="4.0" precipitation_deposits="40.0" wetness="80.0" wind_intensity="100.0" sun_azimuth_angle="315.0" sun_altitude_angle="5.0" fog_density="15.0"/>
+         <weather route_percentage="100.0" cloudiness="50.0" precipitation="15.0" precipitation_deposits="60.0" wetness="8.0" wind_intensity="100.0" sun_azimuth_angle="270.0" sun_altitude_angle="30.0" fog_density="2.0"/>
+      </weathers>
+      <waypoints>
+         <position x="1378.4" y="3099.0" z="363.5"/>
+         <position x="1378.4" y="3099.0" z="363.5"/>
+         <position x="2199.5" y="3103.7" z="356.0"/>
+         <position x="2221.3" y="3101.3" z="356.3"/>
+         <position x="2302.2" y="3105.4" z="357.5"/>
+      </waypoints>
+      <scenarios>
+         <scenario name="HardBreakRoute_2" type="HardBreakRoute">
+            <trigger_point x="1427.9" y="3098.9" z="364.3" yaw="-0.1"/>
+         </scenario>
+         <scenario name="StaticCutIn_2" type="StaticCutIn">
+            <trigger_point x="1599.4" y="3098.7" z="363.3" yaw="-0.1"/>
+            <distance value="100"/>
+            <direction value="right"/>
+         </scenario>
+         <scenario name="YieldToEmergencyVehicle_1" type="YieldToEmergencyVehicle">
+            <trigger_point x="1902.2" y="3098.4" z="358.0" yaw="-0.1"/>
+            <distance value="120"/>
+         </scenario>
+      </scenarios>
+   </route>
+</routes>

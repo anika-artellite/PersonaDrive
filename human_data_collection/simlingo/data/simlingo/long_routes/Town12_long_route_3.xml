@@ -1,0 +1,41 @@
+<?xml version='1.0' encoding='utf-8'?>
+<routes>
+   <route id="30002" town="Town12">
+      <weathers>
+         <weather route_percentage="0" cloudiness="80" precipitation="25" precipitation_deposits="40" wetness="30" wind_intensity="20" sun_azimuth_angle="180" sun_altitude_angle="40" fog_density="3" fog_distance="90" fog_falloff="0.0" scattering_intensity="1.0" mie_scattering_scale="0.03" />
+         <weather route_percentage="100" cloudiness="75" precipitation="0" precipitation_deposits="0" wetness="0" wind_intensity="15" sun_azimuth_angle="220" sun_altitude_angle="35" fog_density="3" fog_distance="90" fog_falloff="0.0" scattering_intensity="1.0" mie_scattering_scale="0.03" />
+      </weathers>
+      <waypoints>
+         <position x="2685.5" y="5391.1" z="369.7" />
+         <position x="2121.2" y="5574.9" z="369.6" />
+         <position x="1784.9" y="5228.4" z="368.0" />
+         <position x="2453.1" y="5096.2" z="369.1" />
+         <position x="2068.3" y="4700.6" z="362.6" />
+         <position x="1330.9" y="4580.7" z="369.7" />
+         <position x="786.0" y="4815.5" z="370.2" />
+         <position x="986.9" y="5201.7" z="371.6" />
+      </waypoints>
+      <scenarios>
+         <scenario name="OppositeVehicleRunningRedLight_1" type="OppositeVehicleRunningRedLight">
+            <trigger_point x="2603.3" y="5601.7" z="369.8" yaw="117.5" />
+         </scenario>
+         <scenario name="HazardAtSideLane_2" type="HazardAtSideLane">
+            <trigger_point x="1752.8" y="5290.4" z="368.5" yaw="269.6" />
+            <distance value="50" />
+            <bicycle_drive_distance value="80" />
+            <bicycle_speed value="7" />
+         </scenario>
+         <scenario name="Accident_3" type="Accident">
+            <trigger_point x="2258.9" y="4987.1" z="367.1" yaw="179.9" />
+         </scenario>
+         <scenario name="StaticCutIn_4" type="StaticCutIn">
+            <trigger_point x="1393.1" y="4590.8" z="369.6" yaw="189.2" />
+            <distance value="100" />
+            <direction value="right" />
+         </scenario>
+         <scenario name="PedestrianCrossing_5" type="PedestrianCrossing">
+            <trigger_point x="788.3" y="5143.4" z="371.5" yaw="89.6" />
+         </scenario>
+      </scenarios>
+   </route>
+</routes>
