@@ -1,0 +1,24 @@
+{
+  "gpu": "A30",
+  "node": "hpc3-gpu-k54-01",
+  "topology": "paired",
+  "clients": 4,
+  "servers": 4,
+  "external_host": null,
+  "town": "Town12",
+  "npcs": 30,
+  "width": 1024,
+  "height": 512,
+  "inference_ms": 0.0,
+  "boot_s": [
+    13.015982894226909,
+    13.016352447681129,
+    15.016122046858072,
+    14.015914620831609
+  ],
+  "gpu_idle_mb": 0.0,
+  "gpu_peak_mb": 22227.0,
+  "gpu_util_mean": 0.2385496183206107,
+  "gpu_rendering_confirmed": true,
+  "failed": true
+}

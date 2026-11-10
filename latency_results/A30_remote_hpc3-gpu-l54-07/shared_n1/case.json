@@ -1,0 +1,19 @@
+{
+  "gpu": "A30_remote",
+  "node": "hpc3-gpu-l54-07",
+  "topology": "shared",
+  "clients": 1,
+  "servers": 1,
+  "external_host": "hpc3-gpu-k54-02",
+  "town": "Town12",
+  "npcs": 30,
+  "width": 1024,
+  "height": 512,
+  "inference_ms": 0.0,
+  "boot_s": [],
+  "gpu_idle_mb": 0.0,
+  "gpu_peak_mb": 0.0,
+  "gpu_util_mean": 0.0,
+  "gpu_rendering_confirmed": null,
+  "failed": false
+}

@@ -1,0 +1,21 @@
+{
+  "gpu": "RTX6000",
+  "node": "hpc3-gpu-m54-02",
+  "topology": "shared",
+  "clients": 2,
+  "servers": 1,
+  "external_host": null,
+  "town": "Town12",
+  "npcs": 30,
+  "width": 1024,
+  "height": 512,
+  "inference_ms": 0.0,
+  "boot_s": [
+    13.015586514025927
+  ],
+  "gpu_idle_mb": 0.0,
+  "gpu_peak_mb": 7267.0,
+  "gpu_util_mean": 2.3162393162393164,
+  "gpu_rendering_confirmed": true,
+  "failed": true
+}

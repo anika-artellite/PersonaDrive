@@ -1,0 +1,21 @@
+{
+  "gpu": "V100",
+  "node": "hpc3-gpu-17-04",
+  "topology": "shared",
+  "clients": 4,
+  "servers": 1,
+  "external_host": null,
+  "town": "Town12",
+  "npcs": 30,
+  "width": 1024,
+  "height": 512,
+  "inference_ms": 0.0,
+  "boot_s": [
+    21.02447578497231
+  ],
+  "gpu_idle_mb": 0.0,
+  "gpu_peak_mb": 7530.0,
+  "gpu_util_mean": 5.720754716981132,
+  "gpu_rendering_confirmed": true,
+  "failed": true
+}

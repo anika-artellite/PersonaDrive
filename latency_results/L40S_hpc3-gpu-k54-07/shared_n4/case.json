@@ -1,0 +1,21 @@
+{
+  "gpu": "L40S",
+  "node": "hpc3-gpu-k54-07",
+  "topology": "shared",
+  "clients": 4,
+  "servers": 1,
+  "external_host": null,
+  "town": "Town12",
+  "npcs": 30,
+  "width": 1024,
+  "height": 512,
+  "inference_ms": 0.0,
+  "boot_s": [
+    65.08637789171189
+  ],
+  "gpu_idle_mb": 0.0,
+  "gpu_peak_mb": 7610.0,
+  "gpu_util_mean": 3.990888382687927,
+  "gpu_rendering_confirmed": true,
+  "failed": true
+}
